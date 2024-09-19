@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@Inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
   in {
@@ -17,7 +17,7 @@
       inherit system;
       modules = [ 
         ./configs/common/configuration.nix 
-        home-manager.nixosModules.home-manager {
+        inputs.home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
