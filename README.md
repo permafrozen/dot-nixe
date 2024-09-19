@@ -1,3 +1,11 @@
+```ascii
+     ____        __                _   ___         
+    / __ \____  / /_              / | / (_)  _____ 
+   / / / / __ \/ __/  ______     /  |/ / / |/_/ _ \
+  / /_/ / /_/ / /_   /_____/    / /|  / />  </  __/
+ /_____/\____/\__/             /_/ |_/_/_/|_|\___/ 
+```
+
 # dot-nixe
 dot-nixe is (will be) my nixos configuration, which is based around `home-manager` and `flakes`. I will daily drive this configuration so I hope I don't abondon it. If you are wondering why I am writing this (I am talking to myself since nobody is reading this shitty ass `README.md` I am writing rn), I guess have not other stuff to do right now.
 
