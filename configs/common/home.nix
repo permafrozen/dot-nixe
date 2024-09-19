@@ -3,7 +3,7 @@
 {
   # Information what to manage
   home = {
-    username = vars.username;
+    username = "matteo";
     homeDirectory = "/home/matteo";
     stateVersion = "24.05";
   };
