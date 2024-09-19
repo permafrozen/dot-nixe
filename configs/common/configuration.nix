@@ -54,9 +54,9 @@
   console.keyMap = "de"; #vars.keyMap;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${vars.username} = {
+  users.users.matteo = {
     isNormalUser = true;
-    description = vars.username;
+    description = "matteo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
 
