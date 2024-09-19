@@ -1,7 +1,8 @@
 {
   description = "Main NixOS configuration Flake";
 
-  inpurts  = {
+  inports  = {
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
