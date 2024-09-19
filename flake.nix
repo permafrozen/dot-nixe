@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
-  outputs = {  }:
+  outputs = { self, nixpkgs, ... }@Inputs:
 
   {
     nixosConfigurations.joes-desktop = nixpkgs.lib.nixosSystem {
