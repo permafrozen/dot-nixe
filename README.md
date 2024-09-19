@@ -27,4 +27,4 @@ Just Find out how it works
 3. no
 
 ## License
-Do I look like I know how a licence works?
+to do
