@@ -12,7 +12,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
-    settings = ./hosts/laptop/settings.nix;
+    settings = import ./hosts/laptop/settings.nix;
   in {
     nixosConfigurations.matteo = nixpkgs.lib.nixosSystem {
       inherit system;
