@@ -27,7 +27,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Vienna";
+  time.timeZone = "${settings.timeZone}";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -54,9 +54,9 @@
   console.keyMap = "${settings.kbLayout}"; #vars.keyMap;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${settings.username} = {
+  users.users.${settings.userName} = {
     isNormalUser = true;
-    description = "matteo";
+    description = "${settings.userName}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
 

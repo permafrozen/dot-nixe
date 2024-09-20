@@ -3,8 +3,8 @@
 {
   # Information what to manage
   home = {
-    username = "${settings.username}";
-    homeDirectory = "/home/${settings.username}";
+    username = "${settings.userName}";
+    homeDirectory = "/home/${settings.userName}";
     stateVersion = "24.05";
   };
 
