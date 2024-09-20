@@ -23,7 +23,7 @@ dot-nixe is (will be) my nixos configuration, which is based around `home-manage
  nix.settings.experimental-features = [ "nix-command" "flakes" ];
  ```
 
-2. rebuild your system to apply changes
+2. rebuild your system to apply changes:
 ```bash
 sudo nixos-rebuild switch
 ```
