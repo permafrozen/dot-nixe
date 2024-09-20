@@ -95,6 +95,9 @@
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
 
+          # Screenshot keybinds
+          "$mainMod, PRINT, exec, hyprshot -m region"
+
           # Cursor resize/move
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
