@@ -16,6 +16,7 @@
   in {
     nixosConfigurations.matteo = nixpkgs.lib.nixosSystem {
       inherit system;
+      specialArgs = { inherit inputs; inherit settings; };
       modules = [ 
         ./configs/common/configuration.nix 
         inputs.home-manager.nixosModules.home-manager {
