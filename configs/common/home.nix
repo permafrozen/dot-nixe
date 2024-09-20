@@ -1,10 +1,10 @@
-{ inputs, config, pkgs, ... }:
+{ config, pkgs, settings, ... }:
 
 {
   # Information what to manage
   home = {
-    username = "matteo";
-    homeDirectory = "/home/matteo";
+    username = "${settings.username}";
+    homeDirectory = "/home/${settings.username}";
     stateVersion = "24.05";
   };
 
