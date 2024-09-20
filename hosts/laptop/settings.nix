@@ -1,3 +1,3 @@
 {
-  username = "matteo"
+  username = "matteo";
 }
