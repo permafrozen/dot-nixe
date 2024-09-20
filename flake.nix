@@ -14,7 +14,7 @@
     system = "x86_64-linux";
     settings = import ./hosts/laptop/settings.nix;
   in {
-    nixosConfigurations.matteo = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${settings.userName} = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; inherit settings; };
       modules = [ 
