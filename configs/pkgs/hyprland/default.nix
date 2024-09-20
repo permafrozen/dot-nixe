@@ -1,1 +1,5 @@
-# dummy
+{ configs, pkgs, settings, ...}:
+
+{
+
+}

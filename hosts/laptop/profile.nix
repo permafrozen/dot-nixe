@@ -3,5 +3,6 @@ let
 in {
   imports = [
     (getPath "pipewire")
+    (getPath "hyprland")
   ];
 }
