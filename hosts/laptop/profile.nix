@@ -1,7 +1,7 @@
-{
-
+let
+  getPath = folderName: ../../configs/pkgs/${folderName}/default.nix;
+in {
   imports = [
-    ../../configs/pkgs/pipewire/default.nix
+    (getPath "pipewire")
   ];
-
 }
