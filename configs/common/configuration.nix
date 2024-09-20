@@ -46,12 +46,12 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "de";
+    layout = "${settings.kbLayout}";
     variant = "";
   };
 
   # Set console keymap to de
-  console.keyMap = "de"; #vars.keyMap;
+  console.keyMap = "${settings.kbLayout}"; #vars.keyMap;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${settings.username} = {
