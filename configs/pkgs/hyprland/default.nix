@@ -15,9 +15,11 @@
       enable = true;
       settings = {
 
-        general = {
-          "$mainMod" = "SUPER";
+        # Variables
+        "$mainMod" = "SUPER";
 
+
+        general = {
           border_size = "1";
           "col.inactive_border" = "0xffFFFFFF";
           "col.active_border" = "0xffFFFFFF";
