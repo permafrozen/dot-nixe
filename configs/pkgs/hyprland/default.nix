@@ -21,6 +21,8 @@
           "col.inactive_border" = "0xffFFFFFF";
           "col.active_border" = "0xffFFFFFF";
           layout = "dwindle";
+          resize_on_border = "true";
+          allow_tearing = "false";
         };
       };
     };
