@@ -24,6 +24,22 @@
           resize_on_border = "true";
           allow_tearing = "false";
         };
+        decoration = {
+          rounding = "5";
+          active_opacity = "1";
+          inactive_opacity = "1";
+          fullscreen_opacity = "1";
+          drop_shadow = "false";
+          shadow_range = "4";
+          shadow_render_power = "4";
+          shadow_ignore_window = "true";
+          "col.shadow" = "0xeeFFFFFF";
+          "col.shadow_inactive" = "0xeeFFFFFF";
+          dim_inactive = "false";
+          dim_strength = "0.5";
+
+
+        };
       };
     };
   }];
