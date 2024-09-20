@@ -12,6 +12,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
+    settings = ./hosts/laptop/settings.nix;
   in {
     nixosConfigurations.matteo = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -21,7 +22,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = { inherit inputs; inherit settings; };
             users.matteo = import ./configs/common/home.nix;
           };
         }

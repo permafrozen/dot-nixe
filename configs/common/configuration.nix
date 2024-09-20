@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, settings, ... }:
 
 {
   imports = [
     ../../hosts/laptop/hardware-configuration.nix
-    ../../hosts/laptop/default.nix
+    ../../hosts/laptop/profile.nix
   ];
 
   # Bootloader.
