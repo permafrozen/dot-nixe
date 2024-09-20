@@ -16,15 +16,21 @@ dot-nixe is (will be) my nixos configuration, which is based around `home-manage
 - [License](#license)
 
 ## Installation
-1. Clone the repository:
-```bash
- git clone https://github.com/Permafrozen/dot-nixe
-```
 
-2. add experimental features to `configuration.nix`:
+
+1. add experimental features to `configuration.nix`:
 ```nix
  nix.settings.experimental-features = [ "nix-command" "flakes" ];
  ```
+
+2. rebuild your system to apply changes
+```bash
+sudo nixos-rebuild switch
+```
+3. Clone the repository:
+```bash
+ git clone https://github.com/Permafrozen/dot-nixe
+```
 
 ## Usage
 Just Find out how it works
