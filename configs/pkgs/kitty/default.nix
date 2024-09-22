@@ -8,8 +8,8 @@
         foreground = "#FFFFFF";
         background = "#000000";
 
-        background_opacity = 0.7;
-        background_blur = 7;
+        background_opacity = "0.7";
+        background_blur = "7";
       };
     };
   }];
