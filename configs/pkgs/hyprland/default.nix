@@ -99,9 +99,10 @@
           "$mainMod, PRINT, exec, hyprshot -m region"
 
           # Cursor resize/move
-          "$mainMod, mouse:272, movewindow"
-          "$mainMod, mouse:273, resizewindow"
-
+          bindm = [
+            "$mainMod, mouse:272, movewindow"
+            "$mainMod, mouse:273, resizewindow"
+          ];
           # move to workspace
           "$mainMod, 1, workspace, 1"
           "$mainMod, 2, workspace, 2"
