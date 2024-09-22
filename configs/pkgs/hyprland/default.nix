@@ -98,11 +98,6 @@
           # Screenshot keybinds
           "$mainMod, PRINT, exec, hyprshot -m region"
 
-          # Cursor resize/move
-          bindm = [
-            "$mainMod, mouse:272, movewindow"
-            "$mainMod, mouse:273, resizewindow"
-          ];
           # move to workspace
           "$mainMod, 1, workspace, 1"
           "$mainMod, 2, workspace, 2"
@@ -126,6 +121,12 @@
           "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
           "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
           "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+        ];
+
+        # Cursor resize/move
+        bindm = [
+          "$mainMod, mouse:272, movewindow"
+          "$mainMod, mouse:273, resizewindow"
         ];
 
         input = {
