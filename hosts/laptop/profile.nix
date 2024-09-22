@@ -4,5 +4,6 @@ in {
   imports = [
     (getPath "pipewire")
     (getPath "hyprland")
+    (getPath "kitty")
   ];
 }
