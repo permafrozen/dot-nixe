@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -17,8 +18,9 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; inherit settings; };
-      modules = [ 
-        ./configs/common/configuration.nix 
+      modules = [
+        ./configs/common/configuration.nix
+        inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
