@@ -13,4 +13,12 @@
       };
     };
   }];
+  environment.systemPackages = with pkgs; [
+    acpi
+    git
+    nurl
+    tree
+    vim
+    wget
+  ];
 }
