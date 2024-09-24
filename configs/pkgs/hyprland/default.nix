@@ -141,7 +141,7 @@
         misc = {
           disable_hyprland_logo	= "true";
           disable_splash_rendering = "true";
-          background_color = "0x000000";
+          background_color = "0x${settings.base00}";
         };
       };
 
