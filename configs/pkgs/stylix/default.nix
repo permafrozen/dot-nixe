@@ -16,7 +16,7 @@
     enable = true;
     autoEnable = false;
     image = ../../../assets/wallpapers/${settings.wallpaper};
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/{settings.scheme}.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${settings.scheme}.yaml";
       fonts = {
         serif = config.stylix.fonts.monospace;
         sansSerif = config.stylix.fonts.monospace;
@@ -36,7 +36,7 @@
       enable = true;
       autoEnable = false;
       image = ../../../assets/wallpapers/${settings.wallpaper};
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/{settings.scheme}.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/${settings.scheme}.yaml";
       fonts = {
         serif = config.stylix.fonts.monospace;
         sansSerif = config.stylix.fonts.monospace;
