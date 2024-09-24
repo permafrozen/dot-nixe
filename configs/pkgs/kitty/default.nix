@@ -5,10 +5,10 @@
     programs.kitty = {
       enable = true;
       settings = {
-        foreground = "#FFFFFF";
+        foreground = "#${config.lib.stylix.colors.base05}";
         background = "#${config.lib.stylix.colors.base00}";
-        background_opacity = "0.7";
-        background_blur = "7";
+        background_opacity = "${settings.opacity}";
+        background_blur = "${settings.blur}";
         confirm_os_window_close = "0";
       };
     };

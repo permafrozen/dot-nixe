@@ -10,5 +10,7 @@
 
   # theme
   wallpaper =   "space.png";
-  scheme =       "eris";
+  scheme =      "eris";
+  opacity =     "0.7";
+  blur =        "7";
 }
