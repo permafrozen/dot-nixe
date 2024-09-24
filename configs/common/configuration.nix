@@ -61,14 +61,6 @@
 
   };
 
-  # Font Packages
-  fonts.packages = with pkgs; [
-    nerdfonts
-    noto-fonts-emoji
-    fira-code
-    fira-code-symbols
-  ];
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 

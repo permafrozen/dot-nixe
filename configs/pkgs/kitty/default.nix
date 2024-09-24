@@ -15,6 +15,7 @@
   }];
   environment.systemPackages = with pkgs; [
     acpi
+    bat
     git
     nurl
     tree
