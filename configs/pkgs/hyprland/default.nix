@@ -21,12 +21,12 @@
 
         general = {
           border_size = "1";
-          "col.inactive_border" = "0xffFFFFFF";
-          "col.active_border" = "0xffFFFFFF";
+          "col.inactive_border" = "0xff${config.lib.stylix.colors.base04}";
+          "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
           resize_on_border = "true";
           
-          gaps_in = "5";
-          gaps_out = "5";
+          gaps_in = "${settings.gaps}";
+          gaps_out = "${settings.gaps}";
 
 
           layout = "dwindle";
@@ -34,7 +34,7 @@
         };
 
         decoration = {
-          rounding = "5";
+          rounding = "${settings.rounding}";
 
           active_opacity = "1";
           inactive_opacity = "1";
