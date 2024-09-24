@@ -1,7 +1,7 @@
 { config, pkgs, settings, ...}:
 
 {
-  enviroment.systemPackages  = with pkgs; [
+  environment.systemPackages  = with pkgs; [
     swww
   ];
 
