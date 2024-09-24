@@ -1,6 +1,10 @@
 { config, pkgs, settings, ...}:
 
 {
+  environment.systemPackages = with pkgs; [
+    base16-schemes
+  ];
+
   fonts.packages = with pkgs; [
     nerdfonts
     noto-fonts-emoji
@@ -10,9 +14,10 @@
 
   stylix = {
     enable = true;
+    autoEnable = false;
     image = ../../../assets/wallpapers/${settings.wallpaper};
-    base16Scheme = ./. + "../../../../assets/schemes/${settings.scheme}.yaml";
-        fonts = {
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/{settings.scheme}.yaml";
+      fonts = {
         serif = config.stylix.fonts.monospace;
         sansSerif = config.stylix.fonts.monospace;
         emoji = {
@@ -30,8 +35,8 @@
     stylix = {
       enable = true;
       autoEnable = false;
-      image = ../../../assets/wallpapers/space.png;
-      base16Scheme = ./. + "../../../../assets/schemes/eris.yaml";
+      image = ../../../assets/wallpapers/${settings.wallpaper};
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/{settings.scheme}.yaml";
       fonts = {
         serif = config.stylix.fonts.monospace;
         sansSerif = config.stylix.fonts.monospace;
