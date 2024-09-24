@@ -7,6 +7,7 @@ in {
     (getPath "kitty")
     (getPath "fish")
     (getPath "starship")
+    (getPath "stylix")
     (getPath "swww")
   ];
 }
