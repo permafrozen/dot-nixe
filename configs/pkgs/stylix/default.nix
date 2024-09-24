@@ -20,6 +20,12 @@ let
     };
   };
 in {
+  stylix = stylixConfig;
+
+  home-manager.sharedModules = [{
+    stylix = stylixConfig;
+  }];
+
   environment.systemPackages = with pkgs; [
     base16-schemes
   ];
@@ -30,10 +36,4 @@ in {
     fira-code
     fira-code-symbols
   ];
-
-  stylix = stylixConfig;
-
-  home-manager.sharedModules = [{
-    stylix = stylixConfig;
-  }];
 }
