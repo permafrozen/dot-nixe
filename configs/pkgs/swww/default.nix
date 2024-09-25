@@ -5,20 +5,21 @@
     swww
   ];
 
-  systemd.services.swww-daemon = {
-    description = "Swww Daemon";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "network.target" ]; # Adjust as needed
-    serviceConfig = {
-      ExecStart = "${pkgs.swww}/bin/swww-daemon";
-      Restart = "always";
-      User = "${settings.userName}";
-    };
-  };
+  # systemd.services.swww-daemon = {
+  #   description = "Swww Daemon";
+  #   wantedBy = [ "multi-user.target" ];
+  #   after = [ "network.target" ]; # Adjust as needed
+  #   serviceConfig = {
+  #     ExecStart = "${pkgs.swww}/bin/swww-daemon";
+  #     Restart = "always";
+  #     User = "${settings.userName}";
+  #   };
+  # };
 
   home-manager.sharedModules = [{
     wayland.windowManager.hyprland.extraConfig = ''
-
+      exec-once = swww-daemon
+      exec = swww img .dotfiles/assets/wallpapers/${settings.wallpaper}
     '';
   }];
 }
