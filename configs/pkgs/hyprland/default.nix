@@ -18,6 +18,9 @@
         # Variables
         "$mainMod" = "SUPER";
 
+        # Monitor Settings
+        "monitor"="eDP-1,1920x1080@60,0x0,1";
+
 
         general = {
           border_size = "1";
@@ -145,9 +148,9 @@
         };
       };
 
-      extraConfig = ''
-        monitor=eDP-1,1920x1080@60,0x0,1
-      '';
+      # extraConfig = ''
+      #   monitor=eDP-1,1920x1080@60,0x0,1
+      # '';
     };
   }];
 }
