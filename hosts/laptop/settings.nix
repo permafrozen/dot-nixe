@@ -9,7 +9,7 @@
   kbLayout =    "de";                 # Be careful, some layouts are not supported, e.g. "at" for Austria
 
   # theme
-  wallpaper =   "space.png";          # background image, located in .../assets/wallpaper/*
+  wallpaper =   "space.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =      "eris";               # Color Theme (Chose any from the base16-schemes Package)
 
   rounding = "10";
