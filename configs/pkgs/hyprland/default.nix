@@ -21,8 +21,8 @@
 
         general = {
           border_size = "1";
-          "col.inactive_border" = "0xff${config.lib.stylix.colors.base04}";
           "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
+          "col.inactive_border" = "0xff${config.lib.stylix.colors.base04}";
           resize_on_border = "true";
           
           gaps_in = "${settings.gaps}";
@@ -40,12 +40,12 @@
           inactive_opacity = "1";
           fullscreen_opacity = "1";
 
-          drop_shadow = "false";
+          drop_shadow = "${settings.shadow}";
           shadow_range = "4";
           shadow_render_power = "4";
           shadow_ignore_window = "true";
-          "col.shadow" = "0xeeFFFFFF";
-          "col.shadow_inactive" = "0xeeFFFFFF";
+          "col.shadow" = "0xee${config.lib.stylix.colors.base05}";
+          "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base04}";
 
           dim_inactive = "false";
           dim_strength = "0.5";
