@@ -9,6 +9,5 @@ in {
     (getPath "starship")
     (getPath "stylix")
     (getPath "swww")
-    (getPath "ly")
   ];
 }
