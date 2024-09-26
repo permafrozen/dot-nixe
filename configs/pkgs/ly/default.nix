@@ -5,6 +5,7 @@
     enable = true;
     settings = {
       animation = "matrix";
+      cmatrix_fg = "0x8001";
     };
   };
 }
