@@ -7,6 +7,4 @@
       animation = "matrix";
     };
   };
-
-  # services.getty.loginProgram = "${pkgs.shadow}/bin/ly"; 
 }
