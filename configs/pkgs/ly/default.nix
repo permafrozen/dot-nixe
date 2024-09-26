@@ -2,6 +2,8 @@
 
 {
   services.displayManager.ly = {
-    enable
+    enable = true;
   };
+
+  # services.getty.loginProgram = "${pkgs.shadow}/bin/ly"; 
 }
