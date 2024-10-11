@@ -23,6 +23,7 @@
     (getPath "git")
     # (getPath "syncthing")
     (getPath "ani-cli")
+    (getPath "bitwarden")
 
     # GPU Settings
     (getPath "nvidia")
