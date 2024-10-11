@@ -12,7 +12,7 @@
       blank_box = true;
 
       # misc
-      clear_password = false;
+      clear_password = true;
       text_in_center = true;
     };
   };
