@@ -24,6 +24,7 @@
     (getPath "syncthing")
     (getPath "ani-cli")
     (getPath "intellij")
+    (getPath "bitwarden")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
