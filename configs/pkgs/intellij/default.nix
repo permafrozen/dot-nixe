@@ -2,6 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    idea-ultimate
+    jetbrains.idea-ultimate
   ];
 }
