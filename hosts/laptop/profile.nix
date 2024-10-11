@@ -23,6 +23,7 @@
     (getPath "git")
     (getPath "syncthing")
     (getPath "ani-cli")
+    (getPath "intellij")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
