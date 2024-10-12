@@ -101,6 +101,12 @@
 
           # Screenshot keybinds
           "$mainMod, PRINT, exec, hyprshot -m region"
+          
+          # vim binds for window focus 
+          "$mainMod, H, movefocus, l"
+          "$mainMod, J, movefocus, d"
+          "$mainMod, K, movefocus, u"
+          "$mainMod, L, movefocus, r"
 
           # move to workspace
           "$mainMod, 1, workspace, 1"
