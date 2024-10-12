@@ -26,10 +26,11 @@
   opacity =       "0.7";                # background opacities for supported windows
   blur =          "7";                  # background blur for supported windows
 
-  # Monitor Settings
+  # Setup Specific Hyprland Config
   hyprConfig = ''
     monitor= HDMI-A-1, 1920x1080@60, 0x0, 1
-    monitor= DP-1, 1920x1080@60, 1920x0, 1 
+    monitor= DP-1, 1920x1080@60, 1920x0, 1
+    workspace = 2, monitor:DP-1, default:true
   '';
 
   # default apps
