@@ -33,7 +33,7 @@
         general = {
           border_size = "1";
           "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
-          "col.inactive_border" = "0xff${config.lib.stylix.colors.base04}";
+          "col.inactive_border" = "0xff${config.lib.stylix.colors.base00}";
           resize_on_border = "true";
           
           gaps_in = "${settings.gaps}";
@@ -47,7 +47,7 @@
           rounding = "${settings.rounding}";
 
           active_opacity = "1";
-          inactive_opacity = "1";
+          inactive_opacity = "${settings.opacity}";
           fullscreen_opacity = "1";
 
           drop_shadow = "${settings.shadow}";
@@ -57,8 +57,8 @@
           "col.shadow" = "0xee${config.lib.stylix.colors.base05}";
           "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base04}";
 
-          dim_inactive = "false";
-          dim_strength = "0.5";
+          dim_inactive = "true";
+          dim_strength = "0.2";
 
           blur = {
             enabled = "true";
@@ -137,6 +137,10 @@
           kb_layout = "de";
           mouse_refocus = false;
           follow_mouse = 0;
+        };
+
+        cursor = {
+          inactive_timeout = 2;
         };
 
         gestures = {
