@@ -30,10 +30,6 @@
         "$browser" = "${settings.browser}";
         "$terminal" = "${settings.terminal}";
 
-        # Monitor Settings
-        # "monitor"="eDP-1,1920x1080@60,0x0,1";
-
-
         general = {
           border_size = "1";
           "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
@@ -139,6 +135,8 @@
 
         input = {
           kb_layout = "de";
+          mouse_refocus = false;
+          follow_mouse = 0;
         };
 
         gestures = {
