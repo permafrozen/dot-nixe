@@ -12,7 +12,7 @@
 
   # git settings
   gitUser =       "Permafrozen";
-  gitMail =       "m8tt8o@gmail.com";
+  gitMail =       "permafrozen@disroot.org";
   defaultBranch = "main";
 
   # theme
