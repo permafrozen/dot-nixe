@@ -12,7 +12,6 @@
           sponsorblock
           sidebery
           ublock-origin
-          vimium
           bitwarden
           wikiwand-wikipedia-modernized
           terms-of-service-didnt-read
