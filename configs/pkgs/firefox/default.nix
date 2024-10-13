@@ -9,10 +9,16 @@
         name = "default";
         extensions = with config.nur.repos.rycee.firefox-addons; [
           privacy-badger
+          sponsorblock
           sidebery
           ublock-origin
+          vimium
+          bitwarden
+          wikiwand-wikipedia-modernized
+          terms-of-service-didnt-read
           
         ];
+        search.default = "DuckDuckGo";
         settings = {
           # Enable all Extensions
           "extensions.autoDisableScopes" = 0;
@@ -38,6 +44,7 @@
           # Bookmarks
           "browser.bookmarks.showMobileBookmarks" = false;
           "browser.toolbars.bookmarks.visibility" = "never";
+          "browser.bookmarks.addedImportButton" = false;
 
           # disable suggestions
           "browser.urlbar.maxRichResults" = 0;
@@ -195,6 +202,16 @@
               .search-wrapper, .personalizeButtonWrapper {
                   display: none !important;
               }
+          }
+
+          /* DuckDuckGo */
+          @-moz-document domain(duckduckgo.com) {
+            * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+
+
           }
 
           /* Google Domains */
