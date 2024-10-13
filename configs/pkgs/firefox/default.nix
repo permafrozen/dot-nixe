@@ -17,6 +17,9 @@
           # Enable all Extensions
           "extensions.autoDisableScopes" = 0;
 
+          # Enable custom css
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
           # Default Page
           "browser.startup.homepage" = "about:newtab";
           "browser.startup.blankWindow" = true;
