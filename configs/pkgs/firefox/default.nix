@@ -192,6 +192,9 @@
           }
         '';
         userContent = ''
+        :root {
+        
+        }
          /* General Styles */
           @-moz-document url("about:newtab"), url("about:blank"), url("about:profiles"), url("about:preferences"), url("about:config") {
               body {
@@ -204,13 +207,79 @@
           }
 
           /* DuckDuckGo */
+          @-moz-document url("https://duckduckgo.com/") {
+            body * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+            }
+          }
           @-moz-document domain(duckduckgo.com) {
             * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
+              border-color: #${config.lib.stylix.colors.base02} !important;
               color: #${config.lib.stylix.colors.base05} !important;
             }
 
+            .search--header {
+              background-color: #${config.lib.stylix.colors.base01} !important; 
+            }
 
+            .search__autocomplete * {
+              background-color: #${config.lib.stylix.colors.base01} !important; 
+            }
+
+            .twMgHM3B8cVRU4iN6brN.YjvCRIuul_goVuf1ESim {
+              background-color: #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .site-wrapper {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              
+            }
+            .header-wrap {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+            }
+
+            .is-related-search-exp.dark-bg .related-searches__item {
+              background-color: #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .ffON2NH02oMAcqyoh2UU.hUUdRtuaOUx7mcSwc56s {
+              background-color: #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .footer, .footer--mobile {
+              background-color: #${config.lib.stylix.colors.base00} !important; 
+            }
+
+            .O9Ipab51rBntYb0pwOQn {
+              background-color: #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .search__button:hover,
+            .search__button:focus,
+            .search--hover .search__button,
+            .search--hover .search__button:focus,
+            .search--header.has-text.search--hover .search__button,
+            .search--header.has-text.search--focus .search__button,
+            .search--header.has-text.search--hover .search__button:hover,
+            .search--header.has-text.search--focus .search__button:hover,
+            .search--home.has-text .search__button,
+            .search--home.has-text .search__button:focus,
+            .search--home.has-text .search__button:hover {
+              background-color:#${config.lib.stylix.colors.base05} !important;
+              color: #${config.lib.stylix.colors.base00} !important;
+            }
+
+            .DrcPyihFGyKMlg6lpwsa:before,
+            .XvPRmQVeIoCP5lQhICTv.ofDl_1VxUG_EKc3b9E3x:before,
+            .RHsWhMlxc4ETEMDS9ltw:before,
+            .RHsWhMlxc4ETEMDS9ltw:after,
+            .header-wrap:after,
+            .header__logo-wrap:after,
+            .cw::after,
+            .zci-wrap,
+            .header__logo {
+              display: none !important;  
+            }
           }
 
           /* Google Domains */
