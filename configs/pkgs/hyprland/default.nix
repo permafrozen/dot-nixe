@@ -47,7 +47,7 @@
           rounding = "${settings.rounding}";
 
           active_opacity = "1";
-          inactive_opacity = "${settings.opacity}";
+          inactive_opacity = "0.5";
           fullscreen_opacity = "1";
 
           drop_shadow = "${settings.shadow}";
@@ -62,7 +62,7 @@
 
           blur = {
             enabled = "true";
-            size = "8";
+            size = "2";
             passes = "1";
             ignore_opacity = "false";
             xray = "true";
