@@ -31,7 +31,7 @@
         "$terminal" = "${settings.terminal}";
 
         general = {
-          border_size = "1";
+          border_size = "2";
           "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
           "col.inactive_border" = "0xff${config.lib.stylix.colors.base00}";
           resize_on_border = "true";
@@ -47,22 +47,22 @@
           rounding = "${settings.rounding}";
 
           active_opacity = "1";
-          inactive_opacity = "0.5";
+          inactive_opacity = "1";
           fullscreen_opacity = "1";
 
           drop_shadow = "${settings.shadow}";
-          shadow_range = "4";
-          shadow_render_power = "4";
+          shadow_range = "16";
+          shadow_render_power = "20";
           shadow_ignore_window = "true";
           "col.shadow" = "0xee${config.lib.stylix.colors.base05}";
-          "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base04}";
+          "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base00}";
 
           dim_inactive = "true";
           dim_strength = "0.2";
 
           blur = {
             enabled = "true";
-            size = "2";
+            size = "${settings.blur}";
             passes = "1";
             ignore_opacity = "false";
             xray = "true";
