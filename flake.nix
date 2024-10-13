@@ -30,7 +30,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            backupFileExtension = "backup";
+            backupFileExtension = "dotnixbk";
             extraSpecialArgs = args;
             users.matteo = import ./configs/common/home.nix;
           };
