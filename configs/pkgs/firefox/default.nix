@@ -282,7 +282,7 @@
             }
           }
 
-          /* Google Domains */
+          /* Google Domains 
           @-moz-document domain(google.com.br), domain(google.com) {
               * {
                   background-color: #${config.lib.stylix.colors.base00} !important;
@@ -296,6 +296,7 @@
                   display: none !important;
               }
           }
+          */
 
           /* GitHub Domain */
           @-moz-document domain(github.com) {
