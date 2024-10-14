@@ -57,7 +57,7 @@
           "col.shadow" = "0xee${config.lib.stylix.colors.base05}";
           "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base00}";
 
-          dim_inactive = "true";
+          dim_inactive = "false";
           dim_strength = "0.2";
 
           blur = {
