@@ -23,6 +23,16 @@
           "terminal.integrated.fontFamily"= "'Hack Nerd Font'";
           "terminal.integrated.smoothScrolling"= "true";
           "window.titleBarStyle"= "custom";
+          "window.menuBarVisibility"= "compact";
+          "workbench.sideBar.location" = "right";
+          "editor.renderControlCharacters" = false;
+          "workbench.editor.showTabs" = "none";
+          "editor.stickyScroll.enabled" = false;
+
+        # Scrollbar Settings
+        "editor.scrollbar.horizontal" = "hidden";
+        "editor.scrollbar.vertical" = "hidden";
+        "editor.minimap.enabled" = false;
 
         # Theme
           "workbench.list.smoothScrolling"= "true";
