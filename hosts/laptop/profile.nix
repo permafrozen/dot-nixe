@@ -25,6 +25,7 @@
     (getPath "ani-cli")
     (getPath "intellij")
     (getPath "bitwarden")
+    (getPath "ncmpcpp")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
