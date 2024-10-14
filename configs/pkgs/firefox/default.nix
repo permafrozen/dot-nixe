@@ -278,7 +278,13 @@
             .header__logo {
               display: none !important;  
             }
+
+            .header-wrap {
+              box-shadow:  0 0 0 #000000 !important;
+            }
           }
+
+          
 
           /* Google Domains 
           @-moz-document domain(google.com.br), domain(google.com) {
