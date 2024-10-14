@@ -16,13 +16,13 @@
   defaultBranch = "main";
 
   # theme
-  wallpaper =     "space.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "eris";               # Color Theme (Chose any from the base16-schemes Package)
+  wallpaper =     "foggy_mountains.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
+  scheme =        "catppuccin-frappe";               # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
   rounding =      "10";                 # Corner rounding
   gaps =          "10";                 # Gaps between windows
-  shadow =        "true";               # Wheater to enable window shadow
+  shadow =        "false";               # Wheater to enable window shadow
   opacity =       "0.7";                # background opacities for supported windows
   blur =          "10";                  # background blur for supported windows
 
