@@ -275,8 +275,6 @@
             .RHsWhMlxc4ETEMDS9ltw:after,
             .header-wrap:after,
             .header__logo-wrap:after,
-            .cw::after,
-            .zci-wrap,
             .header__logo {
               display: none !important;  
             }
