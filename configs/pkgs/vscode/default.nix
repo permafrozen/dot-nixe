@@ -32,6 +32,14 @@
               "activityBar.background"= lib.mkForce "#${config.lib.stylix.colors.base00}";
               "tab.inactiveBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
               "editorGroupHeader.tabsBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "tree.indentGuidesStroke" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "statusBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "editorTitle.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "statusBarItem.remoteBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "dropdown.listBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "titleBar.inactiveBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "breadcrumb.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+              "sideBarSectionHeader.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
             };
           };
           
