@@ -1,22 +1,17 @@
-{ config, pkgs, settings, ... }:
+{ config, pkgs, lib, settings, ... }:
 
 {
   services.mpd = {
     enable = true;
-    # musicDirectory = "/home/${settings.userName}/Music"; # Without this everything is located in /var/lib/mpd/
+    musicDirectory = "/home/${settings.userName}/Music";
     extraConfig = ''
       audio_output {
-          type    "pipewire"
-          name    "PipeWire Sound Server"
-          mixer_type "software"
-        }
-
-      audio_output {
-          type                    "fifo"
-          name                    "my_fifo"
-          path                    "/tmp/mpd.fifo"
-          format                  "44100:16:2"
-      }  
+        type "pipewire"
+        name "My PipeWire Output"
+      }
     '';
+  };
+  home-manager.users.${settings.userName} = {
+    home.file."Music/README.md".text = '' Here belongs the Music for mpd'';
   };
 }
