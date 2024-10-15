@@ -24,6 +24,7 @@
     # (getPath "syncthing")
     (getPath "ani-cli")
     (getPath "bitwarden")
+    (getPath "fastfetch")
 
     # GPU Settings
     (getPath "nvidia")
