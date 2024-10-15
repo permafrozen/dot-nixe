@@ -25,6 +25,7 @@
     (getPath "ani-cli")
     (getPath "intellij")
     (getPath "bitwarden")
+    (getPath "fastfetch")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
