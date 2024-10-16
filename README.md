@@ -65,7 +65,6 @@ sudo nixos-rebuild switch --flake .
 nix flake update
 ```
 ## Showcase
-![screenshot 1](assets/showcase/showcase_1.png)
 ![screenshot 1](assets/showcase/showcase_grey.png)
 
 ## License
