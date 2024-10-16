@@ -23,7 +23,7 @@
   rounding =      "10";                           # Corner rounding
   gaps =          "10";                           # Gaps between windows
   shadow =        "false";                        # Wheater to enable window shadow
-  opacity =       "0.7";                          # background opacities for supported windows
+  opacity =       "0.5";                          # background opacities for supported windows
   blur =          "10";                           # background blur for supported windows
 
     # Setup Specific Hyprland Config
