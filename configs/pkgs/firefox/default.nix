@@ -305,10 +305,17 @@
           /* GitHub Domain */
           @-moz-document domain(github.com) {
               * {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
                   border-color: #${config.lib.stylix.colors.base05} !important;
                   color: #${config.lib.stylix.colors.base05} !important;
               }
+
+              .feed-left-sidebar, .AppHeader-globalBar, .d-md-flex {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+              }
+
+             .input-block {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+             } 
           }
 
           /* Microsoft Teams Domain 
