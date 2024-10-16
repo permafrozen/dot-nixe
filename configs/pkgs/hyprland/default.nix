@@ -27,6 +27,7 @@
 
         # Variables
         "$mainMod" = "SUPER";
+        "$mainMod_SHIFT" = "SUPER_SHIFT";
         "$browser" = "${settings.browser}";
         "$terminal" = "${settings.terminal}";
 
@@ -92,17 +93,25 @@
         };
 
         bind = [
-          # Important Keybinds
+          # Executables
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
+
+          # Window/Session killing
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
+
+          # Fullscreen Controls
           "$mainMod, F, fullscreen,"
+          "$mainMod_SHIFT, F, fullscreen, 1"
+
+          # Resizing Controls
+          # TODO
 
           # Screenshot keybinds
           "$mainMod, PRINT, exec, hyprshot -m region"
           
-          # vim binds for window focus 
+          # Windowfocus Controls (vim like)
           "$mainMod, H, movefocus, l"
           "$mainMod, J, movefocus, d"
           "$mainMod, K, movefocus, u"
