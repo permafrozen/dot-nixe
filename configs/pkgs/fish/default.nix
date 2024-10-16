@@ -7,6 +7,9 @@
         enable = true;
         shellAliases = {
           tt = "tt -notheme";
+          train = "sl -e";
+          bonsai = "cbonsai -l";
+          matrix = "cmatrix -s";
         };
         shellInit = ''
           set -U fish_greeting
@@ -37,8 +40,11 @@
   environment.systemPackages = with pkgs; [
     acpi
     bat
+    cbonsai
+    cmatrix
     git
     nurl
+    sl
     tree
     vim
     wget
