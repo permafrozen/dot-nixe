@@ -291,7 +291,7 @@
               * {
                   background-color: #${config.lib.stylix.colors.base00} !important;
                   border-color: #${config.lib.stylix.colors.base00} !important;
-                  color: #${config.lib.stylix.colors.base05} !important;
+                  color: #${config.lib.stylix.colors.base03} !important;
               }
               span {
                   color: #${config.lib.stylix.colors.base04} !important;
@@ -304,18 +304,60 @@
 
           /* GitHub Domain */
           @-moz-document domain(github.com) {
-              * {
-                  border-color: #${config.lib.stylix.colors.base05} !important;
-                  color: #${config.lib.stylix.colors.base05} !important;
+            * {
+                border-color: #${config.lib.stylix.colors.base03} !important;
+                color: #${config.lib.stylix.colors.base05} !important;
               }
 
-              .feed-left-sidebar, .AppHeader-globalBar, .d-md-flex {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
+              .feed-left-sidebar,
+              .AppHeader-globalBar,
+              .d-md-flex,
+              .AppHeader,
+              .application-main,
+              body {
+                background-color: #${config.lib.stylix.colors.base00} !important;
               }
 
-             .input-block {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
-             } 
+
+            .rounded-1,
+            .Box-body,
+            .Box {
+              background-color: #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .rounded-2 {
+              background-color: #${config.lib.stylix.colors.base02} !important;
+            }
+
+            .ContributionCalendar-day[data-level="0"] {
+              fill: #${config.lib.stylix.colors.base00} !important;
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              outline: 1px solid #${config.lib.stylix.colors.base01} !important;
+            }
+
+            .ContributionCalendar-day[data-level="1"] {
+              fill: #${config.lib.stylix.colors.base01} !important;
+              background-color: #${config.lib.stylix.colors.base01} !important;
+              outline: 1px solid #${config.lib.stylix.colors.base02} !important;
+            }
+
+            .ContributionCalendar-day[data-level="2"] {
+              fill: #${config.lib.stylix.colors.base02} !important;
+              background-color: #${config.lib.stylix.colors.base02} !important;
+              outline: 1px solid #${config.lib.stylix.colors.base03} !important;
+            }
+
+            .ContributionCalendar-day[data-level="3"] {
+              fill: #${config.lib.stylix.colors.base03} !important;
+              background-color: #${config.lib.stylix.colors.base03} !important;
+              outline: 1px solid #${config.lib.stylix.colors.base04} !important;
+            }
+
+            .ContributionCalendar-day[data-level="4"] {
+              fill: #${config.lib.stylix.colors.base04} !important;
+              background-color: #${config.lib.stylix.colors.base04} !important;
+              outline: 1px solid #${config.lib.stylix.colors.base05} !important;
+            }
           }
 
           /* Microsoft Teams Domain 
