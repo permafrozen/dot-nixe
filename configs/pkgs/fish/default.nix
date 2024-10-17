@@ -8,7 +8,7 @@
         shellAliases = {
           tt = "tt -notheme";
           train = "sl -e";
-          bonsai = "cbonsai -l";
+          bonsai = "cbonsai -S";
           matrix = "cmatrix -s";
         };
         shellInit = ''
