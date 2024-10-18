@@ -28,6 +28,7 @@
           "editor.renderControlCharacters" = false;
           "workbench.editor.showTabs" = "none";
           "editor.stickyScroll.enabled" = false;
+          "editor.lineNumbers"= "relative";
 
         # Scrollbar Settings
         "editor.scrollbar.horizontal" = "hidden";
@@ -53,7 +54,7 @@
             };
           };
           
-        # Keybinds
+        # Vim Keybinds Plugin
         "vim.useCtrlKeys"= false;
       };
     };
