@@ -331,61 +331,113 @@
 
           /* GitHub Domain */
           @-moz-document domain(github.com) {
-            * {
-                border-color: #${config.lib.stylix.colors.base03} !important;
-                color: #${config.lib.stylix.colors.base05} !important;
-              }
-
-              .feed-left-sidebar,
-              .AppHeader-globalBar,
-              .d-md-flex,
-              .AppHeader,
-              .application-main,
-              body {
-                background-color: #${config.lib.stylix.colors.base00} !important;
-              }
-
-
-            .rounded-1,
-            .Box-body,
-            .Box {
-              background-color: #${config.lib.stylix.colors.base01} !important;
+            :root {
+              --base00: #${config.lib.stylix.colors.base00};
+              --base01: #${config.lib.stylix.colors.base01};
+              --base02: #${config.lib.stylix.colors.base02};
+              --base03: #${config.lib.stylix.colors.base03};
+              --base04: #${config.lib.stylix.colors.base04};
+              --base05: #${config.lib.stylix.colors.base05};
+              --base0D: #${config.lib.stylix.colors.base0D};
             }
 
-            .rounded-2 {
-              background-color: #${config.lib.stylix.colors.base02} !important;
+            * {
+              border-color: var(--base03) !important;
+              color: var(--base05) !important;
+            }
+
+            .feed-left-sidebar,
+            .AppHeader-globalBar,
+            .d-md-flex,
+            .AppHeader,
+            .application-main,
+            .rounded-1,
+            .d-flex,
+            .d-block,
+            .px-3,
+            .eAZKiL,
+            .hdShgm,
+            kbd,
+            body,
+            html {
+              background-color: var(--base00) !important;
+            }
+
+            .input-block {
+              background-color: var(--base01) !important;
+              color: var(--base05) !important;
+            }
+
+            .Box-body,
+            .Box,
+            .markdown-body,
+            .highlight,
+            .QkQOb,
+            .duyuyF,
+            .kRIEXD,
+            .dJnomT,
+            .klSCQM,
+            .fJiNYL,
+            .hROVzf,
+            .cDbgyb,
+            .d-none,
+            .hQsKGs,
+            .drIBIt,
+            .btn,
+            .rounded-2.py-1 > *,
+            .rounded-2.py-1 .rounded-1,
+            .rounded-2.py-1 .d-flex,
+            .rounded-2.py-1 .d-block,
+            .rounded-2 .flex-1,
+            .px-3,
+            .d-flex.flex-shrink-0.gap-2,
+            .QueryBuilder-StyledInput,
+            .d-flex.flex-nowrap.fgColor-muted.f6 {
+              background-color: var(--base01) !important;
+            }
+
+            .rounded-2,
+            .rounded-top-2 {
+              background-color: var(--base01) !important;
+            }
+
+            .hSRgxc {
+              background-color: var(--base0D) !important;
+            }
+
             }
 
             .ContributionCalendar-day[data-level="0"] {
-              fill: #${config.lib.stylix.colors.base00} !important;
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              outline: 1px solid #${config.lib.stylix.colors.base01} !important;
+              fill: var(--base00) !important;
+              background-color: var(--base00) !important;
+              outline: 1px solid var(--base01) !important;
             }
 
             .ContributionCalendar-day[data-level="1"] {
-              fill: #${config.lib.stylix.colors.base01} !important;
-              background-color: #${config.lib.stylix.colors.base01} !important;
-              outline: 1px solid #${config.lib.stylix.colors.base02} !important;
+              fill: var(--base01) !important;
+              background-color: var(--base01) !important;
+              outline: 1px solid var(--base02) !important;
             }
 
             .ContributionCalendar-day[data-level="2"] {
-              fill: #${config.lib.stylix.colors.base02} !important;
-              background-color: #${config.lib.stylix.colors.base02} !important;
-              outline: 1px solid #${config.lib.stylix.colors.base03} !important;
+              fill: var(--base02) !important;
+              background-color: var(--base02) !important;
+              outline: 1px solid var(--base03) !important;
             }
 
             .ContributionCalendar-day[data-level="3"] {
-              fill: #${config.lib.stylix.colors.base03} !important;
-              background-color: #${config.lib.stylix.colors.base03} !important;
-              outline: 1px solid #${config.lib.stylix.colors.base04} !important;
+              fill: var(--base03) !important;
+              background-color: var(--base03) !important;
+              outline: 1px solid var(--base04) !important;
             }
 
             .ContributionCalendar-day[data-level="4"] {
-              fill: #${config.lib.stylix.colors.base04} !important;
-              background-color: #${config.lib.stylix.colors.base04} !important;
-              outline: 1px solid #${config.lib.stylix.colors.base05} !important;
+              fill: var(--base04) !important;
+              background-color: var(--base04) !important;
+              outline: 1px solid var(--base05) !important;
             }
           }
+ 
 
           /* Microsoft Teams Domain 
           @-moz-document domain(teams.microsoft.com) {
