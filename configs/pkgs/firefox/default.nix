@@ -389,7 +389,7 @@
             .rounded-2.py-1 .d-flex,
             .rounded-2.py-1 .d-block,
             .rounded-2 .flex-1,
-            .px-3,
+            .rounded-2 .px-3,
             .d-flex.flex-shrink-0.gap-2,
             .QueryBuilder-StyledInput,
             .d-flex.flex-nowrap.fgColor-muted.f6 {
