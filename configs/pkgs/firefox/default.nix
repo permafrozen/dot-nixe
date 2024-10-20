@@ -365,7 +365,10 @@
             .border-top.color-border-muted.pt-3.mt-3.d-none.d-md-block,
             .js-profile-timeline-year-list.color-bg-default.js-sticky,
             .color-bg-default.pl-2.pr-3,
-            .color-bg-default {
+            .color-bg-default,
+            .Overlay-headerContentWrap,
+            .List__ListBox-sc-1x7olzq-0.gAwGiF,
+            .Overlay.Overlay-whenNarrow.Overlay--size-small-portrait.Overlay--motion-scaleFade.Overlay--placement-left.SidePanel {
               background-color: var(--base00) !important;
             }
 
@@ -412,7 +415,8 @@
             .form-control.width-full,
             .topic-tag,
             .Button,
-            .FormControl-input {
+            .FormControl-input,
+            .AppHeader-searchButton {
               background-color: var(--base01) !important;
             }
 
