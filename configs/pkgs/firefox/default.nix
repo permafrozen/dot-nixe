@@ -416,6 +416,11 @@
             .topic-tag,
             .Button,
             .FormControl-input,
+            .Box-sc-g0xbh4-0.gpHFJV,
+            .Box-sc-g0xbh4-0.eoaCFS,
+            .Box-sc-g0xbh4-0.jodZGf,
+            .Box-sc-g0xbh4-0.cOgqet,
+            .segmentedControl-content,
             .AppHeader-searchButton {
               background-color: var(--base01) !important;
             }
