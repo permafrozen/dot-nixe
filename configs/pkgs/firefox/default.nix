@@ -359,7 +359,13 @@
             .hdShgm,
             kbd,
             body,
-            html {
+            html,
+            .d-none.d-lg-block,
+            .js-profile-timeline-year-list.color-bg-default.js-sticky.is-stuck,
+            .border-top.color-border-muted.pt-3.mt-3.d-none.d-md-block,
+            .js-profile-timeline-year-list.color-bg-default.js-sticky,
+            .color-bg-default.pl-2.pr-3,
+            .color-bg-default {
               background-color: var(--base00) !important;
             }
 
@@ -369,7 +375,10 @@
             }
 
             .Box-body,
+            .box-body .d-flex.flex-justify-between,
             .Box,
+            .Box .flex-1,
+            .Box .d-flex,
             .markdown-body,
             .highlight,
             .QkQOb,
@@ -392,7 +401,18 @@
             .rounded-2 .px-3,
             .d-flex.flex-shrink-0.gap-2,
             .QueryBuilder-StyledInput,
-            .d-flex.flex-nowrap.fgColor-muted.f6 {
+            .d-flex.flex-nowrap.fgColor-muted.f6,
+            .pl-lg-3.col-6.border-lg-left,
+            .js-activity-overview-graph.mx-auto.d-block,
+            .border.py-2.graph-before-activity-overview,
+            .border.py-2.graph-before-activity-overview > *,
+            .js-calendar-graph *,
+            .user-status-circle-badge,
+            .user-status-emoji-container,
+            .form-control.width-full,
+            .topic-tag,
+            .Button,
+            .FormControl-input {
               background-color: var(--base01) !important;
             }
 
@@ -401,8 +421,14 @@
               background-color: var(--base01) !important;
             }
 
-            .hSRgxc {
+            .hSRgxc,
+            .Progress-item.rounded-2,
+            .js-highlight-blob,
+            .activity-overview-point,
+            .activity-overview-axis {
               background-color: var(--base0D) !important;
+              fill: var(--base0D) !important;
+              stroke: var(--base0D) !important;
             }
 
             }
