@@ -421,6 +421,7 @@
             .Box-sc-g0xbh4-0.jodZGf,
             .Box-sc-g0xbh4-0.cOgqet,
             .segmentedControl-content,
+            .Box-sc-g0xbh4-0.eHDvEW,
             .AppHeader-searchButton {
               background-color: var(--base01) !important;
             }
