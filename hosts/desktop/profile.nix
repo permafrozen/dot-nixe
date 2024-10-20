@@ -25,6 +25,8 @@
     (getPath "ani-cli")
     (getPath "bitwarden")
     (getPath "fastfetch")
+    (getPath "mpd")
+    (getPath "ncmpcpp")
 
     # GPU Settings
     (getPath "nvidia")
