@@ -86,6 +86,7 @@
     cmatrix
     git
     nurl
+    nix-output-monitor
     sl
     tree
     vim
