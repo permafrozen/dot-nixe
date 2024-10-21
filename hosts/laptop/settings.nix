@@ -24,7 +24,6 @@
   gaps =          "10";                           # Gaps between windows
   shadow =        "false";                        # Wheater to enable window shadow
   opacity =       "0.5";                          # background opacities for supported windows
-  blur =          "10";                           # background blur for supported windows
 
     # Setup Specific Hyprland Config
   hyprConfig = ''
