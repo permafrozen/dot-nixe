@@ -63,8 +63,12 @@
 
           blur = {
             enabled = "true";
-            size = "${settings.blur}";
-            passes = "1";
+            size = "2";
+            passes = "3";
+            noise = "0";
+            contrast = "1.69";
+            vibrancy = "0.1069";
+            vibrancy_darkness = "0.1069";
             ignore_opacity = "false";
             xray = "true";
             popups = "true";
