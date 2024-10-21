@@ -2,11 +2,11 @@
   description = "Main NixOS configuration Flake";
 
   inputs  = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = { 
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nur.url = github:nix-community/NUR;
     stylix.url = "github:danth/stylix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
