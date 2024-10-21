@@ -1,6 +1,10 @@
 { config, pkgs, lib, settings, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    mpc-cli
+  ];
+
   services.mpd = {
     enable = true;
     musicDirectory = "/home/${settings.userName}/Music";
@@ -13,16 +17,6 @@
       }
     '';
   };
-
-  # home-manager.users.${settings.userName}.home.file.".config/mpd/mpd.conf".text = ''
-  #   bind_to_address "localhost"
-  #   port "6600"
-  #   music_directory "/home/${settings.userName}/Music"
-  #   audio_output {
-  #     type "pipewire"
-  #     name "My PipeWire Output"
-  #   } 
-  # '';
 
   systemd = {
     services = {
