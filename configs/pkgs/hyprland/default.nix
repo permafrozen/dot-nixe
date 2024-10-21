@@ -23,7 +23,18 @@
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       enable = true;
+      plugins = [ pkgs.hyprlandPlugins.hypr-dynamic-cursors ];
       settings = {
+
+        plugin = {
+          dynamic-cursors = {
+            enabled = true;
+             mode = "stretch"; # tilt, rotate, stretch, none
+            shake = {
+              enabled = false;
+            };
+          };
+        };
 
         # Variables
         "$mainMod" = "SUPER";
@@ -80,19 +91,19 @@
           first_launch_animation = "true";
 
           bezier = [
-            "overshoot, 0.01,-0.11,0.23,1.23"
-            "overshoot2, 0.51,0.23,0.23,1.28"
+            "easeOutQuart, 0.25, 1.0, 0.5, 1.0"
+            "easeOutExpo, 0.16, 1.0, 0.3, 1.0"
           ];
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 5, overshoot2, slide"
-            "windowsOut, 1, 5, overshoot2, slide"
-            "windowsMove, 1, 5, overshoot2, slide"
+            "windowsIn, 1, 5, easeOutQuart, slide"
+            "windowsOut, 1, 5, easeOutQuart, slide"
+            "windowsMove, 1, 5, easeOutQuart, slide"
 
             # Workspaces in & out
-            "workspacesIn, 1, 6, overshoot, slidefade"
-            "workspacesOut, 1, 6, overshoot, slidefade"
+            "workspacesIn, 1, 6, easeOutExpo, slide"
+            "workspacesOut, 1, 6, easeOutExpo, slide"
           ];
         };
 
