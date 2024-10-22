@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ config, pkgs, lib, settings, ...}:
 
 let 
   stylixConfig = {
@@ -28,6 +28,7 @@ in {
         gtk.enable = true;
         gnome.enable = true;
         kde.enable = true;
+        vscode.enable = true;
       };
     };
 
@@ -73,6 +74,29 @@ in {
           set -U fish_pager_color_selected_description ${config.lib.stylix.colors.base0A}
           set -U fish_pager_color_secondary_prefix ${config.lib.stylix.colors.base06}
         '';
+      };
+    };
+
+    # Vscode Stylix Config
+    programs.vscode = {
+      userSettings = {
+        "workbench.list.smoothScrolling"= "true";
+        "workbench.colorCustomizations" = {
+          "[Stylix]" = {
+            "sideBar.background"= lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "activityBar.background"= lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "tab.inactiveBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "editorGroupHeader.tabsBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "tree.indentGuidesStroke" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "statusBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "editorTitle.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "statusBarItem.remoteBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "dropdown.listBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "titleBar.inactiveBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "breadcrumb.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "sideBarSectionHeader.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+          };
+        };
       };
     };
   };
