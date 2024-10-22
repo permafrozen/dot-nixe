@@ -16,44 +16,25 @@
       ];
       userSettings = {
         # Editor Settigns
-          "editor.cursorBlinking"= "phase";
-          "editor.cursorSmoothCaretAnimation"= "on";
-          "editor.fontFamily"= "'Hack Nerd Font'";
-          "editor.smoothScrolling"= "true";
-          "terminal.integrated.fontFamily"= "'Hack Nerd Font'";
-          "terminal.integrated.smoothScrolling"= "true";
-          "window.titleBarStyle"= "custom";
-          "window.menuBarVisibility"= "compact";
-          "workbench.sideBar.location" = "right";
-          "editor.renderControlCharacters" = false;
-          "workbench.editor.showTabs" = "none";
-          "editor.stickyScroll.enabled" = false;
-          "editor.lineNumbers"= "relative";
+        "editor.cursorBlinking"= "phase";
+        "editor.cursorSmoothCaretAnimation"= "on";
+        "editor.fontFamily"= "'Hack Nerd Font'";
+        "editor.smoothScrolling"= "true";
+        "terminal.integrated.fontFamily"= "'Hack Nerd Font'";
+        "terminal.integrated.smoothScrolling"= "true";
+        "window.titleBarStyle"= "custom";
+        "window.menuBarVisibility"= "compact";
+        "workbench.sideBar.location" = "right";
+        "editor.renderControlCharacters" = false;
+        "workbench.editor.showTabs" = "none";
+        "editor.stickyScroll.enabled" = false;
+        "editor.lineNumbers"= "relative";
 
         # Scrollbar Settings
         "editor.scrollbar.horizontal" = "hidden";
         "editor.scrollbar.vertical" = "hidden";
         "editor.minimap.enabled" = false;
 
-        # Theme
-          "workbench.list.smoothScrolling"= "true";
-          "workbench.colorCustomizations" = {
-            "[Stylix]" = {
-              "sideBar.background"= lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "activityBar.background"= lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "tab.inactiveBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "editorGroupHeader.tabsBackground"= lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "tree.indentGuidesStroke" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "statusBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "editorTitle.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "statusBarItem.remoteBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "dropdown.listBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "titleBar.inactiveBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "breadcrumb.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-              "sideBarSectionHeader.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
-            };
-          };
-          
         # Vim Keybinds Plugin
         "vim.useCtrlKeys"= false;
       };
