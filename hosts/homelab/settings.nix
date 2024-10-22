@@ -15,8 +15,4 @@
   gitMail =       "none";
   defaultBranch = "main";
 
-  # theme
-  wallpaper =     "foggy_mountains.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "catppuccin-frappe";            # Color Theme (Chose any from the base16-schemes Package)
-
 }
