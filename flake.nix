@@ -32,7 +32,7 @@
             useUserPackages = true;
             backupFileExtension = "dotnixbk";
             extraSpecialArgs = args;
-            users.matteo = import ./configs/common/home.nix;
+            users.${settings.userName} = import ./configs/common/home.nix;
           };
         }
       ];
