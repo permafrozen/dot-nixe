@@ -12,6 +12,6 @@
     (getPath "git")
     (getPath "syncthing")
     (getPath "fastfetch")
-    (getPath "ssh")
+    (getPath "sshd")
   ];
 }
