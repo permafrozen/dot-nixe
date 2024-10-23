@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, settings, ... }:
 
 {
   services = {
@@ -8,7 +8,7 @@
 
     # Autologin
     displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "eric";
+    displayManager.autoLogin.user = "${settings.userName}";
   };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
