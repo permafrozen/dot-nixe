@@ -26,6 +26,7 @@
     (getPath "intellij")
     (getPath "bitwarden")
     (getPath "fastfetch")
+    (getPath "nh")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
