@@ -27,6 +27,7 @@
     (getPath "fastfetch")
     (getPath "mpd")
     (getPath "ncmpcpp")
+    (getPath "nh")
 
     # GPU Settings
     (getPath "nvidia")
