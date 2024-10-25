@@ -20,7 +20,11 @@ let
     };
   };
 in {
-  stylix = stylixConfig;
+  stylix = stylixConfig // {
+    targets = {
+      console.enable = true;
+    };
+  };
 
   home-manager.users.${settings.userName} = {
     stylix = stylixConfig // {
