@@ -28,6 +28,7 @@
     (getPath "mpd")
     (getPath "ncmpcpp")
     (getPath "nh")
+    (getPath "steam")
 
     # GPU Settings
     (getPath "nvidia")
