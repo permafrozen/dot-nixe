@@ -12,6 +12,7 @@
           };
         };
         shellAliases = {
+          neofetch = "clear && fastfetch";
           tt = "tt -notheme";
           train = "sl -e";
           bonsai = "cbonsai -S";
@@ -39,18 +40,20 @@
   environment.systemPackages = with pkgs; [
     acpi
     bat
-    cbonsai
-    cmatrix
+    file
     git
     nurl
     nix-output-monitor
-    sl
     tree
     vim
     wget
-    tt
-
-    # temp
     mdbook
+    # Silly gimick stuff
+    figlet
+    jp2a
+    sl
+    cbonsai
+    cmatrix
+    tt
   ];
 }
