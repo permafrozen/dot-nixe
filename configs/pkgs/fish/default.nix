@@ -49,5 +49,8 @@
     vim
     wget
     tt
+
+    # temp
+    mdbook
   ];
 }
