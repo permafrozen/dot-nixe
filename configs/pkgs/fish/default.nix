@@ -16,7 +16,7 @@
           tt = "tt -notheme";
           train = "sl -e";
           bonsai = "cbonsai -S";
-          matrix = "cmatrix -s";
+          matrix = "cmatrix -s -C blue";
         };
         shellInit = ''
           set -U fish_greeting
