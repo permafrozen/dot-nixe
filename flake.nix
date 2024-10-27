@@ -16,6 +16,16 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    hyprfocus = { 
+      url = "github:pyt0xic/hyprfocus";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hyprland-easymotion = {
+      url = "github:zakk4223/hyprland-easymotion";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nur.url = github:nix-community/NUR;
     stylix.url = "github:danth/stylix";
