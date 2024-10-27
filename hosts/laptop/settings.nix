@@ -17,7 +17,7 @@
 
   # theme
   wallpaper =     "starry-night.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "ashes";                        # Color Theme (Chose any from the base16-schemes Package)
+  scheme =        "ayu-dark";                        # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
   rounding =      "10";                           # Corner rounding
