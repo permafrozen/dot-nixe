@@ -30,7 +30,7 @@
       XDG_SESSION_DESKTOP = "Hyprland";
     };
   };
-
+  
   # Hyprland Home-Manager Module
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
@@ -41,19 +41,66 @@
 
       plugins = [
         inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+        inputs.hyprfocus.packages.${pkgs.system}.hyprfocus
+        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
       ];
 
       settings = {
 
         plugin = {
-         dynamic-cursors = {
-           enabled = true;
-            mode = "stretch"; # tilt, rotate, stretch, none
-           shake = {
-             enabled = false;
-           };
-         };
+          dynamic-cursors = {
+            enabled = true;
+              mode = "stretch"; # tilt, rotate, stretch, none
+            shake = {
+              enabled = false;
+            };
+          };
+
+          hyprfocus = {
+            enabled = "yes";
+            animate_floating = "yes";
+            animate_workspacechange = "yes";
+            focus_animation = "shrink";
+            # Beziers for focus animations
+            bezier = [
+              "bezIn, 0.5,0.0,1.0,0.5"
+              "bezOut, 0.0,0.5,0.5,1.0"
+              "overshot, 0.05, 0.9, 0.1, 1.05"
+              "smoothOut, 0.36, 0, 0.66, -0.56"
+              "smoothIn, 0.25, 1, 0.5, 1"
+              "realsmooth, 0.28,0.29,.69,1.08"
+            ];
+            # Flash settings
+            flash = {
+              flash_opacity = "0.95";
+              in_bezier = "realsmooth";
+              in_speed = "0.5";
+              out_bezier = "realsmooth";
+              out_speed = "3";
+            };
+            # Shrink settings
+            shrink = {
+              shrink_percentage = "0.95";
+              in_bezier = "realsmooth";
+              in_speed = "1";
+              out_bezier = "realsmooth";
+              out_speed = "2";
+            };
+          };
+
+          easymotion = {
+            textsize = "15";
+            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
+            bgcolor = "rgba(${config.lib.stylix.colors.base00}ff)";
+            textfont = "Hack Nerd Font";
+            textpadding = "2 2 2 2"; # in px
+            bordersize = "0";
+            bordercolor = "rgba(${config.lib.stylix.colors.base00}ff)";
+            rounding = "${settings.rounding}";
+            motionkeys = "abcdefghijklmnopqrstuvwxyz1234567890"; # Keys to use
+          };
         };
+
 
         # Variables
         "$mainMod" = "SUPER";
@@ -145,7 +192,8 @@
           # Screenshot keybinds
           "$mainMod, PRINT, exec, hyprshot -m region"
           
-          # Windowfocus Controls (vim like)
+          # Windowfocus Controls
+          "$mainMod, V, easymotion, action:hyprctl dispatch focuswindow address:{},"
           "$mainMod, H, movefocus, l"
           "$mainMod, J, movefocus, d"
           "$mainMod, K, movefocus, u"
