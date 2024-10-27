@@ -16,14 +16,14 @@
   defaultBranch = "main";
 
   # theme
-  wallpaper =     "foggy_mountains.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "catppuccin-frappe";            # Color Theme (Chose any from the base16-schemes Package)
+  wallpaper =     "starry-night.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
+  scheme =        "ayu-dark";                        # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
   rounding =      "10";                           # Corner rounding
   gaps =          "10";                           # Gaps between windows
   shadow =        "false";                        # Wheater to enable window shadow
-  opacity =       "0.5";                          # background opacities for supported windows
+  opacity =       "0.8";                          # background opacities for supported windows
 
   # Setup Specific Hyprland Config
   hyprConfig = ''
