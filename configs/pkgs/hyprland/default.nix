@@ -1,14 +1,25 @@
-{ config, pkgs, settings, ...}:
+{ inputs, config, pkgs, settings, ...}:
 
 {
+  # Hyprland Cache, so I don't have to compile it
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
 
+  # Hyprland NixOS Module
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+
+    # Flake Inputs -> Hyprland Package
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
+  # Extra packages used
   environment.systemPackages = with pkgs; [
-    hyprshot # for screenshots
+    hyprshot
   ];
 
   # For Screenshare
@@ -20,20 +31,28 @@
     };
   };
 
+  # Hyprland Home-Manager Module
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       enable = true;
-      plugins = [ pkgs.hyprlandPlugins.hypr-dynamic-cursors ];
+
+      # Flake Input -> Hyprland package
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+
+      plugins = [
+        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+      ];
+
       settings = {
 
         plugin = {
-          dynamic-cursors = {
-            enabled = true;
-             mode = "stretch"; # tilt, rotate, stretch, none
-            shake = {
-              enabled = false;
-            };
-          };
+         dynamic-cursors = {
+           enabled = true;
+            mode = "stretch"; # tilt, rotate, stretch, none
+           shake = {
+             enabled = false;
+           };
+         };
         };
 
         # Variables
@@ -58,8 +77,8 @@
         decoration = {
           rounding = "${settings.rounding}";
 
-          active_opacity = "1";
-          inactive_opacity = "1";
+          active_opacity = "${settings.opacity}";
+          inactive_opacity = "${settings.opacity}";
           fullscreen_opacity = "1";
 
           drop_shadow = "${settings.shadow}";
@@ -186,6 +205,8 @@
 
         windowrulev2 = [
           "maximize, class:^(mpv)$" # For watching anime
+          "opacity 1 1 1, class:^(foot)"
+          "opacity 1 1 1, class:^(kitty)"
           "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
         ];
       };
