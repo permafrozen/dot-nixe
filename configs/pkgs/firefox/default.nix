@@ -368,7 +368,11 @@
             .color-bg-default,
             .Overlay-headerContentWrap,
             .List__ListBox-sc-1x7olzq-0.gAwGiF,
-            .Overlay.Overlay-whenNarrow.Overlay--size-small-portrait.Overlay--motion-scaleFade.Overlay--placement-left.SidePanel {
+            .Overlay.Overlay-whenNarrow.Overlay--size-small-portrait.Overlay--motion-scaleFade.Overlay--placement-left.SidePanel,
+            .gh-header-shadow.color-shadow-small.js-notification-shelf-offset-top,
+            .discussion-timeline-actions,
+            .d-flex.flex-items-center.flex-wrap.mt-0.gh-header-meta,
+            .partial-discussion-header {
               background-color: var(--base00) !important;
             }
 
