@@ -17,11 +17,6 @@
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  # Extra packages used
-  environment.systemPackages = with pkgs; [
-    hyprshot
-  ];
-
   # For Screenshare
   environment = {
     variables = {
@@ -61,7 +56,6 @@
             animate_floating = "yes";
             animate_workspacechange = "yes";
             focus_animation = "shrink";
-            # Beziers for focus animations
             bezier = [
               "bezIn, 0.5,0.0,1.0,0.5"
               "bezOut, 0.0,0.5,0.5,1.0"
@@ -70,7 +64,6 @@
               "smoothIn, 0.25, 1, 0.5, 1"
               "realsmooth, 0.28,0.29,.69,1.08"
             ];
-            # Flash settings
             flash = {
               flash_opacity = "0.95";
               in_bezier = "realsmooth";
@@ -78,9 +71,8 @@
               out_bezier = "realsmooth";
               out_speed = "3";
             };
-            # Shrink settings
             shrink = {
-              shrink_percentage = "0.95";
+              shrink_percentage = "0.99";
               in_bezier = "realsmooth";
               in_speed = "1";
               out_bezier = "realsmooth";
@@ -89,13 +81,13 @@
           };
 
           easymotion = {
-            textsize = "15";
+            textsize = "25";
             textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
             bgcolor = "rgba(${config.lib.stylix.colors.base00}ff)";
             textfont = "Hack Nerd Font";
-            textpadding = "2 2 2 2"; # in px
-            bordersize = "0";
-            bordercolor = "rgba(${config.lib.stylix.colors.base00}ff)";
+            textpadding = "5 5 5 5"; # in px
+            bordersize = "2";
+            bordercolor = "rgba(${config.lib.stylix.colors.base0D}ff)";
             rounding = "${settings.rounding}";
             motionkeys = "abcdefghijklmnopqrstuvwxyz1234567890"; # Keys to use
           };
@@ -190,7 +182,7 @@
           # TODO
 
           # Screenshot keybinds
-          "$mainMod, PRINT, exec, hyprshot -m region"
+          "$mainMod, PRINT, exec, grim -g \"$(slurp -o -r -c '##ff0000ff')\" -t ppm - | satty --filename -"
           
           # Windowfocus Controls
           "$mainMod, V, easymotion, action:hyprctl dispatch focuswindow address:{},"
