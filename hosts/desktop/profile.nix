@@ -28,7 +28,6 @@
     (getPath "mpd")
     (getPath "ncmpcpp")
     (getPath "nh")
-    (getPath "flameshot")
 
     # GPU Settings
     (getPath "nvidia")

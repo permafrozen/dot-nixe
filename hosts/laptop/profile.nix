@@ -27,7 +27,6 @@
     (getPath "bitwarden")
     (getPath "fastfetch")
     (getPath "nh")
-    (getPath "flameshot")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
