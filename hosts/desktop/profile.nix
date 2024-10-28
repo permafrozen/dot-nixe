@@ -28,6 +28,7 @@
     (getPath "mpd")
     (getPath "ncmpcpp")
     (getPath "nh")
+    (getPath "satty")
 
     # GPU Settings
     (getPath "nvidia")
