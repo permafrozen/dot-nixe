@@ -23,12 +23,12 @@
     (getPath "git")
     # (getPath "syncthing")
     (getPath "ani-cli")
-    (getPath "bitwarden")
-    (getPath "fastfetch")
     (getPath "mpd")
     (getPath "ncmpcpp")
+    (getPath "fastfetch")
     (getPath "nh")
     (getPath "satty")
+    (getPath "hyprlock")
 
     # GPU Settings
     (getPath "nvidia")

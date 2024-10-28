@@ -28,6 +28,7 @@
     (getPath "fastfetch")
     (getPath "nh")
     (getPath "satty")
+    (getPath "hyprlock")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
