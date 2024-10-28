@@ -138,7 +138,7 @@
             contrast = "1.69";
             vibrancy = "0.1069";
             vibrancy_darkness = "0.1069";
-            ignore_opacity = "false";
+            ignore_opacity = "true";
             xray = "true";
             popups = "true";
           };
