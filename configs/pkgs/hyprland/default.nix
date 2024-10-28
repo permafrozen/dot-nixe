@@ -169,6 +169,7 @@
           # Executables
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
+          "$mainMod, C, exec, hyprlock"
 
           # Window/Session killing
           "$mainMod, Q, killactive,"
