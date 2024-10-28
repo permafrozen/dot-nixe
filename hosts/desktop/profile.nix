@@ -30,6 +30,7 @@
     (getPath "satty")
     (getPath "hyprlock")
     (getPath "kanata")
+    (getPath "cliphist")
 
     # GPU Settings
     (getPath "nvidia")

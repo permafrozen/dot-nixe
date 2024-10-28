@@ -14,7 +14,6 @@
       early-exit = true
       initial-tool = "brush"
 
-      # Configure the command to be called on copy, for example `wl-copy`
       copy-command = "wl-copy"
 
       # Increase or decrease the size of the annotations

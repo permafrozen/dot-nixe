@@ -30,6 +30,7 @@
     (getPath "satty")
     (getPath "hyprlock")
     (getPath "kanata")
+    (getPath "cliphist")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
