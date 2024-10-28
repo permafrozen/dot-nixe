@@ -16,7 +16,7 @@
   defaultBranch = "main";
 
   # theme
-  wallpaper =     "starry-night.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
+  wallpaper =     "rural-night.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =        "ayu-dark";                        # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
