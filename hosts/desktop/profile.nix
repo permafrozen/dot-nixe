@@ -29,6 +29,7 @@
     (getPath "nh")
     (getPath "satty")
     (getPath "hyprlock")
+    (getPath "kanata")
 
     # GPU Settings
     (getPath "nvidia")
