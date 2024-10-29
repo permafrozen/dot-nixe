@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    lutris
+    lutris-unwrapped
+    steam
   ];
 }
