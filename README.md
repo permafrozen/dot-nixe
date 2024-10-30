@@ -8,7 +8,7 @@
     ╚═════╝  ╚═════╝    ╚═╝      ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚══════╝
   </pre>
 </div>
-
+# Look: https://permafrozen.github.io/website/
 ## About
 > [!WARNING]
 > I daily drive this configuration, **but you probably don't want to install this! This is WIP and I am only using nixos since 3 months!**
