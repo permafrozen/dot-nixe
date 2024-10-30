@@ -31,7 +31,6 @@
     (getPath "hyprlock")
     (getPath "kanata")
     (getPath "cliphist")
-    (getPath "steam")
     (getPath "nautilus")
 
     # GPU Settings
