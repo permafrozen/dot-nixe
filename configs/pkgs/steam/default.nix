@@ -1,6 +1,10 @@
 { config, pkgs, settings, ...}:
 
 {
+  environment.systemPackages = with pkgs; [
+    bottles-unwrapped
+  ];
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
