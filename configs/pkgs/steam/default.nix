@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     bottles-unwrapped
+    lutris-unwrapped
   ];
 
   programs.steam = {
