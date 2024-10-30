@@ -32,7 +32,7 @@
     (getPath "kanata")
     (getPath "cliphist")
     (getPath "steam")
-    (getPath "dolphin")
+    (getPath "nautilus")
 
     # GPU Settings
     (getPath "nvidia")

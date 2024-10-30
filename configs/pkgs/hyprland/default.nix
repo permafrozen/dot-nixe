@@ -68,6 +68,7 @@
         "$mainMod" = "SUPER";
         "$mainMod_SHIFT" = "SUPER_SHIFT";
         "$browser" = "${settings.browser}";
+        "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
 
         general = {
@@ -139,6 +140,7 @@
           # Executables
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
+          "$mainMod, E, exec, $explorer"
           "$mainMod, C, exec, hyprlock"
 
           # Window/Session killing
