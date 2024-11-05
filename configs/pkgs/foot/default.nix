@@ -8,7 +8,7 @@
   home-manager.users.${settings.userName} = {
     programs.foot = {
       enable = true;
-      server.enable = true;
+      server.enable = false;
       settings = {
         cursor = {
           style = "underline";
