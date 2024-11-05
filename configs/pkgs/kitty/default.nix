@@ -7,7 +7,7 @@
       settings = {
         foreground = lib.mkDefault "#${config.lib.stylix.colors.base05}";
         background = lib.mkDefault "#${config.lib.stylix.colors.base00}";
-        background_opacity = lib.mkForce "${settings.opacity}";
+        background_opacity = lib.mkForce 1;
         background_blur = lib.mkForce 0;
         confirm_os_window_close = "0";
         cursor_shape_unfocused = "unchanged";
