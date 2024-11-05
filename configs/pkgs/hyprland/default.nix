@@ -122,17 +122,22 @@
           bezier = [
             "easeOutQuart, 0.25, 1.0, 0.5, 1.0"
             "easeOutExpo, 0.16, 1.0, 0.3, 1.0"
+            "nothing, 0, 0, 1, 1"
           ];
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 5, easeOutQuart, slide"
-            "windowsOut, 1, 5, easeOutQuart, slide"
-            "windowsMove, 1, 5, easeOutQuart, slide"
+            "windowsIn, 1, 9, easeOutQuart, slide top"
+            "windowsOut, 1, 9, easeOutQuart, slide bottom"
+            "windowsMove, 1, 9, easeOutQuart, slide top"
 
             # Workspaces in & out
             "workspacesIn, 1, 6, easeOutExpo, slide"
             "workspacesOut, 1, 6, easeOutExpo, slide"
+
+            # Fade in & out
+            "fadeIn, 1, 5, nothing,"
+            "fadeOut, 1, 5, nothing,"
           ];
         };
 
