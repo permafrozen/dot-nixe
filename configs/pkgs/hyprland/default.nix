@@ -134,10 +134,6 @@
             # Workspaces in & out
             "workspacesIn, 1, 6, easeOutExpo, slide"
             "workspacesOut, 1, 6, easeOutExpo, slide"
-
-            # Fade in & out
-            "fadeIn, 1, 5, nothing,"
-            "fadeOut, 1, 5, nothing,"
           ];
         };
 
