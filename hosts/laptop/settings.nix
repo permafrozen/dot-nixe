@@ -17,7 +17,7 @@
 
   # theme
   wallpaper =     "clouds.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "ayu-dark";                        # Color Theme (Chose any from the base16-schemes Package)
+  scheme =        "3024";                        # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
   rounding =      "10";                           # Corner rounding
