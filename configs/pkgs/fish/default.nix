@@ -10,6 +10,18 @@
             body = "__fish_default_command_not_found_handler $argv[1]";
             onEvent = "fish_command_not_found";
           };
+
+          # TODO
+          # __fish_user_key_bindings = {
+          #   body = ''
+          #     function fish_user_key_bindings
+          #       fish_vi_key_bindings
+          #       bind -M insert \cf 'commandline -f forward-char'
+          #     end
+          #   '';
+          #   onEvent = "fish_user_key_bindings";
+          # };
+
         };
         shellAliases = {
           neofetch = "clear && fastfetch";
@@ -19,6 +31,7 @@
           matrix = "cmatrix -s -C blue";
         };
         shellInit = ''
+          fish_vi_key_bindings
           set -U fish_greeting
           cd
         '';
