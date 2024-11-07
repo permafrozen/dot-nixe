@@ -18,7 +18,7 @@
           hide-when-typing = true;
         };
         colors = {
-          alpha = lib.mkForce "${settings.opacity}";
+          alpha = lib.mkForce "0.5";
         };
       };
     };
