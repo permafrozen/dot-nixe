@@ -12,6 +12,7 @@
           };
         };
         shellAliases = {
+          lt = "tre -l 1";
           neofetch = "clear && fastfetch";
           tt = "tt -notheme";
           train = "sl -e";
