@@ -17,13 +17,13 @@
 
   # theme
   wallpaper =     "clouds.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =        "3024";                        # Color Theme (Chose any from the base16-schemes Package)
+  scheme =        "eris";                        # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
   rounding =      "10";                           # Corner rounding
   gaps =          "10";                           # Gaps between windows
   shadow =        "false";                        # Wheater to enable window shadow
-  opacity =       "0.9";                          # background opacities for supported windows
+  opacity =       "1";                          # background opacities for supported windows
 
     # Setup Specific Hyprland Config
   hyprConfig = ''
