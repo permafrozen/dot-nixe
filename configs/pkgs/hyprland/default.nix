@@ -34,35 +34,35 @@
       # Flake Input -> Hyprland package
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
-      plugins = [
-        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
-      ];
+#      plugins = [
+#        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+#        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+#      ];
 
       settings = {
 
-        plugin = {
-          dynamic-cursors = {
-            enabled = true;
-              mode = "stretch"; # tilt, rotate, stretch, none
-            shake = {
-              enabled = false;
-            };
-          };
-
-          easymotion = {
-            textsize = "25";
-            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
-            bgcolor = "rgba(${config.lib.stylix.colors.base00}ff)";
-            textfont = "Hack Nerd Font";
-            textpadding = "5 5 5 5"; # in px
-            bordersize = "2";
-            bordercolor = "rgba(${config.lib.stylix.colors.base0D}ff)";
-            rounding = "${settings.rounding}";
-            motionkeys = "abcdefghijklmnopqrstuvwxyz1234567890"; # Keys to use
-          };
-        };
-
+#        plugin = {
+#          dynamic-cursors = {
+#            enabled = true;
+#              mode = "stretch"; # tilt, rotate, stretch, none
+#            shake = {
+#              enabled = false;
+#            };
+#          };
+#
+#          easymotion = {
+#            textsize = "25";
+#            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
+#            bgcolor = "rgba(${config.lib.stylix.colors.base00}ff)";
+#            textfont = "Hack Nerd Font";
+#            textpadding = "5 5 5 5"; # in px
+#            bordersize = "2";
+#            bordercolor = "rgba(${config.lib.stylix.colors.base0D}ff)";
+#            rounding = "${settings.rounding}";
+#            motionkeys = "abcdefghijklmnopqrstuvwxyz1234567890"; # Keys to use
+#          };
+#        };
+#
 
         # Variables
         "$mainMod" = "SUPER";
@@ -91,12 +91,16 @@
           inactive_opacity = "${settings.opacity}";
           fullscreen_opacity = "1";
 
-          drop_shadow = "${settings.shadow}";
-          shadow_range = "16";
-          shadow_render_power = "20";
-          shadow_ignore_window = "true";
-          "col.shadow" = "0xee${config.lib.stylix.colors.base05}";
-          "col.shadow_inactive" = "0xee${config.lib.stylix.colors.base00}";
+          shadow = {
+            enabled = "${settings.shadow}";
+            range = "16";
+            render_power = "20";
+            ignore_window = "true";
+            color = "0xee${config.lib.stylix.colors.base05}";
+            color_inactive = "0xee${config.lib.stylix.colors.base00}";
+            sharp = "false";
+            scale = "1.0";
+          };
 
           dim_inactive = "false";
           dim_strength = "0.2";
@@ -159,7 +163,7 @@
           "$mainMod, PRINT, exec, grim -g \"$(slurp -o -r -c '##ff0000ff')\" -t ppm - | satty --filename -"
           
           # Windowfocus Controls
-          "$mainMod, V, easymotion, action:hyprctl dispatch focuswindow address:{},"
+          # "$mainMod, V, easymotion, action:hyprctl dispatch focuswindow address:{},"
           "$mainMod, H, movefocus, l"
           "$mainMod, J, movefocus, d"
           "$mainMod, K, movefocus, u"
