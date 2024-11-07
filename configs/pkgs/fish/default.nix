@@ -10,7 +10,6 @@
             body = "__fish_default_command_not_found_handler $argv[1]";
             onEvent = "fish_command_not_found";
           };
-
         };
         shellAliases = {
           neofetch = "clear && fastfetch";
@@ -40,18 +39,25 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # Hardcore Sigma grinding software
     acpi
     bat
+    curl
     file
     git
     nurl
     nix-output-monitor
+    tre-command
     tree
     vim
     wget
     mdbook
+
     # Silly gimick stuff
+    cowsay
     figlet
+    fortune
+    lolcat
     jp2a
     sl
     cbonsai
