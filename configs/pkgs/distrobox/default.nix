@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     distrobox
-    distrobox-tui
   ];
+
+  # Enable Docker Daemon
+  virtualisation.docker.enable = true;
 }
