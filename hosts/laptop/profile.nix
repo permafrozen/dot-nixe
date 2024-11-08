@@ -31,6 +31,7 @@
     (getPath "hyprlock")
     (getPath "kanata")
     (getPath "cliphist")
+    (getPath "distrobox")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
