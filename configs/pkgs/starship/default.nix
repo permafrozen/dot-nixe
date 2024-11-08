@@ -20,13 +20,12 @@
           read_only_style = "red";
         };
         shell = {
-          fish_indicator = "󰈺 ";
-          bash_indicator = "󱆃 ";
+          fish_indicator = "fsh";
+          bash_indicator = "bsh";
           zsh_indicator = "zsh";
-          powershell_indicator = "󰨊";
-          unknown_indicator = "?";
+          unknown_indicator = "?  ";
           style = "yellow bold";
-          disabled = false;
+          disabled = true;
         };
       };
       enableFishIntegration = true;
