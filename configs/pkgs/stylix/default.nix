@@ -88,8 +88,11 @@ in {
         palettes.custom = {
           black = "#${config.lib.stylix.colors.base00}";
           white = "#${config.lib.stylix.colors.base0D}";
-          green = "#${config.lib.stylix.colors.base0B}";
           red = "#${config.lib.stylix.colors.base08}";
+          green = "#${config.lib.stylix.colors.base0B}";
+          blue = "#${config.lib.stylix.colors.base0B}";
+          cyan = "#${config.lib.stylix.colors.base0C}";
+          yellow = "#${config.lib.stylix.colors.base0A}";
         };
       };
     };
