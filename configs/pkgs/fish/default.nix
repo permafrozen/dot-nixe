@@ -53,6 +53,7 @@
     vim
     wget
     mdbook
+    zip
 
     # Silly gimick stuff
     cowsay
