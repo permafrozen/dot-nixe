@@ -12,8 +12,8 @@
 
         # Prompt Character
         character = {
-          format = "[ ](white)";
-          success_symbol = "[ ](bold green)";
+          format = "[  ](white)";
+          success_symbol = "[  ](bold green)";
           error_symbol = "[ ](bold red)";
         };
 
@@ -38,9 +38,9 @@
 
         # Nix-Shell Module
         nix_shell = {
-          format = "via [☃️ $state( \($name\))](bold blue) ";
-          impure_msg = "[impure shell](bold red)";
-          pure_msg = "[pure shell](bold green)";
+          format = "via [󰜗 $state( \($name\))](bold blue) ";
+          impure_msg = "[impure](bold red)";
+          pure_msg = "[pure](bold green)";
           unknown_msg = "[unknown shell](bold yellow)";
         };
       };
