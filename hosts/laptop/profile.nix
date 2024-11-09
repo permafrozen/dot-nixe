@@ -32,6 +32,7 @@
     (getPath "kanata")
     (getPath "cliphist")
     (getPath "distrobox")
+    (getPath "planify")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
