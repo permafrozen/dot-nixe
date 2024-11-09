@@ -66,10 +66,12 @@
 
         # Variables
         "$mainMod" = "SUPER";
-        "$mainMod_SHIFT" = "SUPER_SHIFT";
+        "$altMod" = "SUPER_ALT";
         "$browser" = "${settings.browser}";
         "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
+        "$todolist" = "io.github.alainm23.planify";
+        "$screenlock" = "hyprlock";
 
         general = {
           border_size = "2";
@@ -146,7 +148,8 @@
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
           "$mainMod, E, exec, $explorer"
-          "$mainMod, C, exec, hyprlock"
+          "$mainMod, W, exec, $todolist"
+          "$mainMod, C, exec, $screenlock"
 
           # Window/Session killing
           "$mainMod, Q, killactive,"
@@ -154,7 +157,7 @@
 
           # Fullscreen Controls
           "$mainMod, F, fullscreen,"
-          "$mainMod_SHIFT, F, fullscreen, 1"
+          "$altMod, F, fullscreen, 1"
 
           # Resizing Controls
           # TODO
