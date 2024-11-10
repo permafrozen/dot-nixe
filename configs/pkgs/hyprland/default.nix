@@ -185,16 +185,16 @@
           "$mainMod, 0, workspace, 10"
 
           # move active window to workspace
-          "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
-          "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
-          "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
-          "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
-          "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
-          "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
-          "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
-          "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
-          "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
-          "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+          "$altMod, 1, movetoworkspacesilent, 1"
+          "$altMod, 2, movetoworkspacesilent, 2"
+          "$altMod, 3, movetoworkspacesilent, 3"
+          "$altMod, 4, movetoworkspacesilent, 4"
+          "$altMod, 5, movetoworkspacesilent, 5"
+          "$altMod, 6, movetoworkspacesilent, 6"
+          "$altMod, 7, movetoworkspacesilent, 7"
+          "$altMod, 8, movetoworkspacesilent, 8"
+          "$altMod, 9, movetoworkspacesilent, 9"
+          "$altMod, 0, movetoworkspacesilent, 10"
         ];
 
         # Cursor resize/move
