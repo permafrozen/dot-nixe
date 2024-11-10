@@ -34,35 +34,7 @@
       # Flake Input -> Hyprland package
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
-#      plugins = [
-#        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-#        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
-#      ];
-
       settings = {
-
-#        plugin = {
-#          dynamic-cursors = {
-#            enabled = true;
-#              mode = "stretch"; # tilt, rotate, stretch, none
-#            shake = {
-#              enabled = false;
-#            };
-#          };
-#
-#          easymotion = {
-#            textsize = "25";
-#            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
-#            bgcolor = "rgba(${config.lib.stylix.colors.base00}ff)";
-#            textfont = "Hack Nerd Font";
-#            textpadding = "5 5 5 5"; # in px
-#            bordersize = "2";
-#            bordercolor = "rgba(${config.lib.stylix.colors.base0D}ff)";
-#            rounding = "${settings.rounding}";
-#            motionkeys = "abcdefghijklmnopqrstuvwxyz1234567890"; # Keys to use
-#          };
-#        };
-#
 
         # Variables
         "$mainMod" = "SUPER";
@@ -166,7 +138,6 @@
           "$mainMod, PRINT, exec, grim -g \"$(slurp -o -r -c '##ff0000ff')\" -t ppm - | satty --filename -"
           
           # Windowfocus Controls
-          # "$mainMod, V, easymotion, action:hyprctl dispatch focuswindow address:{},"
           "$mainMod, H, movefocus, l"
           "$mainMod, J, movefocus, d"
           "$mainMod, K, movefocus, u"

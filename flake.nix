@@ -7,21 +7,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-    };
-
-#    hypr-dynamic-cursors = {
-#      url = "github:VirtCode/hypr-dynamic-cursors";
-#      inputs.hyprland.follows = "hyprland";
-#    };
-#
-#    hyprland-easymotion = {
-#      url = "github:zakk4223/hyprland-easymotion";
-#      inputs.hyprland.follows = "hyprland";
-#    };
-
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    hyprland.url = "github:hyprwm/Hyprland";
     nur.url = github:nix-community/NUR;
     stylix.url = "github:danth/stylix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
