@@ -13,6 +13,7 @@
       extensions = with extensions.vscode-marketplace; [
         jnoortheen.nix-ide
         vscodevim.vim
+        esbenp.prettier-vscode
       ];
       userSettings = {
         # Editor Settigns
