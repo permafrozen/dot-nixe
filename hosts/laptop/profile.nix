@@ -33,6 +33,7 @@
     (getPath "cliphist")
     (getPath "distrobox")
     (getPath "planify")
+    (getPath "twingate")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
