@@ -1,15 +1,13 @@
-{ config, pkgs, settings, lib, extensions, ...}:
+{ config, pkgs, settings, lib, extensions, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    vscodium
-  ];
+  environment.systemPackages = with pkgs; [ vscodium nil nixfmt ];
 
   programs.direnv.enable = true;
   home-manager.users.${settings.userName} = {
     programs.vscode = {
       enable = true;
-      package = pkgs.vscodium;  # Use VSCodium as the VSCode package
+      package = pkgs.vscodium; # Use VSCodium as the VSCode package
       extensions = with extensions.vscode-marketplace; [
         jnoortheen.nix-ide
         vscodevim.vim
@@ -17,19 +15,27 @@
       ];
       userSettings = {
         # Editor Settigns
-        "editor.cursorBlinking"= "phase";
-        "editor.cursorSmoothCaretAnimation"= "on";
-        "editor.fontFamily"= "'Hack Nerd Font'";
-        "editor.smoothScrolling"= "true";
-        "terminal.integrated.fontFamily"= "'Hack Nerd Font'";
-        "terminal.integrated.smoothScrolling"= "true";
-        "window.titleBarStyle"= "custom";
-        "window.menuBarVisibility"= "compact";
+        "editor.cursorBlinking" = "phase";
+        "editor.cursorSmoothCaretAnimation" = "on";
+        "editor.fontFamily" = "'Hack Nerd Font'";
+        "editor.smoothScrolling" = "true";
+        "terminal.integrated.fontFamily" = "'Hack Nerd Font'";
+        "terminal.integrated.smoothScrolling" = "true";
+        "window.titleBarStyle" = "custom";
+        "window.menuBarVisibility" = "compact";
         "workbench.sideBar.location" = "right";
         "editor.renderControlCharacters" = false;
         "workbench.editor.showTabs" = "none";
         "editor.stickyScroll.enabled" = false;
-        "editor.lineNumbers"= "relative";
+        "editor.lineNumbers" = "relative";
+
+        # nix-plugin
+        "nix.enableLanguageServer" = true;
+        "nix.serverPath" = "nil";
+
+        "nix.serverSettings" = {
+          "nil" = { "formatting" = { "command" = [ "nixfmt" ]; }; };
+        };
 
         # Scrollbar Settings
         "editor.scrollbar.horizontal" = "hidden";
@@ -37,7 +43,7 @@
         "editor.minimap.enabled" = false;
 
         # Vim Keybinds Plugin
-        "vim.useCtrlKeys"= false;
+        "vim.useCtrlKeys" = false;
       };
     };
     stylix.targets.vscode.enable = true;
