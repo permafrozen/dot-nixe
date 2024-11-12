@@ -1,7 +1,7 @@
 { pkgs, settings, extensions, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ vscodium nil nixfmt-classic ];
+  environment.systemPackages = with pkgs; [ vscodium nixd nixfmt-classic ];
 
   programs.direnv.enable = true;
   home-manager.users.${settings.userName} = {
@@ -31,10 +31,10 @@
 
         # nix-plugin
         "nix.enableLanguageServer" = true;
-        "nix.serverPath" = "nil";
+        "nix.serverPath" = "nixd";
 
         "nix.serverSettings" = {
-          "nil" = { "formatting" = { "command" = [ "nixfmt" ]; }; };
+          "nixd" = { "formatting" = { "command" = [ "nixfmt" ]; }; };
         };
 
         # Scrollbar Settings
