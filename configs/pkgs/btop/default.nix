@@ -8,6 +8,7 @@
       enable = true;
       package = pkgs.btop;
       settings = {
+        color_theme = "stylix";
         theme_background = false;
         vim_keys = true;
         rounded_corners = true;
