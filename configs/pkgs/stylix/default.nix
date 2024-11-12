@@ -27,6 +27,7 @@ in {
     stylix = stylixConfig // {
       targets = {
         gtk.enable = true;
+        btop.enable = true;
         bat.enable = true;
         gnome.enable = true;
         kde.enable = true;
