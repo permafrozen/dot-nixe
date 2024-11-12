@@ -1,7 +1,7 @@
 { pkgs, settings, extensions, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ vscodium nil nixfmt ];
+  environment.systemPackages = with pkgs; [ vscodium nil nixfmt-classic ];
 
   programs.direnv.enable = true;
   home-manager.users.${settings.userName} = {
