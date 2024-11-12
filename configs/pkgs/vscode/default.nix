@@ -1,4 +1,4 @@
-{ config, pkgs, settings, lib, extensions, ... }:
+{ pkgs, settings, extensions, ... }:
 
 {
   environment.systemPackages = with pkgs; [ vscodium nil nixfmt ];
