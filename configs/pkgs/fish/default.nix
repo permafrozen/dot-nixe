@@ -15,8 +15,6 @@
           lt = "tre -l 1";
           neofetch = "clear && fastfetch";
           tt = "tt -notheme";
-          train = "sl -e";
-          bonsai = "cbonsai -S";
           matrix = "cmatrix -s -C blue";
         };
         shellInit = ''
@@ -61,8 +59,6 @@
     fortune
     lolcat
     jp2a
-    sl
-    cbonsai
     cmatrix
     tt
   ];
