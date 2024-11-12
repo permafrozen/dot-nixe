@@ -1,8 +1,6 @@
 { settings, ... }:
-  let
-    getPath = folderName: ../../configs/pkgs/${folderName}/default.nix;
-  in 
-{
+let getPath = folderName: ../../configs/pkgs/${folderName}/default.nix;
+in {
   imports = [
     # Normal Apps
     (getPath "pipewire")
@@ -36,7 +34,7 @@
     (getPath "twingate")
 
     # Variable Apps
-    (getPath "${settings.terminal}")  # BROWSER
-    (getPath "${settings.browser}")   # TERMINAL
+    (getPath "${settings.terminal}") # BROWSER
+    (getPath "${settings.browser}") # TERMINAL
   ];
 }
