@@ -1,10 +1,11 @@
-{ inputs, config, pkgs, settings, ...}:
+{ inputs, config, pkgs, settings, ... }:
 
 {
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys =
+      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # Hyprland NixOS Module
@@ -13,8 +14,10 @@
     xwayland.enable = true;
 
     # Flake Inputs -> Hyprland Package
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    package =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   # For Screenshare
@@ -25,14 +28,15 @@
       XDG_SESSION_DESKTOP = "Hyprland";
     };
   };
-  
+
   # Hyprland Home-Manager Module
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       enable = true;
 
       # Flake Input -> Hyprland package
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package =
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       settings = {
 
@@ -50,7 +54,7 @@
           "col.active_border" = "0xff${config.lib.stylix.colors.base0D}";
           "col.inactive_border" = "0xff${config.lib.stylix.colors.base03}";
           resize_on_border = "true";
-          
+
           gaps_in = "${settings.gaps}";
           gaps_out = "${settings.gaps}";
 
@@ -135,8 +139,9 @@
           # TODO
 
           # Screenshot keybinds
-          "$mainMod, PRINT, exec, grim -g \"$(slurp -o -r -c '##ff0000ff')\" -t ppm - | satty --filename -"
-          
+          ''
+            $mainMod, PRINT, exec, grim -g "$(slurp -o -r -c '##ff0000ff')" -t ppm - | satty --filename -''
+
           # Windowfocus Controls
           "$mainMod, H, movefocus, l"
           "$mainMod, J, movefocus, d"
@@ -180,9 +185,7 @@
           follow_mouse = 0;
         };
 
-        cursor = {
-          inactive_timeout = 2;
-        };
+        cursor = { inactive_timeout = 2; };
 
         gestures = {
           workspace_swipe = "false";
@@ -190,7 +193,7 @@
         };
 
         misc = {
-          disable_hyprland_logo	= "true";
+          disable_hyprland_logo = "true";
           disable_splash_rendering = "true";
           background_color = "0x${config.lib.stylix.colors.base00}";
         };

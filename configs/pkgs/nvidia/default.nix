@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ... }:
+{ config, settings, ... }:
 
 {
   hardware = {
@@ -6,7 +6,7 @@
       enable = true;
       enable32Bit = true;
     };
-    
+
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = false;
@@ -15,10 +15,10 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
-  
+
   boot.kernelParams = [ "video=1920x1080" ];
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   home-manager.users.${settings.userName} = {
     wayland = {

@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ settings, ... }:
 
 {
   home-manager.users.${settings.userName} = {
@@ -38,7 +38,7 @@
 
         # Nix-Shell Module
         nix_shell = {
-          format = "via [󰜗 $state( \($name\))](bold blue) ";
+          format = "via [󰜗 $state( ($name))](bold blue) ";
           impure_msg = "[impure](bold red)";
           pure_msg = "[pure](bold green)";
           unknown_msg = "[unknown shell](bold yellow)";

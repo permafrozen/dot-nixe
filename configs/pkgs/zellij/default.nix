@@ -1,4 +1,4 @@
-{ config, pkgs, settings, lib,  ... }:
+{ config, settings, lib, ... }:
 
 {
   home-manager.users.${settings.userName} = {
@@ -10,8 +10,8 @@
         default_layout = "compact";
         pane_frames = true;
         ui.pane_frames = {
-            rounded_corners = true;
-            hide_session_name = true;
+          rounded_corners = true;
+          hide_session_name = true;
         };
         themes.stylix.green = lib.mkForce "#${config.lib.stylix.colors.base05}";
       };

@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ settings, ... }:
 
 {
   home-manager.users.${settings.userName} = {
@@ -6,9 +6,7 @@
       enable = true;
       userName = settings.gitUser;
       userEmail = settings.gitMail;
-      extraConfig = {
-        init.defaultBranch = settings.defaultBranch;
-      };
+      extraConfig = { init.defaultBranch = settings.defaultBranch; };
     };
   };
 }

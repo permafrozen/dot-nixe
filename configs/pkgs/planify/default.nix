@@ -1,7 +1,5 @@
-{ config, pkgs, settings, ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    planify
-  ];
+  environment.systemPackages = with pkgs; [ planify ];
 }

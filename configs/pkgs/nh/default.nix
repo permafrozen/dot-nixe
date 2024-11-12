@@ -1,7 +1,5 @@
-{ config, pkgs, settings, ... }:
+{ ... }:
 
 {
-  programs.nh = {
-    enable = true;
-  };
+  programs.nh = { enable = true; };
 }

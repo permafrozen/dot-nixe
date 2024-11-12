@@ -1,11 +1,9 @@
-{ config, pkgs, settings, ...}:
+{ pkgs, ... }:
 
 {
   # pavucontrol
-  environment.systemPackages = with pkgs; [
-    pavucontrol
-  ];
-  
+  environment.systemPackages = with pkgs; [ pavucontrol ];
+
   # Pipewire
   services.pipewire = {
     enable = true;
@@ -15,9 +13,7 @@
       enable = true;
       extraConfig = {
         "10-disable-camera" = {
-          "wireplumber.profiles" = {
-            main."monitor.libcamera" = "disabled";
-          };
+          "wireplumber.profiles" = { main."monitor.libcamera" = "disabled"; };
         };
       };
     };

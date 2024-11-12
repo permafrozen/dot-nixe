@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ... }:
+{ settings, ... }:
 
 {
   imports = [
@@ -17,9 +17,7 @@
       # useOSProber = true;
     };
 
-    efi = {
-      canTouchEfiVariables = true;
-    };
+    efi = { canTouchEfiVariables = true; };
   };
 
   networking = {
@@ -33,18 +31,18 @@
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
-      LC_ADDRESS =        "${settings.locale}.UTF-8";
+      LC_ADDRESS = "${settings.locale}.UTF-8";
       LC_IDENTIFICATION = "${settings.locale}.UTF-8";
-      LC_MEASUREMENT =    "${settings.locale}.UTF-8";
-      LC_MONETARY =       "${settings.locale}.UTF-8";
-      LC_NAME =           "${settings.locale}.UTF-8";
-      LC_NUMERIC =        "${settings.locale}.UTF-8";
-      LC_PAPER =          "${settings.locale}.UTF-8";
-      LC_TELEPHONE =      "${settings.locale}.UTF-8";
-      LC_TIME =           "${settings.locale}.UTF-8";
+      LC_MEASUREMENT = "${settings.locale}.UTF-8";
+      LC_MONETARY = "${settings.locale}.UTF-8";
+      LC_NAME = "${settings.locale}.UTF-8";
+      LC_NUMERIC = "${settings.locale}.UTF-8";
+      LC_PAPER = "${settings.locale}.UTF-8";
+      LC_TELEPHONE = "${settings.locale}.UTF-8";
+      LC_TIME = "${settings.locale}.UTF-8";
     };
   };
-# keyboard layout (xserver)
+  # keyboard layout (xserver)
   services.xserver.xkb = {
     layout = "${settings.kbLayout}";
     variant = "";
@@ -58,13 +56,11 @@
     isNormalUser = true;
     description = "${settings.userName}";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-
   };
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05"; # be careful with this one
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }

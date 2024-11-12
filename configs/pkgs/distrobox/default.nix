@@ -1,9 +1,7 @@
-{ config, pkgs, settings, ...}:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    distrobox
-  ];
+  environment.systemPackages = with pkgs; [ distrobox ];
 
   # Enable Docker Daemon
   virtualisation.docker.enable = true;

@@ -1,9 +1,7 @@
-{ config, pkgs, settings, ... }:
+{ pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    fastfetch
-  ];
+  environment.systemPackages = with pkgs; [ fastfetch ];
 
   home-manager.users.${settings.userName} = {
     programs.fastfetch = {
@@ -20,9 +18,7 @@
           };
         };
 
-        display = {
-          separator = "  ";
-        };
+        display = { separator = "  "; };
 
         modules = [
           {

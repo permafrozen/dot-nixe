@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ config, settings, ... }:
 
 {
   home-manager.users.${settings.userName} = {
@@ -16,34 +16,32 @@
           wikiwand-wikipedia-modernized
           terms-of-service-didnt-read
         ];
-        bookmarks = [
-          {
-            name = "Nix sites";
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "homepage";
-                url = "https://nixos.org/";
-                tags = [ "nixos" ];
-              }
-              {
-                name = "wiki";
-                tags = [ "nixios" "wiki" ];
-                url = "https://wiki.nixos.org/";
-              }
-              {
-                name = "mynixos";
-                tags = [ "nixos" "search" ];
-                url = "https://wiki.nixos.org/";
-              }
-              {
-                name = "discourse";
-                tags = [ "nixos" "forum" ];
-                url = "https://discourse.nixos.org/";
-              }
-            ];
-          }
-        ];
+        bookmarks = [{
+          name = "Nix sites";
+          toolbar = true;
+          bookmarks = [
+            {
+              name = "homepage";
+              url = "https://nixos.org/";
+              tags = [ "nixos" ];
+            }
+            {
+              name = "wiki";
+              tags = [ "nixios" "wiki" ];
+              url = "https://wiki.nixos.org/";
+            }
+            {
+              name = "mynixos";
+              tags = [ "nixos" "search" ];
+              url = "https://wiki.nixos.org/";
+            }
+            {
+              name = "discourse";
+              tags = [ "nixos" "forum" ];
+              url = "https://discourse.nixos.org/";
+            }
+          ];
+        }];
         search.default = "DuckDuckGo";
         settings = {
           # Enable all Extensions
@@ -219,297 +217,297 @@
           }
         '';
         userContent = ''
-        :root {
-        
-        }
-         /* General Styles */
-          @-moz-document url("about:newtab"), url("about:blank"), url("about:profiles"), url("about:preferences"), url("about:config") {
-              body {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
-                  color: #${config.lib.stylix.colors.base05} !important;
-              }
-              .search-wrapper, .personalizeButtonWrapper {
-                  display: none !important;
-              }
+          :root {
+
           }
-
-          /* DuckDuckGo */
-          @-moz-document url("https://duckduckgo.com/") {
-            body * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-            }
-          }
-          @-moz-document domain(duckduckgo.com) {
-            * {
-              border-color: #${config.lib.stylix.colors.base02} !important;
-              color: #${config.lib.stylix.colors.base05} !important;
+           /* General Styles */
+            @-moz-document url("about:newtab"), url("about:blank"), url("about:profiles"), url("about:preferences"), url("about:config") {
+                body {
+                    background-color: #${config.lib.stylix.colors.base00} !important;
+                    color: #${config.lib.stylix.colors.base05} !important;
+                }
+                .search-wrapper, .personalizeButtonWrapper {
+                    display: none !important;
+                }
             }
 
-            .search--header {
-              background-color: #${config.lib.stylix.colors.base01} !important; 
-            }
-
-            .search__autocomplete * {
-              background-color: #${config.lib.stylix.colors.base01} !important; 
-            }
-
-            .twMgHM3B8cVRU4iN6brN.YjvCRIuul_goVuf1ESim {
-              background-color: #${config.lib.stylix.colors.base01} !important;
-            }
-
-            .site-wrapper {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              
-            }
-            .header-wrap {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-            }
-
-            .is-related-search-exp.dark-bg .related-searches__item {
-              background-color: #${config.lib.stylix.colors.base01} !important;
-            }
-
-            .ffON2NH02oMAcqyoh2UU.hUUdRtuaOUx7mcSwc56s {
-              background-color: #${config.lib.stylix.colors.base01} !important;
-            }
-
-            .footer, .footer--mobile {
-              background-color: #${config.lib.stylix.colors.base00} !important; 
-            }
-
-            .O9Ipab51rBntYb0pwOQn {
-              background-color: #${config.lib.stylix.colors.base01} !important;
-            }
-
-            .search__button:hover,
-            .search__button:focus,
-            .search--hover .search__button,
-            .search--hover .search__button:focus,
-            .search--header.has-text.search--hover .search__button,
-            .search--header.has-text.search--focus .search__button,
-            .search--header.has-text.search--hover .search__button:hover,
-            .search--header.has-text.search--focus .search__button:hover,
-            .search--home.has-text .search__button,
-            .search--home.has-text .search__button:focus,
-            .search--home.has-text .search__button:hover {
-              background-color:#${config.lib.stylix.colors.base05} !important;
-              color: #${config.lib.stylix.colors.base00} !important;
-            }
-
-            .DrcPyihFGyKMlg6lpwsa:before,
-            .XvPRmQVeIoCP5lQhICTv.ofDl_1VxUG_EKc3b9E3x:before,
-            .RHsWhMlxc4ETEMDS9ltw:before,
-            .RHsWhMlxc4ETEMDS9ltw:after,
-            .header-wrap:after,
-            .header__logo-wrap:after,
-            .header__logo {
-              display: none !important;  
-            }
-
-            .header-wrap {
-              box-shadow:  0 0 0 #000000 !important;
-            }
-          }
-
-          
-
-          /* Google Domains 
-          @-moz-document domain(google.com.br), domain(google.com) {
-              * {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
-                  border-color: #${config.lib.stylix.colors.base00} !important;
-                  color: #${config.lib.stylix.colors.base03} !important;
-              }
-              span {
-                  color: #${config.lib.stylix.colors.base04} !important;
-              }
-              .RNNXgb {
-                  display: none !important;
-              }
-          }
-          */
-
-          /* GitHub Domain */
-          @-moz-document domain(github.com) {
-            :root {
-              --base00: #${config.lib.stylix.colors.base00};
-              --base01: #${config.lib.stylix.colors.base01};
-              --base02: #${config.lib.stylix.colors.base02};
-              --base03: #${config.lib.stylix.colors.base03};
-              --base04: #${config.lib.stylix.colors.base04};
-              --base05: #${config.lib.stylix.colors.base05};
-              --base0D: #${config.lib.stylix.colors.base0D};
-            }
-
-            * {
-              border-color: var(--base03) !important;
-              color: var(--base05) !important;
-            }
-
-            .feed-left-sidebar,
-            .AppHeader-globalBar,
-            .d-md-flex,
-            .AppHeader,
-            .application-main,
-            .rounded-1,
-            .d-flex,
-            .d-block,
-            .px-3,
-            .eAZKiL,
-            .hdShgm,
-            kbd,
-            body,
-            html,
-            .d-none.d-lg-block,
-            .js-profile-timeline-year-list.color-bg-default.js-sticky.is-stuck,
-            .border-top.color-border-muted.pt-3.mt-3.d-none.d-md-block,
-            .js-profile-timeline-year-list.color-bg-default.js-sticky,
-            .color-bg-default.pl-2.pr-3,
-            .color-bg-default,
-            .Overlay-headerContentWrap,
-            .List__ListBox-sc-1x7olzq-0.gAwGiF,
-            .Overlay.Overlay-whenNarrow.Overlay--size-small-portrait.Overlay--motion-scaleFade.Overlay--placement-left.SidePanel,
-            .gh-header-shadow.color-shadow-small.js-notification-shelf-offset-top,
-            .discussion-timeline-actions,
-            .d-flex.flex-items-center.flex-wrap.mt-0.gh-header-meta,
-            .partial-discussion-header {
-              background-color: var(--base00) !important;
-            }
-
-            .input-block {
-              background-color: var(--base01) !important;
-              color: var(--base05) !important;
-            }
-
-            .Box-body,
-            .box-body .d-flex.flex-justify-between,
-            .Box,
-            .Box .flex-1,
-            .Box .d-flex,
-            .markdown-body,
-            .highlight,
-            .QkQOb,
-            .duyuyF,
-            .kRIEXD,
-            .dJnomT,
-            .klSCQM,
-            .fJiNYL,
-            .hROVzf,
-            .cDbgyb,
-            .d-none,
-            .hQsKGs,
-            .drIBIt,
-            .btn,
-            .rounded-2.py-1 > *,
-            .rounded-2.py-1 .rounded-1,
-            .rounded-2.py-1 .d-flex,
-            .rounded-2.py-1 .d-block,
-            .rounded-2 .flex-1,
-            .rounded-2 .px-3,
-            .d-flex.flex-shrink-0.gap-2,
-            .QueryBuilder-StyledInput,
-            .d-flex.flex-nowrap.fgColor-muted.f6,
-            .pl-lg-3.col-6.border-lg-left,
-            .js-activity-overview-graph.mx-auto.d-block,
-            .border.py-2.graph-before-activity-overview,
-            .border.py-2.graph-before-activity-overview > *,
-            .js-calendar-graph *,
-            .user-status-circle-badge,
-            .user-status-emoji-container,
-            .form-control.width-full,
-            .topic-tag,
-            .Button,
-            .FormControl-input,
-            .Box-sc-g0xbh4-0.gpHFJV,
-            .Box-sc-g0xbh4-0.eoaCFS,
-            .Box-sc-g0xbh4-0.jodZGf,
-            .Box-sc-g0xbh4-0.cOgqet,
-            .segmentedControl-content,
-            .Box-sc-g0xbh4-0.eHDvEW,
-            .AppHeader-searchButton {
-              background-color: var(--base01) !important;
-            }
-
-            .rounded-2,
-            .rounded-top-2 {
-              background-color: var(--base01) !important;
-            }
-
-            .hSRgxc,
-            .Progress-item.rounded-2,
-            .js-highlight-blob,
-            .activity-overview-point,
-            .activity-overview-axis {
-              background-color: var(--base0D) !important;
-              fill: var(--base0D) !important;
-              stroke: var(--base0D) !important;
-            }
-
-            }
-
-            .ContributionCalendar-day[data-level="0"] {
-              fill: var(--base00) !important;
-              background-color: var(--base00) !important;
-              outline: 1px solid var(--base01) !important;
-            }
-
-            .ContributionCalendar-day[data-level="1"] {
-              fill: var(--base01) !important;
-              background-color: var(--base01) !important;
-              outline: 1px solid var(--base02) !important;
-            }
-
-            .ContributionCalendar-day[data-level="2"] {
-              fill: var(--base02) !important;
-              background-color: var(--base02) !important;
-              outline: 1px solid var(--base03) !important;
-            }
-
-            .ContributionCalendar-day[data-level="3"] {
-              fill: var(--base03) !important;
-              background-color: var(--base03) !important;
-              outline: 1px solid var(--base04) !important;
-            }
-
-            .ContributionCalendar-day[data-level="4"] {
-              fill: var(--base04) !important;
-              background-color: var(--base04) !important;
-              outline: 1px solid var(--base05) !important;
-            }
-          }
- 
-
-          /* Microsoft Teams Domain 
-          @-moz-document domain(teams.microsoft.com) {
-              * {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
-                  border-color: #${config.lib.stylix.colors.base00} !important;
-                  color: #${config.lib.stylix.colors.base05} !important;
-              }
-          }
-          */
-
-          /* Moodle Domain 
-          @-moz-document domain(elearn.htl-wels.at) {
-              * {
-                  background-color: #${config.lib.stylix.colors.base00} !important;
-                  border-color: #${config.lib.stylix.colors.base00} !important;
-                  color: #${config.lib.stylix.colors.base05} !important;
-              }
-          }
-          */
-
-          /* Digi4School Domain */
-          @-moz-document domain(digi4school.at) {
-            * {
-              color: #${config.lib.stylix.colors.base05} !important;
-            }
-            #mainNav, html, input {
+            /* DuckDuckGo */
+            @-moz-document url("https://duckduckgo.com/") {
+              body * {
                 background-color: #${config.lib.stylix.colors.base00} !important;
-                border-color: #${config.lib.stylix.colors.base00} !important;
-                color: #${config.lib.stylix.colors.base05} !important;
+              }
             }
-          }
+            @-moz-document domain(duckduckgo.com) {
+              * {
+                border-color: #${config.lib.stylix.colors.base02} !important;
+                color: #${config.lib.stylix.colors.base05} !important;
+              }
+
+              .search--header {
+                background-color: #${config.lib.stylix.colors.base01} !important; 
+              }
+
+              .search__autocomplete * {
+                background-color: #${config.lib.stylix.colors.base01} !important; 
+              }
+
+              .twMgHM3B8cVRU4iN6brN.YjvCRIuul_goVuf1ESim {
+                background-color: #${config.lib.stylix.colors.base01} !important;
+              }
+
+              .site-wrapper {
+                background-color: #${config.lib.stylix.colors.base00} !important;
+                
+              }
+              .header-wrap {
+                background-color: #${config.lib.stylix.colors.base00} !important;
+              }
+
+              .is-related-search-exp.dark-bg .related-searches__item {
+                background-color: #${config.lib.stylix.colors.base01} !important;
+              }
+
+              .ffON2NH02oMAcqyoh2UU.hUUdRtuaOUx7mcSwc56s {
+                background-color: #${config.lib.stylix.colors.base01} !important;
+              }
+
+              .footer, .footer--mobile {
+                background-color: #${config.lib.stylix.colors.base00} !important; 
+              }
+
+              .O9Ipab51rBntYb0pwOQn {
+                background-color: #${config.lib.stylix.colors.base01} !important;
+              }
+
+              .search__button:hover,
+              .search__button:focus,
+              .search--hover .search__button,
+              .search--hover .search__button:focus,
+              .search--header.has-text.search--hover .search__button,
+              .search--header.has-text.search--focus .search__button,
+              .search--header.has-text.search--hover .search__button:hover,
+              .search--header.has-text.search--focus .search__button:hover,
+              .search--home.has-text .search__button,
+              .search--home.has-text .search__button:focus,
+              .search--home.has-text .search__button:hover {
+                background-color:#${config.lib.stylix.colors.base05} !important;
+                color: #${config.lib.stylix.colors.base00} !important;
+              }
+
+              .DrcPyihFGyKMlg6lpwsa:before,
+              .XvPRmQVeIoCP5lQhICTv.ofDl_1VxUG_EKc3b9E3x:before,
+              .RHsWhMlxc4ETEMDS9ltw:before,
+              .RHsWhMlxc4ETEMDS9ltw:after,
+              .header-wrap:after,
+              .header__logo-wrap:after,
+              .header__logo {
+                display: none !important;  
+              }
+
+              .header-wrap {
+                box-shadow:  0 0 0 #000000 !important;
+              }
+            }
+
+            
+
+            /* Google Domains 
+            @-moz-document domain(google.com.br), domain(google.com) {
+                * {
+                    background-color: #${config.lib.stylix.colors.base00} !important;
+                    border-color: #${config.lib.stylix.colors.base00} !important;
+                    color: #${config.lib.stylix.colors.base03} !important;
+                }
+                span {
+                    color: #${config.lib.stylix.colors.base04} !important;
+                }
+                .RNNXgb {
+                    display: none !important;
+                }
+            }
+            */
+
+            /* GitHub Domain */
+            @-moz-document domain(github.com) {
+              :root {
+                --base00: #${config.lib.stylix.colors.base00};
+                --base01: #${config.lib.stylix.colors.base01};
+                --base02: #${config.lib.stylix.colors.base02};
+                --base03: #${config.lib.stylix.colors.base03};
+                --base04: #${config.lib.stylix.colors.base04};
+                --base05: #${config.lib.stylix.colors.base05};
+                --base0D: #${config.lib.stylix.colors.base0D};
+              }
+
+              * {
+                border-color: var(--base03) !important;
+                color: var(--base05) !important;
+              }
+
+              .feed-left-sidebar,
+              .AppHeader-globalBar,
+              .d-md-flex,
+              .AppHeader,
+              .application-main,
+              .rounded-1,
+              .d-flex,
+              .d-block,
+              .px-3,
+              .eAZKiL,
+              .hdShgm,
+              kbd,
+              body,
+              html,
+              .d-none.d-lg-block,
+              .js-profile-timeline-year-list.color-bg-default.js-sticky.is-stuck,
+              .border-top.color-border-muted.pt-3.mt-3.d-none.d-md-block,
+              .js-profile-timeline-year-list.color-bg-default.js-sticky,
+              .color-bg-default.pl-2.pr-3,
+              .color-bg-default,
+              .Overlay-headerContentWrap,
+              .List__ListBox-sc-1x7olzq-0.gAwGiF,
+              .Overlay.Overlay-whenNarrow.Overlay--size-small-portrait.Overlay--motion-scaleFade.Overlay--placement-left.SidePanel,
+              .gh-header-shadow.color-shadow-small.js-notification-shelf-offset-top,
+              .discussion-timeline-actions,
+              .d-flex.flex-items-center.flex-wrap.mt-0.gh-header-meta,
+              .partial-discussion-header {
+                background-color: var(--base00) !important;
+              }
+
+              .input-block {
+                background-color: var(--base01) !important;
+                color: var(--base05) !important;
+              }
+
+              .Box-body,
+              .box-body .d-flex.flex-justify-between,
+              .Box,
+              .Box .flex-1,
+              .Box .d-flex,
+              .markdown-body,
+              .highlight,
+              .QkQOb,
+              .duyuyF,
+              .kRIEXD,
+              .dJnomT,
+              .klSCQM,
+              .fJiNYL,
+              .hROVzf,
+              .cDbgyb,
+              .d-none,
+              .hQsKGs,
+              .drIBIt,
+              .btn,
+              .rounded-2.py-1 > *,
+              .rounded-2.py-1 .rounded-1,
+              .rounded-2.py-1 .d-flex,
+              .rounded-2.py-1 .d-block,
+              .rounded-2 .flex-1,
+              .rounded-2 .px-3,
+              .d-flex.flex-shrink-0.gap-2,
+              .QueryBuilder-StyledInput,
+              .d-flex.flex-nowrap.fgColor-muted.f6,
+              .pl-lg-3.col-6.border-lg-left,
+              .js-activity-overview-graph.mx-auto.d-block,
+              .border.py-2.graph-before-activity-overview,
+              .border.py-2.graph-before-activity-overview > *,
+              .js-calendar-graph *,
+              .user-status-circle-badge,
+              .user-status-emoji-container,
+              .form-control.width-full,
+              .topic-tag,
+              .Button,
+              .FormControl-input,
+              .Box-sc-g0xbh4-0.gpHFJV,
+              .Box-sc-g0xbh4-0.eoaCFS,
+              .Box-sc-g0xbh4-0.jodZGf,
+              .Box-sc-g0xbh4-0.cOgqet,
+              .segmentedControl-content,
+              .Box-sc-g0xbh4-0.eHDvEW,
+              .AppHeader-searchButton {
+                background-color: var(--base01) !important;
+              }
+
+              .rounded-2,
+              .rounded-top-2 {
+                background-color: var(--base01) !important;
+              }
+
+              .hSRgxc,
+              .Progress-item.rounded-2,
+              .js-highlight-blob,
+              .activity-overview-point,
+              .activity-overview-axis {
+                background-color: var(--base0D) !important;
+                fill: var(--base0D) !important;
+                stroke: var(--base0D) !important;
+              }
+
+              }
+
+              .ContributionCalendar-day[data-level="0"] {
+                fill: var(--base00) !important;
+                background-color: var(--base00) !important;
+                outline: 1px solid var(--base01) !important;
+              }
+
+              .ContributionCalendar-day[data-level="1"] {
+                fill: var(--base01) !important;
+                background-color: var(--base01) !important;
+                outline: 1px solid var(--base02) !important;
+              }
+
+              .ContributionCalendar-day[data-level="2"] {
+                fill: var(--base02) !important;
+                background-color: var(--base02) !important;
+                outline: 1px solid var(--base03) !important;
+              }
+
+              .ContributionCalendar-day[data-level="3"] {
+                fill: var(--base03) !important;
+                background-color: var(--base03) !important;
+                outline: 1px solid var(--base04) !important;
+              }
+
+              .ContributionCalendar-day[data-level="4"] {
+                fill: var(--base04) !important;
+                background-color: var(--base04) !important;
+                outline: 1px solid var(--base05) !important;
+              }
+            }
+
+
+            /* Microsoft Teams Domain 
+            @-moz-document domain(teams.microsoft.com) {
+                * {
+                    background-color: #${config.lib.stylix.colors.base00} !important;
+                    border-color: #${config.lib.stylix.colors.base00} !important;
+                    color: #${config.lib.stylix.colors.base05} !important;
+                }
+            }
+            */
+
+            /* Moodle Domain 
+            @-moz-document domain(elearn.htl-wels.at) {
+                * {
+                    background-color: #${config.lib.stylix.colors.base00} !important;
+                    border-color: #${config.lib.stylix.colors.base00} !important;
+                    color: #${config.lib.stylix.colors.base05} !important;
+                }
+            }
+            */
+
+            /* Digi4School Domain */
+            @-moz-document domain(digi4school.at) {
+              * {
+                color: #${config.lib.stylix.colors.base05} !important;
+              }
+              #mainNav, html, input {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  border-color: #${config.lib.stylix.colors.base00} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
+            }
 
         '';
       };

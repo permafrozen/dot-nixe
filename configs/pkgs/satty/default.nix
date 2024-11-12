@@ -1,11 +1,7 @@
-{ config, pkgs, settings, ... }:
+{ pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    satty
-    grim
-    slurp
-  ];
+  environment.systemPackages = with pkgs; [ satty grim slurp ];
 
   home-manager.users.${settings.userName} = {
     home.file.".config/satty/config.toml".text = ''
@@ -40,6 +36,6 @@
       fourth= "#ff1493"
       fifth= "#ffd700"
       custom= "#008000"
-    '';  
+    '';
   };
 }

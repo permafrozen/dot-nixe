@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ ... }:
 
 {
   services.displayManager.ly = {

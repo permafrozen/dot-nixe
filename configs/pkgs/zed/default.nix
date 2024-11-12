@@ -1,9 +1,6 @@
-{ config, pkgs, settings, ...}:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    zed-editor
-  ];
-
+  environment.systemPackages = with pkgs; [ zed-editor ];
 
 }

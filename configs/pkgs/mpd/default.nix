@@ -1,15 +1,14 @@
-{ config, pkgs, lib, settings, ... }:
+{ pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    mpc-cli
-  ];
+  environment.systemPackages = with pkgs; [ mpc-cli ];
 
   services.mpd = {
     enable = true;
     musicDirectory = "/home/${settings.userName}/Music";
     user = "${settings.userName}";
-    network.listenAddress = "any"; # if you want to allow non-localhost connections
+    network.listenAddress =
+      "any"; # if you want to allow non-localhost connections
     extraConfig = ''
       audio_output {
         type "pipewire"
@@ -19,10 +18,6 @@
   };
 
   systemd = {
-    services = {
-      mpd.environment = {
-        XDG_RUNTIME_DIR = "/run/user/1000";
-      };
-    };
+    services = { mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; }; };
   };
 }

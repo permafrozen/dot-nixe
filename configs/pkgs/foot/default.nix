@@ -1,9 +1,7 @@
-{ config, pkgs, settings, lib, ... }:
+{ settings, lib, ... }:
 
 {
-  programs.foot = {
-    enableFishIntegration = true;
-  };
+  programs.foot = { enableFishIntegration = true; };
 
   home-manager.users.${settings.userName} = {
     programs.foot = {
@@ -14,12 +12,8 @@
           style = "underline";
           blink = true;
         };
-        mouse = {
-          hide-when-typing = true;
-        };
-        colors = {
-          alpha = lib.mkForce "0.5";
-        };
+        mouse = { hide-when-typing = true; };
+        colors = { alpha = lib.mkForce "0.5"; };
       };
     };
     stylix.targets.foot.enable = true;

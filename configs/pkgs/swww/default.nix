@@ -1,9 +1,7 @@
-{ config, pkgs, settings, ...}:
+{ pkgs, settings, ... }:
 
 {
-  environment.systemPackages  = with pkgs; [
-    swww
-  ];
+  environment.systemPackages = with pkgs; [ swww ];
 
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland.extraConfig = ''

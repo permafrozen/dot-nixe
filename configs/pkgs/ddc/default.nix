@@ -1,10 +1,7 @@
- { config, pkgs, settings, ... }: 
+{ config, pkgs, settings, ... }:
 
- {
-  environment.systemPackages = with pkgs; [
-    ddcutil
-    # ddcui
-  ];
+{
+  environment.systemPackages = with pkgs; [ ddcutil ];
 
   # udev Rule
   services = {
@@ -15,10 +12,10 @@
 
   # Kernel Changes
   boot = {
-    kernelModules = ["i2c-dev"];
-    extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+    kernelModules = [ "i2c-dev" ];
+    extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
   };
 
   hardware.i2c.enable = true;
   users.users.${settings.userName}.extraGroups = [ "i2c" ];
- }
+}
