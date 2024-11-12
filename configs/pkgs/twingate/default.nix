@@ -1,11 +1,9 @@
-{ config, pkgs, settings, ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    twingate
-  ];
+  environment.systemPackages = with pkgs; [ twingate ];
 
-  services.twingate = { 
+  services.twingate = {
     package = pkgs.twingate;
     enable = true;
   };
