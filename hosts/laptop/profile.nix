@@ -14,7 +14,7 @@ in {
     (getPath "vscode")
     (getPath "libreoffice")
     (getPath "yazi")
-    (getPath "bottom")
+    (getPath "btop")
     (getPath "obsidian")
     (getPath "quickemu")
     (getPath "vesktop")
