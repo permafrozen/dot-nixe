@@ -7,7 +7,7 @@
       enable = true;
 
       # ags config dir
-      configDir = ./. + "project/app.ts";
+      configDir = ./project;
 
       # additional packages to add to gjs's runtime
       # extraPackages = with pkgs; [
