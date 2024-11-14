@@ -7,10 +7,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
@@ -38,6 +38,7 @@
           inputs.nur.nixosModules.nur
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
+          inputs.nixvim.nixosModules.nixvim
           {
             home-manager = {
               useGlobalPkgs = true;

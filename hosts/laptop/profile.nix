@@ -32,6 +32,7 @@ in {
     (getPath "distrobox")
     (getPath "planify")
     (getPath "twingate")
+    (getPath "nixvim")
 
     # Variable Apps
     (getPath "${settings.terminal}") # BROWSER
