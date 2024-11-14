@@ -33,6 +33,7 @@ in {
     (getPath "planify")
     (getPath "twingate")
     (getPath "nixvim")
+    (getPath "bluetooth")
 
     # Variable Apps
     (getPath "${settings.terminal}") # BROWSER
