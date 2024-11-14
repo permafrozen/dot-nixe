@@ -12,9 +12,12 @@
           };
         };
         shellAliases = {
-          lt = "tre -l 1";
-          neofetch = "clear && fastfetch";
-          tt = "tt -notheme";
+          eta = "eza -T";
+          le = "eza";
+          nrf = "nh os switch .";
+          trel = "tre -l 1";
+          clearfetch = "clear && fastfetch";
+          ttt = "tt -notheme";
           matrix = "cmatrix -s -C blue";
         };
         shellInit = ''
