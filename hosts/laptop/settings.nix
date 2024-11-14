@@ -19,7 +19,7 @@
 
   # theme
   wallpaper =
-    "clouds.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
+    "forest.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme = "everforest-dark-hard"; # Color Theme (Chose any from the base16-schemes Package)
 
   # hyprland
