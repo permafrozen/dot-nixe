@@ -42,6 +42,7 @@
     acpi
     bat
     curl
+    eza
     file
     git
     nurl
