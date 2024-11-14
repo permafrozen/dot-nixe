@@ -140,7 +140,9 @@
 
           # Screenshot keybinds
           ''
-            $mainMod, PRINT, exec, grim -g "$(slurp -o -r -c '##ff0000ff')" -t ppm - | satty --filename -''
+            $altMod, PRINT, exec, grim -g "$(slurp -o -r -c '##ff0000ff')" -t ppm - | satty --filename -''
+
+          "$mainMod, PRINT, exec, grim - | wl-copy --type image/png"
 
           # Windowfocus Controls
           "$mainMod, H, movefocus, l"
