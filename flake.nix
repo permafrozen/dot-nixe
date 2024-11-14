@@ -14,12 +14,13 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
+    ags.url = "github:aylur/ags";
     nur.url = "github:nix-community/NUR";
     stylix.url = "github:danth/stylix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
       settings = import ./hosts/laptop/settings.nix;

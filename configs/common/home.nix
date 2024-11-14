@@ -1,6 +1,9 @@
-{ lib, settings, ... }:
+{ lib, settings, inputs, ... }:
 
 {
+  # ags Module
+  imports = [ inputs.ags.homeManagerModules.default ];
+
   # Information what to manage
   home = {
     username = "${settings.userName}";

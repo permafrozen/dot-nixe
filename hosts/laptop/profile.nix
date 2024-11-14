@@ -34,6 +34,7 @@ in {
     (getPath "twingate")
     (getPath "nixvim")
     (getPath "bluetooth")
+    (getPath "ags")
 
     # Variable Apps
     (getPath "${settings.terminal}") # BROWSER
