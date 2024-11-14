@@ -37,7 +37,7 @@ in {
       };
     };
 
-    # Stylix Fish Config
+    # Fish
     programs.fish = {
       shellInit = ''
         set -U fish_color_normal normal
@@ -65,9 +65,9 @@ in {
         set -U fish_pager_color_progress ${config.lib.stylix.colors.base07} --bold
         set -U fish_pager_color_completion ${config.lib.stylix.colors.base05}
         set -U fish_pager_color_description ${config.lib.stylix.colors.base0D}
-        set -U fish_pager_color_selected_background --background=${config.lib.stylix.colors.base00}
+        set -U fish_pager_color_selected_background --background=${config.lib.stylix.colors.base02}
         set -U fish_pager_color_secondary_description ${config.lib.stylix.colors.base04}
-        set -U fish_pager_color_secondary_background ${config.lib.stylix.colors.base01}
+        set -U fish_pager_color_secondary_background ${config.lib.stylix.colors.base02}
         set -U fish_color_option ${config.lib.stylix.colors.base0E}
         set -U fish_pager_color_background ${config.lib.stylix.colors.base00}
         set -U fish_pager_color_secondary_completion ${config.lib.stylix.colors.base05}
@@ -84,7 +84,7 @@ in {
     programs.starship = {
       settings = {
         palettes.custom = {
-          black = "#${config.lib.stylix.colors.base00}";
+          black = "#${config.lib.stylix.colors.base03}";
           white = "#${config.lib.stylix.colors.base0D}";
           red = "#${config.lib.stylix.colors.base08}";
           green = "#${config.lib.stylix.colors.base0B}";
