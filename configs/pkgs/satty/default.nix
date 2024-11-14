@@ -10,7 +10,7 @@
       early-exit = true
       initial-tool = "brush"
 
-      copy-command = "wl-copy"
+      copy-command = "wl-copy --type image/png"
 
       # Increase or decrease the size of the annotations
       annotation-size-factor = 1
