@@ -207,12 +207,15 @@
         };
 
         windowrulev2 = [
-          "noborder, focus:0"
           "maximize, class:^(mpv)$"
           "maximize, class:^(VSCodium)$"
           "opacity 1 1 1, class:^(foot)"
           "opacity 1 1 1, class:^(kitty)"
           "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
+        ];
+
+        layerrule = [
+          "blur, gtk-layer-shell"
         ];
       };
 
