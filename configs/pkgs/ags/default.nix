@@ -1,4 +1,4 @@
-{ settings, ... }:
+{ pkgs, inputs, settings, ... }:
 
 {
 
@@ -10,10 +10,17 @@
       configDir = ./project;
 
       # additional packages to add to gjs's runtime
-      # extraPackages = with pkgs; [
-      #   inputs.ags.packages.${pkgs.system}.battery
-      #   fzf
-      # ];
+      extraPackages = with inputs.ags.packages.${pkgs.system}; [
+        battery
+        hyprland
+        network
+        mpris
+        tray
+        wireplumber
+      ];
     };
   };
+
+  # network cover art caching (for spotify)
+  services.gvfs.enable = true;
 }
