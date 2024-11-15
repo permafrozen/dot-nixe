@@ -139,7 +139,6 @@
           # TODO
 
           # Screenshot keybinds
-          # "$altMod, PRINT, exec, grim - | satty --filename -"
           "$altMod, PRINT, exec, grim -g \"$(slurp -o -c '##ff0000ff')\" -t png - | satty --filename -"
           "$mainMod, PRINT, exec, grim - | wl-copy --type image/png"
 
