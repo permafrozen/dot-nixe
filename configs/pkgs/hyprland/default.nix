@@ -135,6 +135,9 @@
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
 
+          # Reload Ags
+          "$mainMod, R, exec, ags quit && ags run"
+
           # Fullscreen Controls
           "$mainMod, F, fullscreen,"
           "$altMod, F, fullscreen, 1"
