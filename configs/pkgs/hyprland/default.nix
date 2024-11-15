@@ -216,6 +216,7 @@
 
         layerrule = [
           "blur, gtk-layer-shell"
+          "ignorezero, gtk-layer-shell"
         ];
       };
 
