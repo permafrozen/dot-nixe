@@ -29,6 +29,9 @@
         "editor.stickyScroll.enabled" = false;
         "editor.lineNumbers" = "relative";
 
+        # Default Formater
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+
         # nix-plugin
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
