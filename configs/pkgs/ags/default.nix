@@ -23,4 +23,5 @@
 
   # network cover art caching (for spotify)
   services.gvfs.enable = true;
+  services.upower.enable = true;
 }

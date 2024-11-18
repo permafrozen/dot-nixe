@@ -15,9 +15,8 @@ window.Bar {
 
   > centerbox {
     background-color: #{$base00_rgba};
-    border-bottom: solid 2px #{$base0D};
-    margin: 0px 0px 0px 0px;
-    min-height: 1em;
+    border-bottom: solid 2px #{$base00};
+    min-height: 2.5em;
   }
 
   button {
@@ -34,17 +33,17 @@ window.Bar {
   }
 
   label {
-    transition: 200ms;
+    transition: 100ms;
     padding: 0 8px;
     margin: 2px;
-    border-radius: $radius;
-    border: 1pt solid transparent;
   }
 
   .Workspaces .focused label {
     color: #{$base0D};
     font-weight: bolder;
-    min-height: 1em;
+    font-size: 1.3em;
+    border-bottom: solid 2px #{$base0D};
+    border-radius: 0;
   }
 
   .FocusedClient {
@@ -60,11 +59,12 @@ window.Bar {
   }
 
   .Battery label {
-    padding-left: 0;
-    margin-left: 0;
+    color: #{$base05};
   }
 
   .AudioSlider {
+    margin-right: 1em;
+
     * {
       all: unset;
     }
