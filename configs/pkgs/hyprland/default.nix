@@ -102,6 +102,7 @@
           first_launch_animation = "true";
 
           bezier = [
+            "easeOutCubic, 0.33, 1.0, 0.68, 1.0"
             "easeOutQuart, 0.25, 1.0, 0.5, 1.0"
             "easeOutExpo, 0.16, 1.0, 0.3, 1.0"
             "nothing, 0, 0, 1, 1"
