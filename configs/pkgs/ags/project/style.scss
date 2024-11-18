@@ -1,5 +1,5 @@
 $base00: "@window_bg_color";
-$base00_rgba: #{"@bg_transp"};
+$base00_rgba: #{"@bg_transp"}; // tricked the sass compiler (app.ts)
 $base05: "@window_fg_color";
 $base0D: "@accent_color";
 $radius: 10px;
@@ -14,6 +14,7 @@ window.Bar {
 
   > centerbox {
     background-color: #{$base00_rgba};
+    border-bottom: solid 2px #{$base0D};
     margin: 0px 0px 0px 0px;
     min-height: 1em;
   }
