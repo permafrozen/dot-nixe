@@ -36,5 +36,5 @@
 
   # default apps
   browser = "firefox"; # only firefox for now
-  terminal = "kitty"; # kitty, foot
+  terminal = "foot"; # kitty, foot
 }
