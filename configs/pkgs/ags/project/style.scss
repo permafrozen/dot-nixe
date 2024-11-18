@@ -1,5 +1,6 @@
 $base00: "@window_bg_color";
 $base00_rgba: #{"@bg_transp"}; // tricked the sass compiler (app.ts)
+$base01: "@dark_1";
 $base05: "@window_fg_color";
 $base0D: "@accent_color";
 $radius: 10px;
@@ -9,8 +10,8 @@ window.Bar {
   box-shadow: none;
   background-color: transparent;
   color: #{$base05};
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 12pt;
+  font-weight: normal;
 
   > centerbox {
     background-color: #{$base00_rgba};
@@ -42,7 +43,7 @@ window.Bar {
 
   .Workspaces .focused label {
     color: #{$base0D};
-    font-size: 1.3em;
+    font-weight: bolder;
     min-height: 1em;
   }
 
@@ -69,7 +70,7 @@ window.Bar {
     }
 
     icon {
-      margin-right: 0.6em;
+      margin: 0 1em 0 1em;
     }
 
     trough {
@@ -85,11 +86,15 @@ window.Bar {
     }
 
     slider {
-      background-color: #{$base05};
+      background-color: #{$base0D};
       border-radius: $radius;
       min-height: 0.6em;
       min-width: 0.6em;
       margin: -0.2em;
     }
+  }
+
+  .Time {
+    font-weight: bold;
   }
 }
