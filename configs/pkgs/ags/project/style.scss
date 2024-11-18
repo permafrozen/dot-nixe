@@ -1,4 +1,5 @@
 $base00: "@window_bg_color";
+$base00_rgba: #{"@bg_transp"};
 $base05: "@window_fg_color";
 $base0D: "@accent_color";
 $radius: 10px;
@@ -12,7 +13,7 @@ window.Bar {
   font-weight: bold;
 
   > centerbox {
-    background-color: #{$base00};
+    background-color: #{$base00_rgba};
     margin: 0px 0px 0px 0px;
     min-height: 1em;
   }
@@ -25,7 +26,6 @@ window.Bar {
       background-color: #{$base05};
       border-color: #{$base0D};
     }
-
     &:active label {
       background-color: #{$base05};
     }
