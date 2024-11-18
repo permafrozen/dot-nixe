@@ -10,25 +10,44 @@ let
     fonts = {
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
-      emoji = {
-        name = "Noto Emoji";
-        package = pkgs.noto-fonts-emoji;
-      };
       monospace = {
         name = "Hack Nerd Font";
         package = pkgs.nerdfonts;
+      };
+      emoji = {
+        name = "Noto Emoji";
+        package = pkgs.noto-fonts-emoji;
       };
     };
   };
 in {
   stylix = stylixConfig // { targets = { console.enable = true; }; };
 
+  environment.systemPackages = with pkgs; [ base16-schemes ];
+
+  fonts.packages = with pkgs; [
+    nerdfonts
+    noto-fonts-emoji
+    fira-code
+    fira-code-symbols
+  ];
+
   home-manager.users.${settings.userName} = {
+    # Icon themes
+    gtk = {
+      iconTheme = {
+        name = "adwaita";
+        package = pkgs.adwaita-icon-theme;
+      };
+    };
+
+
     stylix = stylixConfig // {
       targets = {
         gtk.enable = true;
         btop.enable = true;
         bat.enable = true;
+        foot.enable = true;
         gnome.enable = true;
         kde.enable = true;
         vscode.enable = true;
@@ -344,13 +363,4 @@ in {
       }
     '';
   };
-
-  environment.systemPackages = with pkgs; [ base16-schemes ];
-
-  fonts.packages = with pkgs; [
-    nerdfonts
-    noto-fonts-emoji
-    fira-code
-    fira-code-symbols
-  ];
 }

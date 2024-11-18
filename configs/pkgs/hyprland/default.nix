@@ -110,9 +110,9 @@
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 9, easeOutQuart, slide top"
-            "windowsOut, 1, 9, easeOutQuart, slide bottom"
-            "windowsMove, 1, 9, easeOutQuart, slide top"
+            "windowsIn, 1, 9, easeOutCubic, popin"
+            "windowsOut, 1, 9, easeOutCubic, popin"
+            "windowsMove, 1, 9, easeOutCubic, popin"
 
             # Workspaces in & out
             "workspacesIn, 1, 6, easeOutExpo, slide"
@@ -120,9 +120,7 @@
           ];
         };
 
-        exec-once = [
-          "ags run"
-        ];
+        exec-once = [ "ags run" ];
 
         bind = [
           # Executables
@@ -215,10 +213,7 @@
           "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
         ];
 
-        layerrule = [
-          "blur, gtk-layer-shell"
-          "ignorezero, gtk-layer-shell"
-        ];
+        layerrule = [ "blur, gtk-layer-shell" "ignorezero, gtk-layer-shell" ];
       };
 
       extraConfig = settings.hyprConfig;
