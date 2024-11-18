@@ -31,6 +31,9 @@
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "[nix]" = {
+          "editor.defaultFormatter"= "jnoortheen.nix-ide";
+        };
 
         # nix-plugin
         "nix.enableLanguageServer" = true;
