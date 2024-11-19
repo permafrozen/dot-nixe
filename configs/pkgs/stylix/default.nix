@@ -41,7 +41,6 @@ in {
       };
     };
 
-
     stylix = stylixConfig // {
       targets = {
         gtk.enable = true;
