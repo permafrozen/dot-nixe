@@ -14,13 +14,12 @@ window.Bar {
   font-weight: bold;
 
   box {
-    background-color: #{$base00};
+    background-color: transparent;
     border-radius: $radius;
   }
 
   > centerbox {
     background-color: #{$base00_rgba};
-    // border-bottom: solid 2px #{$base00};
     min-height: 2.5em;
   }
 
@@ -55,12 +54,14 @@ window.Bar {
     color: #{$base0D};
   }
 
-  .Media .Cover {
-    min-height: 1.2em;
-    min-width: 1.2em;
-    border-radius: $radius;
-    background-position: center;
-    background-size: contain;
+  .Media {
+    .Cover {
+      min-height: 1.2em;
+      min-width: 1.2em;
+      border-radius: $radius;
+      background-position: center;
+      background-size: contain;
+    }
   }
 
   .Battery label {
