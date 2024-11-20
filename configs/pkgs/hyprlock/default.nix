@@ -14,11 +14,11 @@
             "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0.5)";
 
           # Blur
-          blur_passes = "3";
-          blur_size = "2";
-          noise = "0";
-          contrast = "1.69";
-          vibrancy = "0.1069";
+          blur_size = "10";
+          blur_passes = "4";
+          noise = "0.0420";
+          contrast = "5.0";
+          vibrancy = "1.0";
           vibrancy_darkness = "0.1069";
         };
 
