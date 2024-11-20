@@ -51,7 +51,7 @@
 
         general = {
           border_size = "2";
-          "col.active_border" = "0x00${config.lib.stylix.colors.base0D}";
+          "col.active_border" = "0xff${config.lib.stylix.colors.base0D}";
           "col.inactive_border" = "0x00${config.lib.stylix.colors.base03}";
           resize_on_border = "true";
 
