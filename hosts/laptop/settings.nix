@@ -17,7 +17,7 @@
 
   # theme
   wallpaper =
-    "forest.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
+    "nixos-gruvbox.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =
     "ayu-mirage"; # Color Theme (Chose any from the base16-schemes Package)
 
