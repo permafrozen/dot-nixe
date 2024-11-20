@@ -85,11 +85,11 @@
 
           blur = {
             enabled = "true";
-            size = "8";
-            passes = "3";
+            size = "10";
+            passes = "4";
             noise = "0.0420";
-            contrast = "1.69";
-            vibrancy = "0.1069";
+            contrast = "5.0";
+            vibrancy = "1.0";
             vibrancy_darkness = "0.1069";
             ignore_opacity = "true";
             xray = "true";
