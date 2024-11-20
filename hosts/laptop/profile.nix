@@ -9,7 +9,7 @@ in {
     (getPath "starship")
     (getPath "stylix")
     (getPath "swww")
-    (getPath "ly")
+    (getPath "greetd")
     (getPath "lazygit")
     (getPath "vscode")
     (getPath "libreoffice")
