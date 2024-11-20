@@ -6,8 +6,8 @@
       enable = true;
       package = pkgs.zathura;
       options = {
-        default-bg = lib.mkDefault
-          "rgba(${config.lib.stylix.colors.base00-hex-r}, ${config.lib.stylix.colors.base00-hex-g}, ${config.lib.stylix.colors.base00-hex-a}, 0,5)";
+        default-bg = lib.mkForce
+          "rgba(${config.lib.stylix.colors.base00-hex-r}, ${config.lib.stylix.colors.base00-hex-g}, ${config.lib.stylix.colors.base00-hex-b}, 0,5)";
       };
     };
   };
