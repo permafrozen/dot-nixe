@@ -35,6 +35,7 @@ in {
     (getPath "nixvim")
     (getPath "bluetooth")
     (getPath "ags")
+    (getPath "zathura")
 
     # Variable Apps
     (getPath "${settings.terminal}") # BROWSER
