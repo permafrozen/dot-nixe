@@ -121,7 +121,7 @@
           ];
         };
 
-        exec-once = [ "ags run" ];
+        exec-once = [ "ags run" "$terminal" ];
 
         bind = [
           # Executables
