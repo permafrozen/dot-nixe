@@ -12,8 +12,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     ags.url = "github:aylur/ags";
     nur.url = "github:nix-community/NUR";
     stylix.url = "github:danth/stylix";
