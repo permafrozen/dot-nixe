@@ -11,7 +11,7 @@
           path =
             "/home/${settings.userName}/.dot-nixe/assets/wallpapers/${settings.wallpaper}";
           color =
-            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${settings.opacity})";
+            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0.5)";
 
           # Blur
           blur_passes = "3";

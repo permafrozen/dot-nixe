@@ -21,12 +21,6 @@
   scheme =
     "ayu-mirage"; # Color Theme (Chose any from the base16-schemes Package)
 
-  # hyprland
-  rounding = "10";
-  gaps = "10";
-  shadow = "false";
-  opacity = "1";
-
   # Setup Specific Hyprland Config
   hyprConfig = ''
     monitor= eDP-1, 1920x1080@60, 0x0, 1

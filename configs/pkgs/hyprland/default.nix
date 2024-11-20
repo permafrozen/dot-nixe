@@ -55,22 +55,23 @@
           "col.inactive_border" = "0x00${config.lib.stylix.colors.base03}";
           resize_on_border = "true";
 
-          gaps_in = "${settings.gaps}";
-          gaps_out = "${settings.gaps}";
+          gaps_in = "15";
+          gaps_out = "30";
+          gaps_workspaces = "0";
 
           layout = "dwindle";
           allow_tearing = "false";
         };
 
         decoration = {
-          rounding = "${settings.rounding}";
+          rounding = "10";
 
-          active_opacity = "${settings.opacity}";
-          inactive_opacity = "${settings.opacity}";
+          active_opacity = "1";
+          inactive_opacity = "1";
           fullscreen_opacity = "1";
 
           shadow = {
-            enabled = "${settings.shadow}";
+            enabled = "false";
             range = "16";
             render_power = "20";
             ignore_window = "true";
@@ -188,7 +189,7 @@
 
         input = {
           kb_layout = "de";
-          mouse_refocus = false;
+          mouse_refocus = "false";
           follow_mouse = 0;
         };
 
