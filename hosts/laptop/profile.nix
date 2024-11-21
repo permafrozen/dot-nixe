@@ -36,6 +36,7 @@ in {
     (getPath "bluetooth")
     (getPath "ags")
     (getPath "zathura")
+    (getPath "tealdeer")
 
     # Variable Apps
     (getPath "${settings.terminal}") # BROWSER
