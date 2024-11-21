@@ -1,11 +1,12 @@
 { config, ... }:
 
 {
+  environment.sessionVariables = { MANPAGER = "nvim +Man!"; };
   programs.nixvim = {
     enable = true;
 
     # Base16 color scheme
-    colorschemes.base16 = { 
+    colorschemes.base16 = {
       enable = true;
       colorscheme = {
         base00 = "#${config.lib.stylix.colors.base00}";
