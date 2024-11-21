@@ -5,6 +5,16 @@
   programs.nixvim = {
     enable = true;
 
+    # Plugins
+    plugins = {
+      transparent = {
+        enable = true;
+        settings = { enable = true; };
+      };
+    };
+
+    globals = { transparent_enabled = "v:true"; };
+
     # Base16 color scheme
     colorschemes.base16 = {
       enable = true;
