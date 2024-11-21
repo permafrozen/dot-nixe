@@ -11,11 +11,5 @@
 
 # Look: https://permafrozen.github.io/website/
 
-## todos
-
-- wikiman
-- make nvim manpager
-- tealdeer
-
 ## License
 MIT License
