@@ -18,10 +18,21 @@ let
         name = "Noto Emoji";
         package = pkgs.noto-fonts-emoji;
       };
+      sizes = {
+        applications = 14;
+        desktop = 14;
+        popups = 14;
+        terminal = 14;
+      };
     };
   };
 in {
-  stylix = stylixConfig // { targets = { console.enable = true; }; };
+  stylix = stylixConfig // {
+    targets = {
+      console.enable = true;
+      regreet.enable = true;
+    };
+  };
 
   environment.systemPackages = with pkgs; [ base16-schemes ];
 
@@ -104,11 +115,11 @@ in {
       settings = {
         palettes.custom = {
           black = "#${config.lib.stylix.colors.base03}";
-          white = "#${config.lib.stylix.colors.base0D}";
+          white = "#${config.lib.stylix.colors.base05}";
           red = "#${config.lib.stylix.colors.base08}";
           green = "#${config.lib.stylix.colors.base0B}";
           blue = "#${config.lib.stylix.colors.base0B}";
-          cyan = "#${config.lib.stylix.colors.base0C}";
+          cyan = "#${config.lib.stylix.colors.base0D}";
           yellow = "#${config.lib.stylix.colors.base0A}";
         };
       };
