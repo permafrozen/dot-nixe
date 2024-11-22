@@ -1,10 +1,9 @@
 { settings, ... }:
 
-{
-  imports = [
-    ../../hosts/${settings.hostPreset}/hardware-configuration.nix
-    ../../hosts/${settings.hostPreset}/profile.nix
-  ];
+let path = pkg: ../../configs/pkgs/${pkg}/default.nix;
+in {
+  imports = [ ../../hosts/${settings.hostPreset}/hardware-configuration.nix ]
+    ++ map path settings.pkgs;
 
   # Bootloader.
   boot.loader = {

@@ -1,4 +1,4 @@
-{
+rec {
   # system settings
   userName = "matteo";
   hostName = "nixos";
@@ -27,7 +27,47 @@
     monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
   '';
 
-  # default apps
+  # variable apps
   browser = "firefox"; # only firefox for now
   terminal = "foot"; # kitty, foot
+
+  pkgs = [
+    "pipewire"
+    "hyprland"
+    "fish"
+    "starship"
+    "stylix"
+    "swww"
+    "greetd"
+    "lazygit"
+    "vscode"
+    "libreoffice"
+    "yazi"
+    "btop"
+    "obsidian"
+    "quickemu"
+    "vesktop"
+    "git"
+    "syncthing"
+    "ani-cli"
+    "intellij"
+    "bitwarden"
+    "fastfetch"
+    "nh"
+    "satty"
+    "hyprlock"
+    "kanata"
+    "cliphist"
+    "distrobox"
+    "planify"
+    "twingate"
+    "nixvim"
+    "bluetooth"
+    "ags"
+    "zathura"
+    "tealdeer"
+    "${terminal}" # BROWSER
+    "${browser}" # TERMINAL
+  ];
+
 }
