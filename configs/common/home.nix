@@ -2,7 +2,10 @@
 
 {
   # ags Module
-  imports = [ inputs.ags.homeManagerModules.default ];
+  imports = if builtins.elem "ags" settings.pkgs then
+    [ inputs.ags.homeManagerModules.default ]
+  else
+    [ ];
 
   # Information what to manage
   home = {
