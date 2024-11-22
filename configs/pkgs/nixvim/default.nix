@@ -7,6 +7,12 @@
 
     # Plugins
     plugins = {
+
+      alpha = {
+        enable = true;
+        theme = "startify";
+      };
+
       transparent = {
         enable = true;
         settings = { enable = true; };
@@ -22,6 +28,13 @@
         };
       };
 
+      lualine = {
+        enable = true;
+      };
+
+      nvim-tree = { enable = true; };
+      web-devicons = { enable = true; };
+
       cmp = {
         enable = true;
         autoEnableSources = true;
@@ -29,6 +42,12 @@
           [ { name = "nvim_lsp"; } { name = "path"; } { name = "buffer"; } ];
       };
     };
+
+    extraConfigLua = ''
+      vim.opt.fillchars:append { eob = " " }
+      vim.wo.number = true
+      vim.wo.relativenumber = true
+    '';
 
     extraConfigVim = ''
       augroup RestoreCursorShapeOnExit
