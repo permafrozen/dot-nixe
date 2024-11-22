@@ -11,7 +11,31 @@
         enable = true;
         settings = { enable = true; };
       };
+
+      lsp = {
+        enable = true;
+        servers = {
+          nixd = {
+            enable = true;
+            settings = { formatting.command = [ "nix-fmt" ]; };
+          };
+        };
+      };
+
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings.sources =
+          [ { name = "nvim_lsp"; } { name = "path"; } { name = "buffer"; } ];
+      };
     };
+
+    extraConfigVim = ''
+      augroup RestoreCursorShapeOnExit
+        autocmd!
+        autocmd VimLeave * set guicursor=a:ver20
+      augroup END
+    '';
 
     globals = { transparent_enabled = "v:true"; };
 
