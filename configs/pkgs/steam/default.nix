@@ -1,11 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    bottles-unwrapped
-    lutris-unwrapped
-  ];
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall =

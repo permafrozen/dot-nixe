@@ -37,6 +37,7 @@ rec {
     "fish"
     "starship"
     "stylix"
+    "steam"
     "swww"
     "greetd"
     "lazygit"
