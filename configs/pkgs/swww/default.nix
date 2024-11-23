@@ -6,7 +6,7 @@
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland.extraConfig = ''
       exec-once = swww-daemon
-      exec = swww img ~/.dot-nixe/assets/wallpapers/${settings.wallpaper}
+      exec = swww img ${../../../.}/assets/wallpapers/${settings.wallpaper} -t grow --transition-fps 100 
     '';
   };
 }
