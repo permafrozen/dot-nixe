@@ -1,0 +1,59 @@
+$base00: "@window_bg_color";
+$base00_rgba: #{"@bg_transp"}; // tricked the sass compiler (app.ts)
+$base01: "@dark_1";
+$base05: "@window_fg_color";
+$base0D: "@accent_color";
+$radius: 10px;
+
+window#launcher {
+  all: unset;
+  * {
+    background-color: transparent;
+  }
+
+  box.Applauncher {
+    background-color: #{$base00_rgba};
+    border: 2px solid #{$base0D};
+    border-radius: $radius;
+    margin: 1rem;
+    padding: 0.8rem;
+
+    entry {
+      margin-bottom: 0.8rem;
+    }
+
+    button {
+      min-width: 0;
+      min-height: 0;
+      padding: 0.5rem;
+
+      icon {
+        font-size: 3em;
+        margin-right: 0.3rem;
+      }
+
+      label.name {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      label.description {
+        color: #{$base05};
+      }
+    }
+
+    box.not-found {
+      padding: 1rem;
+
+      icon {
+        font-size: 6em;
+        color: #{$base05};
+      }
+
+      label {
+        font-size: 1.2em;
+        color: #{$base05};
+      }
+    }
+  }
+}

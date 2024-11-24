@@ -140,8 +140,8 @@ function FocusedClient() {
   return (
     <box className="Focused" visible={focused.as(Boolean)}>
       {focused.as(
-        
-        (client) => client && <label label={bind(client,"initialClass").as(String)} />
+        (client) =>
+          client && <label label={bind(client, "initialClass").as(String)} />
       )}
     </box>
   );

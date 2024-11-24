@@ -11,6 +11,7 @@
 
       # additional packages to add to gjs's runtime
       extraPackages = with inputs.ags.packages.${pkgs.system}; [
+        apps
         battery
         hyprland
         network
