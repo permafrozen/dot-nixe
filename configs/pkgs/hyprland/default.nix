@@ -48,7 +48,7 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        "$runner" = "ags run ~/.config/ags/runner.ts ";
+        # "$runner" = "ags run ~/.config/ags/runner.ts ";
         "$statusbar" = "ags run ~/.config/ags/bar.ts ";
 
         general = {
@@ -137,9 +137,6 @@
           # Window/Session killing
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
-
-          # Reload Ags
-          "$mainMod, R, exec, ags quit && ags run"
 
           # Fullscreen Controls
           "$mainMod, F, fullscreen,"
