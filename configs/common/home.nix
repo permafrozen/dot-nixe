@@ -1,9 +1,11 @@
 { lib, settings, inputs, ... }:
 
 {
-  # ags Module
+  # extra modules
   imports = if builtins.elem "ags" settings.pkgs then
     [ inputs.ags.homeManagerModules.default ]
+  else if builtins.elem "walker" settings.pkgs then
+    [ inputs.walker.homeManagerModules.default ]
   else
     [ ];
 
