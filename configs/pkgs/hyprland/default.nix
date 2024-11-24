@@ -123,8 +123,7 @@
           ];
         };
 
-        exec-once =
-          [ "$statusbar" "$terminal" "walker --gapplication-service" ];
+        exec-once = [ "$statusbar" "$terminal" ];
 
         bind = [
           # Executables

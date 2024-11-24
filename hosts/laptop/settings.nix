@@ -67,7 +67,6 @@ rec {
     "ags"
     "zathura"
     "tealdeer"
-    "walker"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
