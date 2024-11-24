@@ -48,7 +48,7 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        # "$runner" = "ags run ~/.config/ags/runner.ts ";
+        "$runner" = "walker";
         "$statusbar" = "ags run ~/.config/ags/bar.ts ";
 
         general = {
@@ -123,7 +123,8 @@
           ];
         };
 
-        exec-once = [ "$statusbar" "$terminal" ];
+        exec-once =
+          [ "$statusbar" "$terminal" "walker --gapplication-service" ];
 
         bind = [
           # Executables
