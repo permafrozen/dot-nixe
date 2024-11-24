@@ -48,6 +48,8 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
+        "$runner" = "ags run ~/.config/ags/runner.ts ";
+        "$statusbar" = "ags run ~/.config/ags/bar.ts ";
 
         general = {
           border_size = "2";
@@ -121,10 +123,11 @@
           ];
         };
 
-        exec-once = [ "ags run" "$terminal" ];
+        exec-once = [ "$statusbar" "$terminal" ];
 
         bind = [
           # Executables
+          "$mainMod, A, exec, $runner"
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
           "$mainMod, E, exec, $explorer"
