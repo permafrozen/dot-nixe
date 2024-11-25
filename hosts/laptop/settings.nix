@@ -67,6 +67,7 @@ rec {
     "ags"
     "zathura"
     "tealdeer"
+    "rofi-wayland"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
