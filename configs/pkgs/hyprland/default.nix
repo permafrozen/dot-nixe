@@ -48,8 +48,8 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        "$runner" = "walker";
-        "$statusbar" = "ags run ~/.config/ags/bar.ts ";
+        "$runner" = "rofi -show drun -theme default";
+        "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         general = {
           border_size = "2";
