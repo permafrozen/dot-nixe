@@ -118,6 +118,8 @@
 
         style = ''
           :root {
+            --main-background: #${config.lib.stylix.colors.base00}80;
+            background-color: #${config.lib.stylix.colors.base00}80;
             --main-color: #${config.lib.stylix.colors.base05};
             --main-border-color: #${config.lib.stylix.colors.base0D};
             --search-background: #${config.lib.stylix.colors.base00};
@@ -154,23 +156,15 @@
           }
 
           #box {
-            border-radius: 2px;
-            background: var(--main-background);
+            border-radius: 10px;
+            background-color: #${config.lib.stylix.colors.base00}80;
             padding: 32px;
-            border: 1px solid var(--main-border-color);
-            /* box-shadow:
-              0 19px 38px rgba(0, 0, 0, 0.3),
-              0 15px 12px rgba(0, 0, 0, 0.22); */
+            border: 2px solid #${config.lib.stylix.colors.base0D};
+
           }
 
           #search {
-            /* box-shadow:
-              0 1px 3px rgba(0, 0, 0, 0.1),
-              0 1px 2px rgba(0, 0, 0, 0.22); */
-            background: var(--search-background);
-          }
-
-          #prompt {
+            background: #${config.lib.stylix.colors.base0D};
           }
 
           #password,
@@ -225,7 +219,7 @@
 
           child:selected,
           child:hover {
-            background: var(--selected-background);
+            background: #${config.lib.stylix.colors.base02};
           }
 
           #item {
@@ -279,7 +273,6 @@
 
           .aiItem.assistant {
             background: var(--ai-response-background);
-          }
         '';
       };
     };
