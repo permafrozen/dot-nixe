@@ -48,7 +48,7 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        "$runner" = "rofi -show drun -theme default";
+        "$runner" = "walker"; #"rofi -show drun -theme default";
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         general = {
@@ -96,7 +96,7 @@
             vibrancy_darkness = "0.1069";
             ignore_opacity = "true";
             xray = "true";
-            popups = "true";
+            # popups = "true";
           };
         };
 
@@ -123,7 +123,7 @@
           ];
         };
 
-        exec-once = [ "$statusbar" "$terminal" ];
+        exec-once = [ "$statusbar" "$terminal" "walker --gapplication-service" ];
 
         bind = [
           # Executables

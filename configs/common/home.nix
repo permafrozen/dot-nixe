@@ -1,10 +1,10 @@
 { lib, settings, inputs, ... }:
 
 {
-  imports = if builtins.elem "ags" settings.pkgs then
-    [ inputs.ags.homeManagerModules.default ]
-  else
-    [ ];
+  imports = [
+    inputs.ags.homeManagerModules.default
+    inputs.walker.homeManagerModules.default
+  ];
 
   # Information what to manage
   home = {
