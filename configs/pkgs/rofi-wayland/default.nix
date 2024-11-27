@@ -32,10 +32,10 @@
           red:                         #${config.lib.stylix.colors.base08};
           blue:                        #${config.lib.stylix.colors.base0D};
           foreground:                  #${config.lib.stylix.colors.base05};
-          background:                  #${config.lib.stylix.colors.base00};
+          background:                  #${config.lib.stylix.colors.base00}80;
           selected-active-foreground:  #${config.lib.stylix.colors.base01};
           lightfg:                     #${config.lib.stylix.colors.base03};
-          lightbg:                     #${config.lib.stylix.colors.base00};
+          lightbg:                     #${config.lib.stylix.colors.base00}80;
           spacing:                     2;
           separatorcolor:              var(foreground);
           urgent-foreground:           var(red);
