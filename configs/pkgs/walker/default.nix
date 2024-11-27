@@ -152,7 +152,7 @@
           }
 
           #window {
-            color: var(--main-color);
+            color: #${config.lib.stylix.colors.base05};
           }
 
           #box {
@@ -161,10 +161,6 @@
             padding: 32px;
             border: 2px solid #${config.lib.stylix.colors.base0D};
 
-          }
-
-          #search {
-            background: #${config.lib.stylix.colors.base0D};
           }
 
           #password,
@@ -214,12 +210,7 @@
 
           child {
             padding: 9px;
-            border-radius: 2px;
-          }
-
-          child:selected,
-          child:hover {
-            background: #${config.lib.stylix.colors.base02};
+            border-radius: 10px;
           }
 
           #item {
