@@ -48,7 +48,7 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        "$runner" = "walker"; # "rofi -show drun -theme default";
+        "$runner" = "walker --modules applications"; # "rofi -show drun -theme default";
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         general = {
