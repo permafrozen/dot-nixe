@@ -17,7 +17,7 @@ rec {
 
   # theme
   wallpaper =
-    "city.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
+    "dark-asian-temple.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =
     "ayu-mirage"; # Color Theme (Chose any from the base16-schemes Package)
 
