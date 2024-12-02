@@ -19,7 +19,7 @@ rec {
   wallpaper =
     "dark-asian-temple.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =
-    "ayu-mirage"; # Color Theme (Chose any from the base16-schemes Package)
+    "da-one-black"; # Color Theme (Chose any from the base16-schemes Package)
 
   # Setup Specific Hyprland Config
   hyprConfig = ''
