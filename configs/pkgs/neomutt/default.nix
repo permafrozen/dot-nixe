@@ -6,6 +6,9 @@
       enable = true;
       editor = "nvim";
       vimKeys = true;
+      settings = {
+
+      };
     };
   };
 }
