@@ -48,7 +48,8 @@
         "$terminal" = "${settings.terminal}";
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
-        "$runner" = "walker --modules applications"; # "rofi -show drun -theme default";
+        "$runner" =
+          "walker --modules applications"; # "rofi -show drun -theme default";
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         general = {
@@ -207,7 +208,24 @@
           background_color = "0x${config.lib.stylix.colors.base00}";
         };
 
+        workspace = [
+
+          # Smart Gaps ------------------ #
+          "w[tv1], gapsout:0, gapsin:0"
+          "f[1], gapsout:0, gapsin:0"
+          # ----------------------------- #
+
+        ];
+
         windowrulev2 = [
+
+          # Smart Gaps ------------------ #
+          "bordersize 0, floating:0, onworkspace:w[tv1]"
+          "rounding 0, floating:0, onworkspace:w[tv1]"
+          "bordersize 0, floating:0, onworkspace:f[1]"
+          "rounding 0, floating:0, onworkspace:f[1]"
+          # ----------------------------- #
+
           "maximize, class:^(mpv)$"
           "maximize, class:^(VSCodium)$"
           "opacity 1 1 1, class:^(foot)"
