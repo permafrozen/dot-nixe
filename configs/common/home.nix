@@ -15,6 +15,7 @@
       mkdir -p Documents
       mkdir -p Downloads
       mkdir -p Music
+      mkdir -p Mail
       mkdir -p Pictures/Screenshots
     '';
   };
