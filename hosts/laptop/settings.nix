@@ -68,6 +68,7 @@ rec {
     "zathura"
     "tealdeer"
     "walker"
+    "neomutt"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
