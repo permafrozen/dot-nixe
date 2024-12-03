@@ -28,7 +28,7 @@ rec {
   '';
 
   # variable apps
-  browser = "firefox"; # only firefox for now
+  browser = "floorp"; # firefox, floorp, ungoogle-chromium
   terminal = "foot"; # kitty, foot
 
   pkgs = [
@@ -69,7 +69,6 @@ rec {
     "tealdeer"
     "walker"
     "neomutt"
-    "ungoogled-chromium"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
