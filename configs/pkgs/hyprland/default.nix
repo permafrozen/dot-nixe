@@ -67,7 +67,7 @@
         };
 
         decoration = {
-          rounding = "10";
+          rounding = "0";
 
           active_opacity = "1";
           inactive_opacity = "1";
