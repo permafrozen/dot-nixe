@@ -69,6 +69,7 @@ rec {
     "tealdeer"
     "walker"
     "neomutt"
+    "ungoogled-chromium"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
