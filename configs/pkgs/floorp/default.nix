@@ -5,6 +5,10 @@
       profiles.default = {
         settings = {
           "extensions.autoDisableScopes" = 0;
+          "browser.aboutConfig.showWarning" = false;
+          "browser.bookmarks.addedImportButton" = false;
+          "browser.toolbars.bookmarks.visibility" = "newtab";
+
           # "browser.startup.homepage" = "https://nixos.org";
           # "browser.search.region" = "GB";
           # "browser.search.isUS" = false;
@@ -62,7 +66,6 @@
               "@g"; # builtin engines only support specifying one additional alias
           };
         };
-
       };
     };
   };
