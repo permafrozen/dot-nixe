@@ -28,7 +28,7 @@ rec {
   '';
 
   # variable apps
-  browser = "librewolf"; # firefox, floorp, ungoogle-chromium, librewolf
+  browser = "floorp"; # firefox, floorp, ungoogle-chromium, librewolf
   terminal = "foot"; # kitty, foot
 
   pkgs = [
