@@ -1,9 +1,10 @@
-{ config, settings, ... }: {
+{ config, settings, pkgs, ... }: {
   home-manager.users.${settings.userName} = {
     programs.floorp = {
       enable = true;
       profiles.default = {
         settings = {
+          "extensions.autoDisableScopes" = 0;
           # "browser.startup.homepage" = "https://nixos.org";
           # "browser.search.region" = "GB";
           # "browser.search.isUS" = false;
