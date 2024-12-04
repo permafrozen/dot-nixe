@@ -12,7 +12,7 @@ let
       sansSerif = config.stylix.fonts.monospace;
       monospace = {
         name = "Hack Nerd Font";
-        package = pkgs.nerdfonts;
+        package = pkgs.nerd-fonts.hack;
       };
       emoji = {
         name = "Noto Emoji";
@@ -37,9 +37,9 @@ in {
   environment.systemPackages = with pkgs; [ base16-schemes ];
 
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.hack
+    nerd-fonts.symbols-only
     noto-fonts-emoji
-    fira-code
     fira-code-symbols
   ];
 
@@ -64,6 +64,7 @@ in {
         yazi.enable = true;
         zathura.enable = true;
         zellij.enable = true;
+        firefox.enable = true;
       };
     };
 
