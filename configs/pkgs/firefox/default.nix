@@ -42,7 +42,6 @@
             }
           ];
         }];
-        search.default = "DuckDuckGo";
         settings = {
           # Enable all Extensions
           "extensions.autoDisableScopes" = 0;
