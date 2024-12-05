@@ -45,7 +45,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = "dotnixbk";
+              backupFileExtension = "backup";
               extraSpecialArgs = args;
               users.${settings.userName} = import ./configs/common/home.nix;
             };
