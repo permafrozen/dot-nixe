@@ -20,6 +20,7 @@
           #   url = "https://nixos.org";
           # }];
         };
+
         extensions = with config.nur.repos.rycee.firefox-addons; [
           privacy-badger
           sponsorblock
@@ -28,6 +29,43 @@
           wikiwand-wikipedia-modernized
           terms-of-service-didnt-read
         ];
+
+        bookmarks = [{
+          name = "HTL-Wels Seiten";
+          # tags = [ "schule" "htl" ];
+          bookmarks = [
+            {
+              name = "webdav";
+              url = "https://webdav.htl-wels.at:4343/Lehrer/Lehrer/";
+            }
+            {
+              name = "digi4school";
+              url = "https://digi4school.at/";
+            }
+            {
+              name = "webuntis";
+              url = "https://hypate.webuntis.com/today";
+            }
+          ];
+        }];
+
+        containers = {
+          private = {
+            id = 0;
+            icon = "chill";
+          };
+
+          school = {
+            id = 1;
+            icon = "tree";
+          };
+
+          work = {
+            id = 2;
+            icon = "briefcase";
+          };
+        };
+
         search = {
           default = "DuckDuckGo";
           engines = {
@@ -59,6 +97,11 @@
               iconUpdateURL = "https://wiki.nixos.org/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@nw" ];
+            };
+
+            "Perplexity ai" = {
+              urls = [{ template = "https://www.perplexity.ai/search"; }];
+              definedAliases = [ "@pe" ];
             };
 
             "Bing".metaData.hidden = true;
