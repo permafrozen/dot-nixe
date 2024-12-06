@@ -32,6 +32,7 @@ rec {
   terminal = "foot"; # kitty, foot
 
   pkgs = [
+    "kernel"
     "pipewire"
     "hyprland"
     "fish"
