@@ -32,8 +32,12 @@
 
         bookmarks = [{
           name = "HTL-Wels Seiten";
-          # tags = [ "schule" "htl" ];
+          toolbar = true;
           bookmarks = [
+            {
+              name = "moodle";
+              url = "http://elearn.htl-wels.at/";
+            }
             {
               name = "webdav";
               url = "https://webdav.htl-wels.at:4343/Lehrer/Lehrer/";
@@ -48,23 +52,6 @@
             }
           ];
         }];
-
-        containers = {
-          private = {
-            id = 0;
-            icon = "chill";
-          };
-
-          school = {
-            id = 1;
-            icon = "tree";
-          };
-
-          work = {
-            id = 2;
-            icon = "briefcase";
-          };
-        };
 
         search = {
           default = "DuckDuckGo";
@@ -100,8 +87,15 @@
             };
 
             "Perplexity ai" = {
-              urls = [{ template = "https://www.perplexity.ai/search"; }];
+              urls =
+                [{ template = "https://www.perplexity.ai/?q={searchTerms}"; }];
               definedAliases = [ "@pe" ];
+            };
+
+            "My NixOS" = {
+              urls =
+                [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+              definedAliases = [ "@my" ];
             };
 
             "Bing".metaData.hidden = true;
