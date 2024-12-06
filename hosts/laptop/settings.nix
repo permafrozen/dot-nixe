@@ -32,7 +32,6 @@ rec {
   terminal = "foot"; # kitty, foot
 
   pkgs = [
-    "wluma"
     "kernel"
     "pipewire"
     "hyprland"
