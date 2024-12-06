@@ -56,6 +56,7 @@
     wget
     mdbook
     zip
+    brightnessctl
 
     # Silly gimick stuff
     cowsay
