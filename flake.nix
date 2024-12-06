@@ -36,7 +36,7 @@
         inherit system;
         specialArgs = args;
         modules = [
-          ./configs/common/configuration.nix
+          ./configs/core/configuration.nix
           inputs.nur.nixosModules.nur
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
@@ -47,7 +47,7 @@
               useUserPackages = true;
               backupFileExtension = "backup";
               extraSpecialArgs = args;
-              users.${settings.userName} = import ./configs/common/home.nix;
+              users.${settings.userName} = import ./configs/core/home.nix;
             };
           }
         ];
