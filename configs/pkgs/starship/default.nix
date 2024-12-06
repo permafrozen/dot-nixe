@@ -7,16 +7,16 @@
       settings = {
 
         # Misc
-        format = ''
-          $directory$character
-        '';
+        # format = ''
+        #   $directory$character
+        # '';
         palette = "custom";
         add_newline = false;
 
         # Prompt Character
         character = {
-          success_symbol = "[ ](bold white)";
-          error_symbol = "[ ](bold red)";
+          success_symbol = "[ > ](bold white)";
+          error_symbol = "[!> ](bold red)";
         };
 
         # Directory Module
