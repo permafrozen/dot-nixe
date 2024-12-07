@@ -12,6 +12,9 @@
         jnoortheen.nix-ide
         vscodevim.vim
         esbenp.prettier-vscode
+        svelte.svelte-vscode
+        tauri-apps.tauri-vscode
+        rust-lang.rust-analyzer
       ];
       userSettings = {
         # Editor Settigns
@@ -31,9 +34,10 @@
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        "[nix]" = {
-          "editor.defaultFormatter"= "jnoortheen.nix-ide";
-        };
+        "[nix]" = { "editor.defaultFormatter" = "jnoortheen.nix-ide"; };
+
+        # Svelte ts support
+        "svelte.enable-ts-plugin" = true;
 
         # nix-plugin
         "nix.enableLanguageServer" = true;
