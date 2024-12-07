@@ -22,15 +22,21 @@
         "editor.cursorSmoothCaretAnimation" = "on";
         "editor.fontFamily" = "'Hack Nerd Font'";
         "editor.smoothScrolling" = "true";
+        "editor.renderControlCharacters" = false;
+        "editor.stickyScroll.enabled" = false;
+        "editor.lineNumbers" = "relative";
         "terminal.integrated.fontFamily" = "'Hack Nerd Font'";
         "terminal.integrated.smoothScrolling" = "true";
         "window.titleBarStyle" = "custom";
-        "window.menuBarVisibility" = "compact";
+        "window.menuBarVisibility" = "toggle";
+        "window.density.editorTabHeight" = "compact";
         "workbench.sideBar.location" = "right";
-        "editor.renderControlCharacters" = false;
-        "workbench.editor.showTabs" = "none";
-        "editor.stickyScroll.enabled" = false;
-        "editor.lineNumbers" = "relative";
+        "workbench.editor.showTabs" = "multiple";
+        "workbench.welcomePage.extraAnnouncements" = false;
+        "workbench.layoutControl.enabled" = false;
+        "workbench.editor.editorActionsLocation" = "hidden";
+        "window.commandCenter" = false;
+        "window.experimentalControlOverlay" = false;
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
