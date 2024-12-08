@@ -17,7 +17,7 @@
           blur_size = "10";
           blur_passes = "4";
           noise = "0.0420";
-          contrast = "5.0";
+          contrast = "1.0";
           vibrancy = "1.0";
           vibrancy_darkness = "0.1069";
         };
@@ -37,9 +37,9 @@
 
           # Color Setting
           outer_color =
-            "rgb(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b})";
+            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
           inner_color =
-            "rgb(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b})";
+            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
           font_color =
             "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
           check_color =
