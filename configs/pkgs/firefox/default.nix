@@ -1,4 +1,4 @@
-{ config, settings, ... }:
+{ pkgs, config, settings, ... }:
 
 {
   home-manager.users.${settings.userName} = {
@@ -7,7 +7,7 @@
       profiles.default = {
         id = 0;
         name = "default";
-        extensions = with config.nur.repos.rycee.firefox-addons; [
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           privacy-badger
           sponsorblock
           sidebery

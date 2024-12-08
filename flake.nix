@@ -37,7 +37,7 @@
         specialArgs = args;
         modules = [
           ./configs/core/configuration.nix
-          inputs.nur.nixosModules.nur
+          inputs.nur.modules.nixos.default
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixvim.nixosModules.nixvim

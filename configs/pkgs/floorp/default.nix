@@ -21,7 +21,7 @@
           # }];
         };
 
-        extensions = with config.nur.repos.rycee.firefox-addons; [
+        extensions = with  pkgs.nur.repos.rycee.firefox-addons; [
           privacy-badger
           sponsorblock
           ublock-origin
