@@ -16,7 +16,7 @@
           le = "eza";
           nrf = "nh os switch .";
           trel = "tre -l 1";
-          cfetch = "clear && fastfetch";
+          cfetch = "clear && fastfetch && sleep 10";
           ttt = "tt -notheme";
           matrix = "cmatrix -s -C blue";
         };
