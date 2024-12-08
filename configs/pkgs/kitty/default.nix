@@ -9,7 +9,7 @@
         # Colors
         foreground = lib.mkDefault "#${config.lib.stylix.colors.base05}";
         background = lib.mkDefault "#${config.lib.stylix.colors.base00}";
-        background_opacity = lib.mkForce 0.5;
+        background_opacity = lib.mkForce settings.opacity;
         background_blur = lib.mkForce 0;
 
         # Miscellaneous

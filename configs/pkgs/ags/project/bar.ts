@@ -6,7 +6,7 @@ App.start({
   // trick
   css:
     `
-        @define-color bg_transp alpha(@window_bg_color, 0.5);
+        @define-color bg_transp alpha(@window_bg_color, 0.3);
     ` + style,
   instanceName: "bar",
   requestHandler(request, res) {

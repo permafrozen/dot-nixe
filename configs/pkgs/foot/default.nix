@@ -18,7 +18,7 @@
         };
 
         mouse = { hide-when-typing = true; };
-        colors = { alpha = lib.mkForce "0.5"; };
+        colors = { alpha = lib.mkForce "${settings.opacity}"; };
       };
     };
   };

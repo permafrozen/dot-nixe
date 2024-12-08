@@ -16,10 +16,9 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper =
-    "minimalist-dunes.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
-  scheme =
-    "da-one-black"; # Color Theme (Chose any from the base16-schemes Package)
+  wallpaper = "minimalist-dunes.png"; # ../assets/wallpaper/
+  scheme = "da-one-black"; # base16-schemes Package
+  opacity = "0.3";
 
   # Setup Specific Hyprland Config
   hyprConfig = ''

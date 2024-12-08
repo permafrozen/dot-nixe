@@ -27,9 +27,6 @@
         "editor.lineNumbers" = "relative";
         "terminal.integrated.fontFamily" = "'Hack Nerd Font'";
         "terminal.integrated.smoothScrolling" = "true";
-        "window.titleBarStyle" = "custom";
-        "window.menuBarVisibility" = "toggle";
-        "window.density.editorTabHeight" = "compact";
         "workbench.sideBar.location" = "right";
         "workbench.editor.showTabs" = "multiple";
         "workbench.welcomePage.extraAnnouncements" = false;
@@ -37,6 +34,10 @@
         "workbench.editor.editorActionsLocation" = "hidden";
         "window.commandCenter" = false;
         "window.experimentalControlOverlay" = false;
+        "window.titleBarStyle" = "custom";
+        "window.menuBarVisibility" = "toggle";
+        "window.density.editorTabHeight" = "compact";
+        "window.zoomLevel" = 2;
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
