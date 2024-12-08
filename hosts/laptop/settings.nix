@@ -17,7 +17,7 @@ rec {
 
   # theme
   wallpaper =
-    "dark-asian-temple.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
+    "minimalist-dunes.png"; # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =
     "da-one-black"; # Color Theme (Chose any from the base16-schemes Package)
 
