@@ -9,7 +9,7 @@
       package = pkgs.fastfetch;
       settings = {
         logo = {
-          source = "~/.dot-nixe/assets/ascii-art/dot-nixe.txt";
+          source = "~/.dot-nixe/assets/ascii/nixos.txt";
           position = "top";
           padding = {
             top = 2;
