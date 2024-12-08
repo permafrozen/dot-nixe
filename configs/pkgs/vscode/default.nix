@@ -38,6 +38,7 @@
         "window.menuBarVisibility" = "toggle";
         "window.density.editorTabHeight" = "compact";
         "window.zoomLevel" = 2;
+        "workbench.startupEditor" = "none";
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
