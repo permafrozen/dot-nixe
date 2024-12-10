@@ -5,17 +5,18 @@ in {
   imports = [ ../../hosts/${settings.hostPreset}/hardware-configuration.nix ]
     ++ map path settings.pkgs;
 
+  # Laptop Settings
+  services.logind.lidSwitch = "ignore"; # only turns off screen on close
+
   # Bootloader.
   boot.loader = {
     systemd-boot.enable = false;
-
     grub = {
       enable = true;
       device = "nodev";
       efiSupport = true;
       # useOSProber = true;
     };
-
     efi = { canTouchEfiVariables = true; };
   };
 
@@ -41,6 +42,7 @@ in {
       LC_TIME = "${settings.locale}.UTF-8";
     };
   };
+
   # keyboard layout (xserver)
   services.xserver.xkb = {
     layout = "${settings.kbLayout}";
@@ -57,9 +59,9 @@ in {
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  # System Settings
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05"; # be careful with this one
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }
