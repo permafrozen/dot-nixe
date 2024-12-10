@@ -16,7 +16,7 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "minimalist-dunes.png"; # ../assets/wallpaper/
+  wallpaper = "light-snowy-city.png"; # ../assets/wallpaper/
   scheme = "da-one-black"; # base16-schemes Package
   opacity = "0.3";
 
