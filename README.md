@@ -9,7 +9,8 @@
   </pre>
 </div>
 
-# Look: https://permafrozen.github.io/website/
+## Documentation 
+[mdbook](https://permafrozen.github.io/website/dot-nixe-docs/book/misc/introduction.html)
 
 ## License
 MIT License
