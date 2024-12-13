@@ -20,7 +20,7 @@
         # Editor Settigns
         "editor.cursorBlinking" = "phase";
         "editor.cursorSmoothCaretAnimation" = "on";
-        "editor.fontFamily" = "'Hack Nerd Font'";
+        # "editor.fontFamily" = "'Hack Nerd Font'";
         "editor.smoothScrolling" = "true";
         "editor.renderControlCharacters" = false;
         "editor.stickyScroll.enabled" = false;
