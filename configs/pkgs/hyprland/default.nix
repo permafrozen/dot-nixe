@@ -1,6 +1,8 @@
 { inputs, config, pkgs, settings, ... }:
 
 {
+  imports = [ ./plugins.nix ];
+
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
@@ -43,6 +45,7 @@
         # Variables
         "$mainMod" = "SUPER";
         "$altMod" = "SUPER_ALT";
+        "$cursor" = "Bibata-Modern-Classic";
         "$browser" = "${settings.browser}";
         "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
@@ -51,6 +54,9 @@
         "$runner" =
           "walker --modules applications"; # "rofi -show drun -theme default";
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
+
+        # Set Cursor
+        env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,24" ];
 
         general = {
           border_size = "2";
