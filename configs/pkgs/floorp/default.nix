@@ -7,7 +7,7 @@
           "extensions.autoDisableScopes" = 0;
           "browser.aboutConfig.showWarning" = false;
           "browser.bookmarks.addedImportButton" = false;
-          "browser.toolbars.bookmarks.visibility" = "newtab";
+          "browser.toolbars.bookmarks.visibility" = "never";
           "browser.tabs.warnOnClose" = false;
           # "browser.startup.homepage" = "https://nixos.org";
           # "browser.search.region" = "GB";
