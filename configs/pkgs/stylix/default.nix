@@ -25,6 +25,11 @@ let
         terminal = 14;
       };
     };
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
   };
 in {
   stylix = stylixConfig // {
@@ -34,7 +39,7 @@ in {
     };
   };
 
-  environment.systemPackages = with pkgs; [ base16-schemes ];
+  environment.systemPackages = with pkgs; [ base16-schemes bibata-cursors ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.hack
@@ -44,6 +49,10 @@ in {
   ];
 
   home-manager.users.${settings.userName} = {
+    # Cursor Deployment
+    home.file.".icons/Bibata-Modern-Classic".source =
+      "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
+
     # Icon themes
     gtk = {
       iconTheme = {
