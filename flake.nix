@@ -12,6 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     hyprland.url = "github:hyprwm/Hyprland";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     ags.url = "github:aylur/ags";
