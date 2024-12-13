@@ -4,6 +4,8 @@
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       settings = {
+        # Enable Full Log
+        # debug.disable_logs = "false";
 
         # Variables
         "$mainMod" = "SUPER";
