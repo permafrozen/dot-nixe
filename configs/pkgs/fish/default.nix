@@ -57,6 +57,7 @@
     mdbook
     zip
     brightnessctl
+    ciscoPacketTracer8
 
     # Silly gimick stuff
     cowsay
