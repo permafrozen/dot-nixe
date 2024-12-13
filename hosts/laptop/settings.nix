@@ -61,7 +61,6 @@ rec {
     "cliphist"
     "distrobox"
     "planify"
-    "twingate"
     "nixvim"
     "bluetooth"
     "ags"
