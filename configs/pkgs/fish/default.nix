@@ -49,6 +49,7 @@
     file
     git
     nurl
+    nix-melt
     nix-output-monitor
     tre-command
     tree
