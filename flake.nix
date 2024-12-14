@@ -2,6 +2,14 @@
   description = "Main NixOS configuration Flake";
 
   inputs = {
+    hyprland.url = "github:hyprwm/Hyprland";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    ags.url = "github:aylur/ags";
+    nur.url = "github:nix-community/NUR";
+    stylix.url = "github:danth/stylix";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    walker.url = "github:abenz1267/walker";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,14 +24,6 @@
       url = "github:VirtCode/hypr-dynamic-cursors";
       inputs.hyprland.follows = "hyprland";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    ags.url = "github:aylur/ags";
-    nur.url = "github:nix-community/NUR";
-    stylix.url = "github:danth/stylix";
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    walker.url = "github:abenz1267/walker";
   };
 
   outputs = { nixpkgs, ... }@inputs:
