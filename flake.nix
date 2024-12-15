@@ -23,6 +23,7 @@
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
       inputs.hyprland.follows = "hyprland";
+      # inputs.nixpkgs.follows = "nixkpgs";
     };
   };
 
