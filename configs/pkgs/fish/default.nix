@@ -59,6 +59,7 @@
     zip
     brightnessctl
     ciscoPacketTracer8
+    nodejs
 
     # Silly gimick stuff
     cowsay
