@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./plugins.nix
+    ./plugins.nix
     ./configuration.nix
   ];
 

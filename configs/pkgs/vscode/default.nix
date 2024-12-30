@@ -11,6 +11,7 @@
       extensions = with extensions.vscode-marketplace; [
         jnoortheen.nix-ide
         vscodevim.vim
+        svelte.svelte-vscode
         esbenp.prettier-vscode
         svelte.svelte-vscode
         tauri-apps.tauri-vscode

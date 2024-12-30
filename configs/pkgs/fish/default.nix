@@ -58,7 +58,7 @@
     mdbook
     zip
     brightnessctl
-    ciscoPacketTracer8
+    # ciscoPacketTracer8
     nodejs
 
     # Silly gimick stuff

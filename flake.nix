@@ -2,7 +2,7 @@
   description = "Main NixOS configuration Flake";
 
   inputs = {
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     ags.url = "github:aylur/ags";
     nur.url = "github:nix-community/NUR";
