@@ -14,7 +14,7 @@
           # rotate  - rotate the cursor based on movement direction
           # stretch - stretch the cursor shape based on direction and velocity
           # none    - do not change the cursors behaviour
-          mode = "stretch";
+          mode = "tilt";
           threshold = "2";
 
           stretch = {

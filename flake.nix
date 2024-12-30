@@ -33,6 +33,7 @@
       settings = import ./hosts/laptop/settings.nix;
       extensions = inputs.nix-vscode-extensions.extensions.${system};
       args = {
+        inherit system;
         inherit inputs;
         inherit settings;
         inherit extensions;
