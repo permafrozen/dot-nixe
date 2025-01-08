@@ -47,6 +47,7 @@
 
         # Svelte ts support
         "svelte.enable-ts-plugin" = true;
+        "[svelte]" = { "editor.defaultFormatter" = "svelte.svelte-vscode"; };
 
         # nix-plugin
         "nix.enableLanguageServer" = true;
