@@ -60,6 +60,7 @@
     brightnessctl
     # ciscoPacketTracer8
     nodejs
+    pnpm
 
     # Silly gimick stuff
     cowsay
