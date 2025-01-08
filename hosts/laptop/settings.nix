@@ -28,7 +28,7 @@ rec {
 
   # variable apps
   browser = "floorp"; # firefox, floorp, ungoogle-chromium, librewolf
-  terminal = "foot"; # kitty, foot
+  terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
     "kernel"
@@ -68,9 +68,9 @@ rec {
     "tealdeer"
     "walker"
     "neomutt"
-    "ghostty"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
+    "docker"
   ];
 
 }
