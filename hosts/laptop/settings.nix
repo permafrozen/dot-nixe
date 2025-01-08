@@ -61,7 +61,7 @@ rec {
     "cliphist"
     "distrobox"
     "planify"
-    "nvchad"# "nixvim"
+    "nixvim"
     "bluetooth"
     "ags"
     "zathura"
