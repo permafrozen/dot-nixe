@@ -7,7 +7,7 @@
     ];
   };
 
-  home-manager.users.${settings.username} = {
+  home-manager.users.${settings.userName} = {
     imports = [ inputs.nvchad4nix.homeManagerModule ];
     programs.nvchad.enable = true;
   };
