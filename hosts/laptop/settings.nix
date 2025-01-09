@@ -46,7 +46,7 @@ rec {
     "yazi"
     "btop"
     "obsidian"
-    # "quickemu"
+    "quickemu"
     "vesktop"
     "git"
     "syncthing"
