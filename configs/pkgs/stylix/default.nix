@@ -39,7 +39,13 @@ in {
     };
   };
 
-  environment.systemPackages = with pkgs; [ base16-schemes bibata-cursors ];
+  environment.systemPackages = with pkgs; [
+    base16-schemes
+    bibata-cursors
+    adwaita-icon-theme
+    gnome-icon-theme
+    hicolor-icon-theme
+  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.hack
@@ -56,7 +62,7 @@ in {
     # Icon themes
     gtk = {
       iconTheme = {
-        name = "adwaita";
+        name = "Adwaita";
         package = pkgs.adwaita-icon-theme;
       };
     };
