@@ -1,5 +1,7 @@
 {
-  description = "Main NixOS configuration Flake";
+  description = ''
+    This is a NixOS configuration flake using home-manager.
+  '';
 
   inputs = {
     hyprland.url = "github:hyprwm/Hyprland?submodules=1";

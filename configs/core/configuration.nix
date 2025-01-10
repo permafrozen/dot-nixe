@@ -6,7 +6,7 @@ in {
     ++ map path settings.pkgs;
 
   # Laptop Settings
-  services.logind.lidSwitch = "ignore"; # only turns off screen on close
+  services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
 
   # Bootloader.
   boot.loader = {
