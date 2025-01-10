@@ -31,6 +31,7 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "zen"
     "kernel"
     "pipewire"
     "hyprland"
