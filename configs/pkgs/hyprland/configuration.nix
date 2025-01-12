@@ -25,8 +25,8 @@
 
         general = {
           border_size = "2";
-          "col.active_border" = "0x4D${config.lib.stylix.colors.base05}";
-          "col.inactive_border" = "0x00${config.lib.stylix.colors.base03}";
+          "col.active_border" = "0xff${config.lib.stylix.colors.base0D}";
+          "col.inactive_border" = "0x4D${config.lib.stylix.colors.base00}";
           resize_on_border = "true";
 
           gaps_in = "15";
@@ -183,7 +183,7 @@
 
           # Smart Gaps ------------------ #
           # "w[tv1], gapsout:0, gapsin:0"
-          "f[1], gapsout:0, gapsin:0"
+          # "f[1], gapsout:0, gapsin:0"
           # ----------------------------- #
 
         ];
@@ -191,10 +191,10 @@
         windowrulev2 = [
 
           # Smart Gaps ------------------ #
-          "bordersize 0, floating:0, onworkspace:w[tv1]"
+          # "bordersize 0, floating:0, onworkspace:w[tv1]"
           # "rounding 0, floating:0, onworkspace:w[tv1]"
-          "bordersize 0, floating:0, onworkspace:f[1]"
-          "rounding 0, floating:0, onworkspace:f[1]"
+          # "bordersize 0, floating:0, onworkspace:f[1]"
+          # "rounding 0, floating:0, onworkspace:f[1]"
           # ----------------------------- #
 
           "maximize, class:^(mpv)$"
