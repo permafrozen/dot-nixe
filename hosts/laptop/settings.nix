@@ -27,11 +27,10 @@ rec {
   '';
 
   # variable apps
-  browser = "floorp"; # firefox, floorp, ungoogle-chromium, librewolf
+  browser = "zen"; # firefox, floorp, ungoogle-chromium, librewolf, zen
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
-    "zen"
     "kernel"
     "pipewire"
     "hyprland"
