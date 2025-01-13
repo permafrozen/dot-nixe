@@ -1,10 +1,9 @@
 { inputs, pkgs, settings, ... }:
 
 {
-  imports = [
-    ./plugins.nix
-    ./configuration.nix
-  ];
+  imports = [ ./plugins.nix ./configuration.nix ];
+
+  environment.systemPackages = with pkgs; [ hyprshot ];
 
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
@@ -47,3 +46,4 @@
     };
   };
 }
+

@@ -85,8 +85,8 @@
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 9, easeOutCubic, popin"
-            "windowsOut, 1, 9, easeOutCubic, popin"
+            "windowsIn, 1, 9, easeOutCubic, popin 80%"
+            "windowsOut, 1, 9, easeOutCubic, popin 80%"
             "windowsMove, 1, 9, easeOutCubic, popin"
 
             # Workspaces in & out
@@ -119,9 +119,7 @@
           # TODO
 
           # Screenshot keybinds
-          ''
-            $altMod, PRINT, exec, grim -g "$(slurp -o -c '##ff0000ff')" -t png - | satty --filename -''
-          "$mainMod, PRINT, exec, grim - | wl-copy --type image/png"
+          "$mainMod, PRINT, exec, hyprshot -m region"
 
           # Windowfocus Controls
           "$mainMod, H, movefocus, l"
