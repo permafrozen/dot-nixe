@@ -1,4 +1,4 @@
-{ pkgs, settings, extensions, ... }:
+{ pkgs, lib, settings, extensions, ... }:
 
 {
   environment.systemPackages = with pkgs; [ vscodium nixd nixfmt-classic ];
@@ -18,10 +18,18 @@
         rust-lang.rust-analyzer
       ];
       userSettings = {
+
+        # Font Settings
+        "editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "chat.editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "debug.console.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "markdown.preview.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "scm.inputFontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "terminal.integrated.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+
         # Editor Settigns
         "editor.cursorBlinking" = "phase";
         "editor.cursorSmoothCaretAnimation" = "on";
-        # "editor.fontFamily" = "'Hack Nerd Font'";
         "editor.smoothScrolling" = "true";
         "editor.renderControlCharacters" = false;
         "editor.stickyScroll.enabled" = false;

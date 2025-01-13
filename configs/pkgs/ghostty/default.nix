@@ -18,6 +18,9 @@
 
       cursor-style = bar
       cursor-style-blink = true
+      font-size = ${settings.font-size}
+
+      window-padding-x = 10
     '';
   };
 }

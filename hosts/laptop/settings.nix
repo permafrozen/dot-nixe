@@ -19,6 +19,7 @@ rec {
   wallpaper = "light-snowy-city.png"; # ../assets/wallpaper/
   scheme = "da-one-black"; # base16-schemes Package
   opacity = "0.3";
+  font-size = "14";
 
   # Setup Specific Hyprland Config
   hyprConfig = ''
@@ -55,7 +56,6 @@ rec {
     "bitwarden"
     "fastfetch"
     "nh"
-    "satty"
     "hyprlock"
     "kanata"
     "cliphist"
