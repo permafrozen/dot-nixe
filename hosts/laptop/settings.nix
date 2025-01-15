@@ -68,9 +68,9 @@ rec {
     "tealdeer"
     "walker"
     "neomutt"
+    "docker"
+    "zed"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
-    "docker"
   ];
-
 }
