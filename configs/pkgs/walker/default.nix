@@ -27,7 +27,6 @@
 
       theme = {
         layout = {
-
           "ui" = {
             "anchors" = {
               "bottom" = true;
