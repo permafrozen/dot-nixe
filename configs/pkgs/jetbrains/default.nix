@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
+    jetbrains.datagrip
     jdk21
   ];
 
