@@ -13,7 +13,6 @@ in {
         "java"
         "lua"
         "zig"
-        "nix"
         "dockerfile"
         "docker-compose"
         "svelte"
@@ -26,15 +25,16 @@ in {
         "make"
         "xml"
       ];
-      extraPackages = [ pkgs.nixd ];
+      extraPackages = [ pkgs.nixd pkgs.nixfmt-classic pkgs.nil ];
       package = pkgs.zed-editor;
       userKeymaps = { };
       userSettings = {
+
+        # Important Stuff
         vim_mode = true;
+        features.copilot = false;
 
-        features = { copilot = false; };
-
-        # Telemetry
+        # Telemetry Data Collection
         telemetry = {
           diagnostics = false;
           metrics = false;
@@ -53,7 +53,17 @@ in {
         };
 
         # LSP - Config
-        lsp = { nix = { binary.path = lib.getExe pkgs.nixd; }; };
+
+        languages = {
+          Nix = {
+            formatter.command = "nixfmt";
+            language_servers = [ "nixd" "!nil" ];
+          };
+        };
+        lsp = {
+          nixd.settings.diagnostic.suppress = [ "sema-extra-with" ];
+          nil.settings.formatting.command = [ "nixfmt" ];
+        };
       };
     };
   };
