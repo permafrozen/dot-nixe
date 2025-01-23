@@ -62,6 +62,7 @@
     # ciscoPacketTracer8
     nodejs
     pnpm
+    udiskie
 
     # Silly gimick stuff
     cowsay
