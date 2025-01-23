@@ -1,7 +1,8 @@
 { pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ quickemu ];
+  environment.systemPackages = with pkgs; [ quickemu spice-gtk ];
+  services.samba.enable = true;
 
   # Enable virt-manager and dconf
   programs.virt-manager.enable = true;
