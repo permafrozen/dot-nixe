@@ -65,19 +65,6 @@ in {
           nixd.settings.diagnostic.suppress = [ "sema-extra-with" ];
           nil.settings.formatting.command = [ "nixfmt" ];
         };
-
-        # Templates
-        file_templates = {
-          nix = {
-            content = ''
-              {...}:
-
-              {
-
-              }'';
-          };
-          sh = { content = "#!/bin/bash"; };
-        };
       };
     };
   };

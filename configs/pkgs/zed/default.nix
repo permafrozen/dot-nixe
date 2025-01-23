@@ -1,5 +1,9 @@
 { ... }:
 
 {
-  imports = [ ./theme.nix ./configuration.nix ./tasks.nix ];
+  imports = [
+    ./theme.nix
+    ./configuration.nix
+    #./tasks.nix
+  ];
 }
