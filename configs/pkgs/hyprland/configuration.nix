@@ -21,7 +21,7 @@
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         # Set Cursor
-        env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,24" ];
+        env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,32" ];
 
         general = {
           border_size = "2";
@@ -99,7 +99,7 @@
           "$statusbar"
           "$terminal"
           "walker --gapplication-service"
-          "hyprctl setcursor $cursor 24"
+          "hyprctl setcursor $cursor 32"
         ];
 
         bind = [
