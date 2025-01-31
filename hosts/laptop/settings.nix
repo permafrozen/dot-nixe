@@ -41,7 +41,7 @@ rec {
     "starship"
     "stylix"
     "swww"
-    "greetd"
+    "sddm" # "greetd"
     "lazygit"
     "libreoffice"
     "yazi"
