@@ -20,6 +20,8 @@ rec {
   scheme = "da-one-black"; # base16-schemes Package
   opacity = "0.3";
   font-size = "14";
+  cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
+  hyprcursor = "McMojave-Hypr";
 
   # Setup Specific Hyprland Config
   hyprConfig = ''

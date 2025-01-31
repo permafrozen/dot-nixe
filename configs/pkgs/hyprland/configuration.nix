@@ -10,7 +10,7 @@
         # Variables
         "$mainMod" = "SUPER";
         "$altMod" = "SUPER_ALT";
-        "$cursor" = "Bibata-Modern-Classic";
+        "$cursor" = "${settings.hyprcursor}";
         "$browser" = "${settings.browser}";
         "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
@@ -95,8 +95,12 @@
           ];
         };
 
-        exec-once =
-          [ "$statusbar" "$terminal" "walker --gapplication-service" ];
+        exec-once = [
+          "$statusbar"
+          "$terminal"
+          "walker --gapplication-service"
+          "hyprctl setcursor $cursor 24"
+        ];
 
         bind = [
           # Executables
