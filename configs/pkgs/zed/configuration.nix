@@ -24,6 +24,8 @@ in {
         "ini"
         "make"
         "xml"
+        "qml"
+        "git_firefly"
       ];
       extraPackages = [ pkgs.nixd pkgs.nixfmt-classic pkgs.nil ];
       package = pkgs.zed-editor;
