@@ -42,7 +42,6 @@ rec {
     "stylix"
     "swww"
     "sddm" # "greetd"
-    "lazygit"
     "libreoffice"
     "yazi"
     "btop"
