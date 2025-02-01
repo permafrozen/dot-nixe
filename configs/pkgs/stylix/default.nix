@@ -109,6 +109,7 @@ in {
         zathura.enable = true;
         zellij.enable = true;
         firefox.enable = true;
+        lazygit.enable = true;
       };
     };
 
