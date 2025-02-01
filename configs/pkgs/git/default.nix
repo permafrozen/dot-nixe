@@ -11,9 +11,11 @@
       };
       gh = {
         enable = true;
-        git_protocol = "ssh";
-        aliases = {
-          #TODO
+        settings = {
+          git_protocol = "ssh";
+          aliases = {
+            #TODO
+          };
         };
       };
       lazygit = {
