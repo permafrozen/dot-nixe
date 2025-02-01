@@ -17,6 +17,7 @@
       mkdir -p Music
       mkdir -p Mail
       mkdir -p Pictures/Screenshots
+      mkdir -p dev
     '';
   };
 
