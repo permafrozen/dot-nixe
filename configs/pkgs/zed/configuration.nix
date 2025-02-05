@@ -27,7 +27,15 @@ in {
         "qml"
         "git_firefly"
       ];
-      extraPackages = [ pkgs.nixd pkgs.nixfmt-classic pkgs.nil ];
+      extraPackages = with pkgs; [
+        nixd
+        nixfmt-classic
+        nil
+        kdePackages.qtdeclarative
+        shellcheck
+        shfmt
+      ];
+
       package = pkgs.zed-editor;
       userKeymaps = { };
       userSettings = {
