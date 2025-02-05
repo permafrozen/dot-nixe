@@ -34,6 +34,8 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "mpd"
+    "ncmpcpp"
     "kernel"
     "pipewire"
     "hyprland"
