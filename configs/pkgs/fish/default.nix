@@ -72,5 +72,6 @@
     jp2a
     cmatrix
     tt
+    pipes
   ];
 }
