@@ -71,6 +71,7 @@ rec {
     "neomutt"
     "docker"
     "zed"
+    "element"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
