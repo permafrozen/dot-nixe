@@ -17,7 +17,7 @@
         "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
         "$runner" =
-          "walker --modules applications"; # "rofi -show drun -theme default";
+          "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
         "$statusbar" = "ags run ~/.config/ags/bar.ts";
 
         # Set Cursor
