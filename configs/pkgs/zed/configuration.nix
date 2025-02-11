@@ -13,6 +13,7 @@ in {
         "java"
         "lua"
         "zig"
+        "toml"
         "dockerfile"
         "docker-compose"
         "svelte"
@@ -28,6 +29,7 @@ in {
         "git_firefly"
       ];
       extraPackages = with pkgs; [
+        rust-analyzer
         nixd
         nixfmt-classic
         nil
