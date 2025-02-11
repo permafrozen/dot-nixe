@@ -23,7 +23,6 @@
         shellInit = ''
           fish_default_key_bindings
           set -U fish_greeting
-          cd
         '';
       };
     };
