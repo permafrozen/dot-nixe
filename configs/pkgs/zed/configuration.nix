@@ -14,6 +14,7 @@ in {
         "lua"
         "zig"
         "toml"
+        "nix"
         "dockerfile"
         "docker-compose"
         "svelte"
