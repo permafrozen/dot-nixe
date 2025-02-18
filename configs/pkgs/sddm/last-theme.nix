@@ -9,7 +9,7 @@ stdenv.mkDerivation {
     owner = "Permafrozen";
     repo = "sddm-theme";
     rev = "ba91974e91431dbb8c0e4a20bfed4cd1a9c33e03";
-    hash = "sha256-aUT/TPm6KT2g1qK6RgdlNKvaYCPH3wrxbWZ9Ty4jUMI=";
+    hash = "sha256-rXZH4g53kFE17Oybv/X0jiMntMoaLLJYfZcUg3O+cbc=";
   };
 
   installPhase = ''
