@@ -25,8 +25,8 @@
 
         general = {
           border_size = "2";
-          "col.active_border" = "0xff${config.lib.stylix.colors.base0D}";
-          "col.inactive_border" = "0x4D${config.lib.stylix.colors.base00}";
+          "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
+          "col.inactive_border" = "0xff${config.lib.stylix.colors.base02}";
           resize_on_border = "true";
 
           gaps_in = "15";
