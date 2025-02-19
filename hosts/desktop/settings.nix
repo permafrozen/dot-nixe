@@ -25,7 +25,7 @@ rec {
 
   # Setup Specific Hyprland Config
   hyprConfig = ''
-    monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
+    monitor = HDMI-A-1, 2560x1440@59.95Hz, 0x0, 1
     monitor = DP-1, 1920x1080@60,1920x0, 1
     # monitor = , preferred, auto, 1
   '';

@@ -3,6 +3,7 @@ let
   ui_font_size = (lib.toInt settings.font-size) * 5 / 3;
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
 in {
+  environment.systemPackages = with pkgs; [ nixd ];
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {
       enable = true;
