@@ -38,6 +38,7 @@ rec {
     # "steam"
     # "mpd"
     # "ncmpcpp"
+    "rocket-league"
     "kernel"
     "nvidia"
     "pipewire"
