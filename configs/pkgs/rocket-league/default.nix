@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }: {
 
-  # TODO BROKEN
+  # cachix config
   nix.settings = {
     substituters = [ "https://nix-gaming.cachix.org" ];
     trusted-public-keys = [
@@ -8,7 +8,13 @@
     ];
   };
 
+  # needed programs
+  programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
+
+  # package
   environment.systemPackages = [ # or home.packages
     inputs.nix-gaming.packages.${pkgs.system}.rocket-league # installs a package
+    pkgs.legendary-gl
   ];
 }
