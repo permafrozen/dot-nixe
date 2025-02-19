@@ -12,6 +12,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     walker.url = "github:abenz1267/walker";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
     home-manager = {
       url = "github:nix-community/home-manager";
