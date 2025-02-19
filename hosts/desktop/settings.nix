@@ -52,7 +52,7 @@ rec {
     "btop"
     # "obsidian"
     # "quickemu"
-    # "vesktop"
+    "discord"
     "git"
     # "syncthing"
     "ani-cli"
