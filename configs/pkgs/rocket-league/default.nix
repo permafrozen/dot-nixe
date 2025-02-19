@@ -1,4 +1,6 @@
 { pkgs, inputs, ... }: {
+
+  # TODO BROKEN
   nix.settings = {
     substituters = [ "https://nix-gaming.cachix.org" ];
     trusted-public-keys = [
