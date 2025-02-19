@@ -1,4 +1,13 @@
-{ config, settings, ... }: {
+{ config, settings, lib, ... }:
+let
+
+  decToHex = decimalString:
+    let
+      decimal = builtins.fromJSON decimalString;
+      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
+      hex = lib.trivial.toHexString integer;
+    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
+in {
 
   home-manager.users.${settings.userName} = {
     home.file.".config/zed/themes/stylix.json".text = ''
@@ -19,7 +28,19 @@
               "border.disabled": "#00000000",
 
               "background.appearance": "blurred",
-              "background": "#${config.lib.stylix.colors.base00}00",
+              "background": "#${config.lib.stylix.colors.base00}${
+                decToHex settings.opacity
+              }",
+              "title_bar.background": "#${config.lib.stylix.colors.base00}${
+                decToHex settings.opacity
+              }",
+              "title_bar.inactive_background": "#${config.lib.stylix.colors.base00}${
+                decToHex settings.opacity
+              }",
+              "status_bar.background": "#${config.lib.stylix.colors.base00}${
+                decToHex settings.opacity
+              }",
+
               "panel.background": "#${config.lib.stylix.colors.base00}00",
               "editor.background": "#${config.lib.stylix.colors.base00}00",
               "tab_bar.background": "#${config.lib.stylix.colors.base00}00",
@@ -28,9 +49,6 @@
               "tab.inactive_background": "#${config.lib.stylix.colors.base00}00",
               "tab.active_background": "#${config.lib.stylix.colors.base02}4d",
               "element.selected": "#${config.lib.stylix.colors.base02}4d",
-              "status_bar.background": "#${config.lib.stylix.colors.base00}00",
-              "title_bar.background": "#${config.lib.stylix.colors.base00}00",
-              "title_bar.inactive_background": "#${config.lib.stylix.colors.base00}00",
 
               "scrollbar.show": "never",
               "scrollbar.thumb.background": "#${config.lib.stylix.colors.base02}00",
