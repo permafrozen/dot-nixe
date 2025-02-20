@@ -1,5 +1,5 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ webcord-vencord ];
+  environment.systemPackages = with pkgs; [ vesktop ];
 }

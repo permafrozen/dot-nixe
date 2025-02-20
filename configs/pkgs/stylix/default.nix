@@ -110,6 +110,7 @@ in {
         zellij.enable = true;
         firefox.enable = true;
         lazygit.enable = true;
+        vesktop.enable = true;
       };
     };
 

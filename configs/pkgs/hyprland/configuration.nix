@@ -1,6 +1,7 @@
-{ config, settings, ... }:
+{ pkgs, config, settings, ... }:
 
 {
+  environment.systemPackages = [ pkgs.xwaylandvideobridge ];
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       settings = {
@@ -191,6 +192,13 @@
         ];
 
         windowrulev2 = [
+          # xwayland video bridge
+          "opacity 0.0 override, class:^(xwaylandvideobridge)$"
+          "noanim, class:^(xwaylandvideobridge)$"
+          "noinitialfocus, class:^(xwaylandvideobridge)$"
+          "maxsize 1 1, class:^(xwaylandvideobridge)$"
+          "noblur, class:^(xwaylandvideobridge)$"
+          "nofocus, class:^(xwaylandvideobridge)$"
 
           # Smart Gaps ------------------ #
           # "bordersize 0, floating:0, onworkspace:w[tv1]"
