@@ -28,7 +28,7 @@ in {
         "make"
         "xml"
         "qml"
-        "git_firefly"
+        "git-firefly"
       ];
       extraPackages = with pkgs; [
         rust-analyzer
