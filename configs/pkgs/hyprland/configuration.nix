@@ -1,7 +1,7 @@
 { pkgs, config, settings, ... }:
 
 {
-  environment.systemPackages = [ pkgs.xwaylandvideobridge ];
+  environment.systemPackages = [ pkgs.kdePackages.xwaylandvideobridge ];
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       settings = {
@@ -211,7 +211,7 @@
           "maximize, class:^(VSCodium)$"
           "opacity 1 1 1, class:^(foot)"
           "opacity 1 1 1, class:^(kitty)"
-          "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
+          # "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
         ];
 
         layerrule = [
