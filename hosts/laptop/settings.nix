@@ -72,6 +72,7 @@ rec {
     "docker"
     "zed"
     "element"
+    "wireshark"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
   ];
