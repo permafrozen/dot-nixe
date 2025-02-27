@@ -17,15 +17,17 @@
         tauri-apps.tauri-vscode
         rust-lang.rust-analyzer
       ];
-      userSettings = {
+      profiles.default.userSettings = {
 
         # Font Settings
         "editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
         "chat.editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
         "debug.console.fontSize" = lib.mkForce (lib.toInt settings.font-size);
-        "markdown.preview.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "markdown.preview.fontSize" =
+          lib.mkForce (lib.toInt settings.font-size);
         "scm.inputFontSize" = lib.mkForce (lib.toInt settings.font-size);
-        "terminal.integrated.fontSize" = lib.mkForce (lib.toInt settings.font-size);
+        "terminal.integrated.fontSize" =
+          lib.mkForce (lib.toInt settings.font-size);
 
         # Editor Settigns
         "editor.cursorBlinking" = "phase";

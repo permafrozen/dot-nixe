@@ -181,7 +181,7 @@ in {
 
     # Vscode Stylix Config
     programs.vscode = {
-      userSettings = {
+      profiles.default.userSettings = {
         "workbench.list.smoothScrolling" = "true";
         "workbench.colorCustomizations" = {
           "[Stylix]" = {
