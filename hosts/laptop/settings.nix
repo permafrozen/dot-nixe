@@ -34,6 +34,7 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "xdg-user-dirs"
     "steam"
     "mpd"
     "ncmpcpp"
