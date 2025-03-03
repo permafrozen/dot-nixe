@@ -52,7 +52,6 @@
     nix-output-monitor
     tre-command
     tree
-    aerc
     vim
     wget
     mdbook

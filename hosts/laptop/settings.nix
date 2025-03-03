@@ -34,6 +34,7 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "librewolf"
     "xdg-user-dirs"
     "steam"
     "mpd"
@@ -65,11 +66,11 @@ rec {
     "planify"
     "nixvim"
     "bluetooth"
-    "ags"
+    # "ags"
     "zathura"
     "tealdeer"
     "walker"
-    "neomutt"
+    # "neomutt"
     "docker"
     "zed"
     "element"
