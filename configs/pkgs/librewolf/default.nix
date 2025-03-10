@@ -1,14 +1,37 @@
-{ settings, pkgs, ... }: {
+{ lib, config, settings, pkgs, ... }:
+let
+  decToHex = decimalString:
+    let
+      decimal = builtins.fromJSON decimalString;
+      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
+      hex = lib.trivial.toHexString integer;
+    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
+in {
   home-manager.users.${settings.userName} = {
+    # *Theme*
+    # https://github.com/datguypiko/Firefox-Mod-Blur
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/fetchzip/default.nix
+    # home.file.librewolf = {
+    #     target = ".librewolf/default/chrome";
+    #     source = pkgs.fetchzip {
+    #         url = "https://github.com/datguypiko/Firefox-Mod-Blur/releases/download/v2.15.1/v2.15.1_ModBlur-Firefox_v136.zip";
+    #         hash = "sha256-HofaOJpmOdTcJq0gw4jP1UZ6eBE8wtxf052VD5T5EC4=";
+    #         stripRoot = false;
+    #     };
+    # };
+
     programs.librewolf = {
       enable = true;
-      package = pkgs.librewolf-wayland;
+      package = pkgs.librewolf;
       languagePacks = [ "en-GB" "de" ];
 
-      # Librewolf Settings
+      # Librewolf Overrides (about:config; ...)
       settings = {
-        "webgl.disabled" = false;
         "privacy.resistFingerprinting" = false;
+        "svg.context-properties.content.enabled" = true;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "browser.tabs.allow_transparent_browser" = true;
+        "webgl.disabled" = false;
       };
 
       # Policies
@@ -88,68 +111,104 @@
             installation_mode = "force_installed";
           };
         };
+      };
 
-        # Default Profile Configuration
-        profiles.default = {
-          name = "${settings.userName}";
-          id = 0;
-          isDefault = true;
+      # Default Profile Configuration
+      profiles.default = {
+        name = "${settings.userName}";
+        id = 0;
+        isDefault = true;
 
-          userChrome = ''
+        # userChrome = "\n";
+        # userContent = "\n";
 
-          '';
-          userContent = ''
+        search.engines = {
+          "Nix Packages" = {
+            urls = [{
+              template = "https://search.nixos.org/packages";
+              params = [
+                {
+                  name = "type";
+                  value = "packages";
+                }
+                {
+                  name = "query";
+                  value = "{searchTerms}";
+                }
+              ];
+            }];
 
-          '';
-
-          search.engines = {
-            "Nix Packages" = {
-              urls = [{
-                template = "https://search.nixos.org/packages";
-                params = [
-                  {
-                    name = "type";
-                    value = "packages";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }];
-
-              icon =
-                "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = [ "@nixp" ];
-            };
-
-            "NixOS Wiki" = {
-              urls = [{
-                template =
-                  "https://wiki.nixos.org/index.php?search={searchTerms}";
-              }];
-              iconUpdateURL = "https://wiki.nixos.org/favicon.png";
-              updateInterval = 24 * 60 * 60 * 1000; # every day
-              definedAliases = [ "@nixw" ];
-            };
-
-            "Perplexity" = {
-              urls = [{
-                template =
-                  "https://www.perplexity.ai/search/?q=%s{searchTerms}";
-              }];
-              iconUpdateURL = "https://www.perplexity.ai/favicon.png";
-              updateInterval = 24 * 60 * 60 * 1000; # every day
-              definedAliases = [ "@per" ];
-            };
-
-            "Bing".metaData.hidden = true;
-            "Google".metaData.alias =
-              "@goo"; # builtin engines only support specifying one additional alias
-            "DuckDuckGo".metaData.alias =
-              "@duck"; # builtin engines only support specifying one additional alias
+            icon =
+              "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@nixp" ];
           };
+
+          "NixOS Wiki" = {
+            urls = [{
+              template =
+                "https://wiki.nixos.org/index.php?search={searchTerms}";
+            }];
+            iconUpdateURL = "https://wiki.nixos.org/favicon.png";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [ "@nixw" ];
+          };
+
+          "Perplexity" = {
+            urls = [{
+              template = "https://www.perplexity.ai/search/?q=%s{searchTerms}";
+            }];
+            iconUpdateURL = "https://www.perplexity.ai/favicon.png";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [ "@per" ];
+          };
+
+          "Bing".metaData.hidden = true;
+          "Google".metaData.alias =
+            "@goo"; # builtin engines only support specifying one additional alias
+          "DuckDuckGo".metaData.alias =
+            "@duck"; # builtin engines only support specifying one additional alias
         };
+        userChrome = ''
+          :root {
+              --main-bg: #${config.lib.stylix.colors.base00}${
+                decToHex settings.opacity
+              };
+          }
+
+          toolbox#navigator-toolbox.browser-toolbox-background {
+            background-color: var(--main-bg) !important;
+          }
+
+           tab.tabbrowser-tab {
+            background-color: var(--main-bg) !important;
+            margin: 0 10px 0 10px !important;
+            border-radius: 100px !important;
+          }
+
+          .tab-background:is([selected], [multiselected]) {
+              background-color: var(--main-bg) !important;
+              background-image: none !important;
+
+          }
+
+          .tab-text {
+
+          }
+
+          toolbarbutton.titlebar-button.titlebar-close,
+          toolbarbutton#firefox-view-button.chromeclass-toolbar-additional,
+          .titlebar-spacer{
+            display: none;
+          }
+
+          toolbar {
+             background-color: #00000000 !important;
+          }
+
+          #nav-bar {
+            border: none !important;
+          }
+        '';
       };
     };
   };
