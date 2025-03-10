@@ -7,7 +7,7 @@
       editor = "nvim";
       vimKeys = true;
       settings = {
-      
+
       };
     };
   };

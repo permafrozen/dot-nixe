@@ -22,7 +22,7 @@
         list = { height = 200; };
         websearch.prefix = "?";
         switcher.prefix = "/";
-        theme = "home-manager";
+        theme = "nixos";
       };
 
       theme = {
@@ -117,12 +117,12 @@
         style = ''
           :root {
             --main-background: #${config.lib.stylix.colors.base00}80;
-            background-color: #${config.lib.stylix.colors.base00}80;
+            --background-color: #${config.lib.stylix.colors.base00}80;
             --main-color: #${config.lib.stylix.colors.base05};
-            --main-border-color: #${config.lib.stylix.colors.base0D};
+            --main-border-color: #${config.lib.stylix.colors.base05};
             --search-background: #${config.lib.stylix.colors.base00};
-            --search-icon-color: #${config.lib.stylix.colors.base05};
-            --typeahead-color: ${config.lib.stylix.colors.base04};
+            --search-icon-color: #${config.lib.stylix.colors.base04};
+            --typeahead-color: ${config.lib.stylix.colors.base03};
             --selected-background: ${config.lib.stylix.colors.base01};
             --ai-color: ${config.lib.stylix.colors.base06};
             --ai-response-background: ${config.lib.stylix.colors.base00};
@@ -150,15 +150,14 @@
           }
 
           #window {
-            color: #${config.lib.stylix.colors.base05};
+            color: var(--main-color);
           }
 
           #box {
             border-radius: 10px;
-            background-color: #${config.lib.stylix.colors.base00}80;
+            background-color: var(--main-background);
             padding: 32px;
-            border: 2px solid #${config.lib.stylix.colors.base0D};
-
+            border: 2px solid var(--main-border-color);
           }
 
           #password,
@@ -171,6 +170,7 @@
           }
 
           #input {
+            color: var(--main-color);
             background: none;
           }
 
@@ -193,14 +193,6 @@
           #typeahead > *:first-child {
             margin-right: 16px;
             margin-left: 4px;
-            color: var(--search-icon-color);
-            /* opacity: 0.2; */
-          }
-
-          #input > *:last-child,
-          #typeahead > *:last-child {
-            color: var(--search-icon-color);
-            /* opacity: 0.8; */
           }
 
           #list {

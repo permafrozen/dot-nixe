@@ -57,7 +57,7 @@ in {
               "scrollbar.track.background": "#${config.lib.stylix.colors.base00}00",
               "scrollbar.track.border": "#00000000",
 
-              "elevated_surface.background": "#${config.lib.stylix.colors.base00}00",
+              "elevated_surface.background": "#${config.lib.stylix.colors.base00}ff",
               "surface.background": "#${config.lib.stylix.colors.base00}00",
               "editor.active_line.background": "#${config.lib.stylix.colors.base01}00",
               "editor.gutter.background": "#${config.lib.stylix.colors.base00}00",

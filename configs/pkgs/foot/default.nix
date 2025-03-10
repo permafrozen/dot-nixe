@@ -8,9 +8,7 @@
       enable = true;
       server.enable = false;
       settings = {
-        main = {
-          resize-delay-ms = "80";
-        };
+        main = { resize-delay-ms = "80"; };
 
         cursor = {
           style = "beam";

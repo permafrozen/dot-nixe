@@ -70,7 +70,7 @@ in {
         languages = {
           Nix = {
             formatter.command = "nixfmt";
-            language_servers = [ "nixd" "!nil" ];
+            language_servers = [ "nixd" "nil" "..." ];
           };
         };
 

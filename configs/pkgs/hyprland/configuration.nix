@@ -62,8 +62,8 @@
           blur = {
             enabled = "true";
             size = "10";
-            passes = "4";
-            noise = "0.0420";
+            passes = "3";
+            noise = "0.0020";
             contrast = "1.0";
             vibrancy = "1.0";
             vibrancy_darkness = "0.1069";

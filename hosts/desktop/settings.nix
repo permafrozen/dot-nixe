@@ -1,4 +1,5 @@
-rec {
+{ lib, ... }: rec {
+
   # system settings
   userName = "matteo";
   hostName = "nixos";
