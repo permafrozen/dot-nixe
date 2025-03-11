@@ -1,4 +1,4 @@
-{ lib, ... }: rec {
+{ ... }: rec {
 
   # system settings
   userName = "matteo";

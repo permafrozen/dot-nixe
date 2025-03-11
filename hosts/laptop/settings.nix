@@ -34,7 +34,6 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
-    "librewolf"
     "xdg-user-dirs"
     "steam"
     "mpd"
