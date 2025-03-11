@@ -138,7 +138,16 @@ in {
           id = 0;
           isDefault = true;
 
+          extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            privacy-badger
+            sponsorblock
+            ublock-origin
+            bitwarden
+            wikiwand-wikipedia-modernized
+          ];
+
           settings = {
+            "extensions.autoDisableScopes" = 0;
             "browser.aboutConfig.showWarning" = false;
             "devtools.debugger.remote-enabled" = true;
             "devtools.chrome.enabled" = true;
@@ -146,6 +155,8 @@ in {
             "browser.tabs.allow_transparent_browser" = true;
             "gfx.webrender.all" = true;
             "zen.view.grey-out-inactive-windows" = false;
+            "signon.rememberSignons" = false;
+            "browser.translations.automaticallyPopup" = false;
           };
 
           search.engines = {
@@ -203,7 +214,9 @@ in {
           };
           userChrome = ''
             :root {
-                --main-bg: #${config.lib.stylix.colors.base00}${decToHex settings.opacity}
+                --main-bg: #${config.lib.stylix.colors.base00}${
+                  decToHex settings.opacity
+                }
             }
             toolbox#navigator-toolbox.browser-toolbox-background {
               background-color: transparent !important;
