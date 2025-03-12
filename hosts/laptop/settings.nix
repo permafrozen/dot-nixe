@@ -18,7 +18,7 @@ rec {
   # theme
   wallpaper = "orbit.png"; # ../assets/wallpaper/
   scheme = "da-one-black"; # base16-schemes Package
-  opacity = "0.3";
+  opacity = "0.5";
   font-size = "14";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
   hyprcursor = "McMojave-Hypr";
