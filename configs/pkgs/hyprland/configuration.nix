@@ -216,8 +216,10 @@
 
         layerrule = [
           "blur, gtk-layer-shell"
+          "blur, gtk4-layer-shell"
           "blur, walker"
           "ignorezero, gtk-layer-shell"
+          "ignorezero, gtk4-layer-shell"
           "ignorezero, walker"
         ];
       };
