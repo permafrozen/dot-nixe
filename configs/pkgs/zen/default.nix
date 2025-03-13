@@ -157,6 +157,7 @@ in {
             "zen.view.grey-out-inactive-windows" = false;
             "signon.rememberSignons" = false;
             "browser.translations.automaticallyPopup" = false;
+            "zen.workspaces.force-container-workspace" = true;
           };
 
           search.engines = {
