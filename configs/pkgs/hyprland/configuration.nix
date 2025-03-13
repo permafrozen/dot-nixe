@@ -19,7 +19,7 @@
         "$screenlock" = "hyprlock";
         "$runner" =
           "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
-        "$statusbar" = "ags run ~/.config/ags/bar.ts";
+        "$statusbar" = "aglet";
 
         # Set Cursor
         env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,32" ];

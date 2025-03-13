@@ -1,8 +1,51 @@
 {
   "nodes": {
+    "aglet": {
+      "inputs": {
+        "ags": "ags",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741789472,
+        "narHash": "sha256-1ufy4JFZJW4y4qv0soiITMdTiyfPnTs8EY+UHwNll3U=",
+        "owner": "Permafrozen",
+        "repo": "aglet",
+        "rev": "c49218e800c2a0d1bfd69052bad5bf86a26cf5dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Permafrozen",
+        "repo": "aglet",
+        "type": "github"
+      }
+    },
     "ags": {
       "inputs": {
         "astal": "astal",
+        "nixpkgs": [
+          "aglet",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1738087375,
+        "narHash": "sha256-GLyNtU9A2VN22jNRHZ2OXuFfTJLh8uEVVt+ftsKUX0c=",
+        "owner": "aylur",
+        "repo": "ags",
+        "rev": "a6a7a0adb17740f4c34a59902701870d46fbb6a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aylur",
+        "repo": "ags",
+        "type": "github"
+      }
+    },
+    "ags_2": {
+      "inputs": {
+        "astal": "astal_2",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
@@ -53,6 +96,28 @@
       }
     },
     "astal": {
+      "inputs": {
+        "nixpkgs": [
+          "aglet",
+          "ags",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737670815,
+        "narHash": "sha256-ZCxxshGN7XooabArcoGkYSNx5yVunqjKJi2aTv6cznI=",
+        "owner": "aylur",
+        "repo": "astal",
+        "rev": "127e9cdcbf173846a3c40ddc0abfbb038df48042",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aylur",
+        "repo": "astal",
+        "type": "github"
+      }
+    },
+    "astal_2": {
       "inputs": {
         "nixpkgs": [
           "ags",
@@ -436,11 +501,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741701235,
-        "narHash": "sha256-gBlb8R9gnjUAT5XabJeel3C2iEUiBHx3+91651y3Sqo=",
+        "lastModified": 1741785612,
+        "narHash": "sha256-3NFLoC7AdenUJQHzPiHDYVBEgEIH6mGSbdx7GFbRURA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c630dfa8abcc65984cc1e47fb25d4552c81dd37e",
+        "rev": "144f13f535be35c906241043f6bfcf21c1c419a0",
         "type": "github"
       },
       "original": {
@@ -565,11 +630,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1741714321,
-        "narHash": "sha256-MLsVJ2LrHJzPErd3ImRYuQJuhiKyKAUSHta5ZptH3wE=",
+        "lastModified": 1741788549,
+        "narHash": "sha256-Ot/AuQGw5KJwHjyTMHWmyaduNkcE58bOCmyitZ4VxEQ=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "4b25fbe5fda3bf7f0e561f400fb8f300b002eab3",
+        "rev": "e86d3a14e46d19d8a47f8ceb6410546715d45f10",
         "type": "github"
       },
       "original": {
@@ -803,11 +868,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1741743989,
-        "narHash": "sha256-E74K0Ba2A3JuRbe3jHorMEHuwtNfuWfykHJxxS42qeE=",
+        "lastModified": 1741772639,
+        "narHash": "sha256-u6jSqRGsfm4Af+tUKJsJ346XwJuomL6Qxiu/BZieowU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "38a3eb7093553b9f35aecff068da76eddf850129",
+        "rev": "2f079586510bc77bac539cf330edaebb9d51e0e0",
         "type": "github"
       },
       "original": {
@@ -1020,11 +1085,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1741762884,
-        "narHash": "sha256-yPOTDk/YIl+iFkW1VMCEn1YTTdFLSK36rP5UTTC8lgE=",
+        "lastModified": 1741787260,
+        "narHash": "sha256-u/HsPsA+ZP3SCtvXIxM/ewzqaM2J4tqIV8OElrdedUQ=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4ac110f1a5e2b3f93df60df4805ef085690840a4",
+        "rev": "e5191b50528b586d65ae4f0ac5634a9fb9478175",
         "type": "github"
       },
       "original": {
@@ -1142,7 +1207,8 @@
     },
     "root": {
       "inputs": {
-        "ags": "ags",
+        "aglet": "aglet",
+        "ags": "ags_2",
         "home-manager": "home-manager",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
         "hyprland": "hyprland",

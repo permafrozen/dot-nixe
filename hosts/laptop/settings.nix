@@ -65,7 +65,7 @@ rec {
     "planify"
     "nixvim"
     "bluetooth"
-    # "ags"
+    "ags"
     "zathura"
     "tealdeer"
     "walker"

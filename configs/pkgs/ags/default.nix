@@ -1,31 +1,9 @@
-{ pkgs, inputs, settings, ... }:
+{ inputs, ... }:
 
 {
+  # astal config from remote flake
+  environment.systemPackages = [ inputs.aglet.packages.x86_64-linux.default ];
 
-  home-manager.users.${settings.userName} = {
-    programs.ags = {
-      enable = true;
-
-      # ags config dir
-      configDir = ./project;
-
-      # additional packages to add to gjs's runtime
-      extraPackages = with inputs.ags.packages.${pkgs.system}; [
-        apps
-        battery
-        hyprland
-        network
-        mpris
-        tray
-        wireplumber
-      ];
-    };
-  };
-
-  # network cover art caching (for spotify)
-  services.gvfs.enable = true;
-  services.upower = {
-    enable = true;
-    ignoreLid = true;
-  };
+  # dependencies
+  services.upower.enable = true;
 }
