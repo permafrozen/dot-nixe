@@ -1,6 +1,13 @@
-{ pkgs, config, settings, ... }:
+{ pkgs, config, settings, lib, ... }:
 
-{
+let
+  decToHex = decimalString:
+    let
+      decimal = builtins.fromJSON decimalString;
+      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
+      hex = lib.trivial.toHexString integer;
+    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
+in {
   environment.systemPackages = [ pkgs.kdePackages.xwaylandvideobridge ];
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
@@ -25,13 +32,15 @@
         env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,32" ];
 
         general = {
-          border_size = "2";
-          "col.active_border" = "0xff${config.lib.stylix.colors.base05}";
-          "col.inactive_border" = "0xff${config.lib.stylix.colors.base02}";
+          border_size = "5";
+          "col.active_border" =
+            "0x${decToHex settings.opacity}${config.lib.stylix.colors.base05}";
+          "col.inactive_border" =
+            "0x${decToHex settings.opacity}${config.lib.stylix.colors.base02}";
           resize_on_border = "true";
 
-          gaps_in = "15";
-          gaps_out = "30";
+          gaps_in = "10";
+          gaps_out = "10";
           gaps_workspaces = "0";
 
           layout = "dwindle";
@@ -40,59 +49,46 @@
 
         decoration = {
           rounding = "15";
-
           active_opacity = "1";
           inactive_opacity = "1";
           fullscreen_opacity = "1";
-
-          shadow = {
-            enabled = "false";
-            range = "16";
-            render_power = "20";
-            ignore_window = "true";
-            color = "0xee${config.lib.stylix.colors.base05}";
-            color_inactive = "0xee${config.lib.stylix.colors.base00}";
-            sharp = "false";
-            scale = "1.0";
-          };
+          shadow.enabled = "false";
 
           dim_inactive = "false";
           dim_strength = "0.2";
 
           blur = {
-            enabled = "true";
-            size = "10";
-            passes = "3";
-            noise = "0.0020";
-            contrast = "1.0";
-            vibrancy = "1.0";
-            vibrancy_darkness = "0.1069";
-            ignore_opacity = "true";
-            xray = "true";
-            popups = "true";
+            enabled = true;
+            contrast = "3.0";
+            ignore_opacity = true;
+            noise = "0.05";
+            passes = "4";
+            popups = true;
+            size = "4";
+            vibrancy = "10";
+            vibrancy_darkness = "1";
+            xray = true;
           };
         };
 
         animations = {
           enabled = "true";
-          first_launch_animation = "true";
+          first_launch_animation = "false";
 
-          bezier = [
-            "easeOutCubic, 0.33, 1.0, 0.68, 1.0"
-            "easeOutQuart, 0.25, 1.0, 0.5, 1.0"
-            "easeOutExpo, 0.16, 1.0, 0.3, 1.0"
-            "nothing, 0, 0, 1, 1"
-          ];
+          bezier = [ "easeOutExpo, 0.16, 1.0, 0.3, 1.0" ];
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 9, easeOutCubic, popin 80%"
-            "windowsOut, 1, 9, easeOutCubic, popin 80%"
-            "windowsMove, 1, 9, easeOutCubic, popin"
+            "windowsIn, 1, 4, easeOutExpo, popin"
+            "windowsOut, 1, 4, easeOutExpo, popin"
+            "windowsMove, 1, 4, easeOutExpo, popin"
 
             # Workspaces in & out
-            "workspacesIn, 1, 6, easeOutExpo, slide"
-            "workspacesOut, 1, 6, easeOutExpo, slide"
+            "workspacesIn, 1, 4, easeOutExpo, slide"
+            "workspacesOut, 1, 4, easeOutExpo, slide"
+
+            # Layer Shell
+            "layers, 1, 3, easeOutExpo, popin"
           ];
         };
 
@@ -119,6 +115,12 @@
           # Fullscreen Controls
           "$mainMod, F, fullscreen,"
           "$altMod, F, fullscreen, 1"
+
+          # Pin to Middle
+          "$mainMod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin && hyprctl dispatch resizeactive exact 80% 80% && hyprctl dispatch centerwindow"
+
+          # Misc
+          "$mainMod, O, swapnext"
 
           # Resizing Controls
           # TODO
@@ -166,13 +168,13 @@
         input = {
           kb_layout = "de";
           mouse_refocus = "false";
-          follow_mouse = 0;
+          follow_mouse = "0";
         };
 
-        cursor = { inactive_timeout = 2; };
+        cursor.inactive_timeout = "0.1";
 
         gestures = {
-          workspace_swipe = "false";
+          workspace_swipe = "true";
           workspace_swipe_fingers = "3";
         };
 
@@ -211,7 +213,6 @@
           "maximize, class:^(VSCodium)$"
           "opacity 1 1 1, class:^(foot)"
           "opacity 1 1 1, class:^(kitty)"
-          # "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
         ];
 
         layerrule = [
