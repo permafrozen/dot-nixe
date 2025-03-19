@@ -1,5 +1,10 @@
 { ... }: rec {
 
+  #############################################
+  # OUTDATE
+  # LOOK AT LAPTOP AND FIX TODO
+  #############################################
+
   # system settings
   userName = "matteo";
   hostName = "nixos";

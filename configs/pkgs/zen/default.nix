@@ -158,6 +158,7 @@ in {
             "signon.rememberSignons" = false;
             "browser.translations.automaticallyPopup" = false;
             "zen.workspaces.force-container-workspace" = true;
+            "browser.download.lastDir" = "/home/matteo/downloads";
           };
 
           search.engines = {
