@@ -34,6 +34,7 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "zsh"
     "xdg-user-dirs"
     "steam"
     "mpd"

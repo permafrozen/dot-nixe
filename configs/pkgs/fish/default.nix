@@ -15,9 +15,7 @@
           eta = "eza -T";
           le = "eza";
           nrf = "nh os switch .";
-          trel = "tre -l 1";
           cfetch = "clear && fastfetch && sleep 10";
-          ttt = "tt -notheme";
           matrix = "cmatrix -s -C blue";
         };
         shellInit = ''
@@ -39,37 +37,4 @@
     '';
   };
 
-  environment.systemPackages = with pkgs; [
-    # Hardcore Sigma grinding software
-    acpi
-    bat
-    curl
-    eza
-    file
-    git
-    nurl
-    nix-melt
-    nix-output-monitor
-    tre-command
-    tree
-    vim
-    wget
-    mdbook
-    zip
-    brightnessctl
-    # ciscoPacketTracer8
-    nodejs
-    pnpm
-    udiskie
-
-    # Silly gimick stuff
-    cowsay
-    figlet
-    fortune
-    lolcat
-    jp2a
-    cmatrix
-    tt
-    pipes
-  ];
 }

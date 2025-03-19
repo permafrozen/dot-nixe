@@ -1,9 +1,32 @@
-{ settings, ... }:
+{ settings, pkgs, ... }:
 
 let path = pkg: ../../configs/pkgs/${pkg}/default.nix;
 in {
   imports = [ ../../hosts/${settings.hostPreset}/hardware-configuration.nix ]
     ++ map path settings.pkgs;
+
+  # Packages
+  environment.systemPackages = with pkgs; [
+    acpi
+    bat
+    curl
+    nurl
+    eza
+    file
+    git
+    nix-melt
+    nix-output-monitor
+    wget
+    zip
+    brightnessctl
+    nodejs
+    pnpm
+    udiskie
+    figlet
+    cmatrix
+    pipes
+    vitetris
+  ];
 
   # Laptop Settings
   services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
