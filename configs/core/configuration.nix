@@ -23,6 +23,7 @@ in {
     pnpm
     udiskie
     figlet
+    fzf
     cmatrix
     pipes
     vitetris
