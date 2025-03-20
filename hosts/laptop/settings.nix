@@ -34,6 +34,7 @@ rec {
   terminal = "ghostty"; # kitty, foot, ghostty
 
   pkgs = [
+    "virt-manager"
     "zsh"
     "xdg-user-dirs"
     "steam"
@@ -42,7 +43,6 @@ rec {
     "kernel"
     "pipewire"
     "hyprland"
-    "fish"
     "starship"
     "stylix"
     "swww"
