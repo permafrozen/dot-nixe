@@ -222,6 +222,8 @@ in {
           "ignorezero, gtk-layer-shell"
           "ignorezero, gtk4-layer-shell"
           "ignorezero, walker"
+          "noanim, hyprpicker"
+          "noanim, selection "
         ];
       };
     };
