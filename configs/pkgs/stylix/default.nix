@@ -34,7 +34,7 @@ let
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       monospace = {
-        name = "Hack Nerd Font";
+        name = "Maple Mono";
         package = pkgs.nerd-fonts.hack;
       };
       emoji = {
@@ -74,6 +74,7 @@ in {
   fonts.packages = with pkgs; [
     nerd-fonts.hack
     nerd-fonts.symbols-only
+    maple-mono-NF
     noto-fonts-emoji
     fira-code-symbols
   ];
