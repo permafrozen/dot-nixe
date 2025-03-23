@@ -89,48 +89,6 @@ in {
               }
             ];
           };
-
-          # Autoinstalled Extensions
-          # https://mozilla.github.io/policy-templates/#extensionsettings
-          ExtensionSettings = {
-            "*".installation_mode = "blocked";
-
-            "uBlock0@raymondhill.net" = {
-              install_url =
-                "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-              installation_mode = "force_installed";
-            };
-
-            "jid1-MnnxcxisBPnSXQ@jetpack" = {
-              install_url =
-                "https://addons.mozilla.org/en-US/firefox/downloads/latest/privacy-badger17/latest.xpi";
-              installation_mode = "force_installed";
-            };
-
-            "sponsorBlocker@ajay.app" = {
-              install_url =
-                "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-              installation_mode = "force_installed";
-            };
-
-            "jid1-D7momAzRw417Ag@jetpack" = {
-              install_url =
-                "https://addons.mozilla.org/firefox/downloads/latest/wikiwand-wikipedia-modernized/latest.xpi";
-              installation_mode = "force_installed";
-            };
-
-            "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-              install_url =
-                "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
-              installation_mode = "force_installed";
-            };
-
-            "queryamoid@kaply.com" = {
-              install_url =
-                "https://github.com/mkaply/queryamoid/releases/download/v0.1/query_amo_addon_id-0.1-fx.xpi";
-              installation_mode = "force_installed";
-            };
-          };
         };
 
         profiles."default" = {
@@ -159,6 +117,7 @@ in {
             "browser.translations.automaticallyPopup" = false;
             "zen.workspaces.force-container-workspace" = true;
             "browser.download.lastDir" = "/home/matteo/downloads";
+            "zen.welcome-screen.seen" = true;
           };
 
           search.engines = {
@@ -187,7 +146,7 @@ in {
                 template =
                   "https://wiki.nixos.org/index.php?search={searchTerms}";
               }];
-              iconUpdateURL = "https://wiki.nixos.org/favicon.png";
+              icon = "https://wiki.nixos.org/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@nw" ];
             };
@@ -196,7 +155,7 @@ in {
               urls = [{
                 template = "https://www.perplexity.ai/search/?q={searchTerms}";
               }];
-              iconUpdateURL = "https://www.perplexity.ai/favicon.png";
+              icon = "https://www.perplexity.ai/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@pp" ];
             };
@@ -204,7 +163,7 @@ in {
             "MyNixOS" = {
               urls =
                 [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
-              iconUpdateURL = "https://mynixos.com/favicon.png";
+              icon = "https://mynixos.com/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@my" ];
             };
@@ -214,25 +173,25 @@ in {
                 template =
                   "https://github.com/search?q={searchTerms}&type=repositories";
               }];
-              iconUpdateURL = "https://github.com/favicon.png";
+              icon = "https://github.com/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@gh" ];
             };
 
-            "YouTube" = {
+            "youtube" = {
               urls = [{
                 template =
                   "https://www.youtube.com/results?search_query={searchTerms}";
               }];
-              iconUpdateURL = "https://www.youtube.com/favicon.png";
+              icon = "https://www.youtube.com/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@yt" ];
             };
 
-            "Bing".metaData.hidden = true;
-            "Google".metaData.alias =
+            "bing".metaData.hidden = true;
+            "google".metaData.alias =
               "@go"; # builtin engines only support specifying one additional alias
-            "DuckDuckGo".metaData.alias = "@dd"; # ^
+            "ddg".metaData.alias = "@ddg"; # ^
           };
           userChrome = ''
             :root {
