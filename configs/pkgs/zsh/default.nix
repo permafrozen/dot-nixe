@@ -25,6 +25,7 @@
       shellAliases = {
         ls = "eza";
         cd = "z";
+        edi = "zeditor ./";
         nos = "nh os switch .";
       };
       initExtraFirst = ''
