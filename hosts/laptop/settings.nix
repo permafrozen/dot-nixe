@@ -16,7 +16,7 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "orbit.png"; # ../assets/wallpaper/
+  wallpaper = "skull.png"; # ../assets/wallpaper/
   scheme = "da-one-black"; # base16-schemes Package
   opacity = "0.5";
   font-size = "14";
