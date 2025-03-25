@@ -32,6 +32,7 @@ rec {
   # variable apps
   browser = "zen"; # firefox, floorp, ungoogle-chromium, librewolf, zen
   terminal = "ghostty"; # kitty, foot, ghostty
+  shell = "fish"; # zsh, fish, bash
 
   pkgs = [
     "virt-manager"

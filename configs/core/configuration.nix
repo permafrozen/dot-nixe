@@ -77,10 +77,13 @@ in {
   console.keyMap = "${settings.kbLayout}";
 
   # Define a user account
-  users.users.${settings.userName} = {
-    isNormalUser = true;
-    description = "${settings.userName}";
-    extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    users.${settings.userName} = {
+      isNormalUser = true;
+      description = "${settings.userName}";
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
+    defaultUserShell = pkgs.${settings.shell};
   };
 
   # System Settings
