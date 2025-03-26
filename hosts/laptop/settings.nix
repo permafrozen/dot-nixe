@@ -76,5 +76,6 @@ rec {
     "wireshark"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
+    "${shell}" # SHELL
   ];
 }

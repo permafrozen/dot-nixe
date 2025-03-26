@@ -32,17 +32,21 @@ in {
   # Laptop Settings
   services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
 
-  # Bootloader.
-  boot.loader = {
-    systemd-boot.enable = false;
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
-      # useOSProber = true;
-    };
-    efi = { canTouchEfiVariables = true; };
+  boot.loader = { 
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
   };
+  # Bootloader.
+  # boot.loader = {
+  #  systemd-boot.enable = false;
+  #  grub = {
+  #    enable = true;
+  #    device = "nodev";
+  #    efiSupport = true;
+  #    # useOSProber = true;
+  #  };
+  #  efi = { canTouchEfiVariables = true; };
+  #};
 
   networking = {
     hostName = "${settings.hostName}";
@@ -83,7 +87,6 @@ in {
       description = "${settings.userName}";
       extraGroups = [ "networkmanager" "wheel" ];
     };
-    defaultUserShell = pkgs.${settings.shell};
   };
 
   # System Settings

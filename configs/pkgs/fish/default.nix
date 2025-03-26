@@ -12,11 +12,10 @@
           };
         };
         shellAliases = {
-          eta = "eza -T";
-          le = "eza";
-          nrf = "nh os switch .";
-          cfetch = "clear && fastfetch && sleep 10";
-          matrix = "cmatrix -s -C blue";
+          ls = "eza";
+          cd = "z";
+          edi = "zeditor ./";
+          nos = "nh os switch .";
         };
         shellInit = ''
           fish_default_key_bindings

@@ -1,8 +1,9 @@
-{ config, settings, ... }: {
+{ config, settings, pkgs, ... }: {
 
   # system
   environment.pathsToLink = [ "/share/zsh" ];
   programs.zsh.enable = true; # system module
+  users.defaultUserShell = pkgs.zsh; # ^ needed
 
   home-manager.users.${settings.userName} = {
     # misc
