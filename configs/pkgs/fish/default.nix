@@ -3,6 +3,21 @@
 {
   home-manager.users.${settings.userName} = {
     programs = {
+      # Terminal Utilities
+      zoxide = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+      fzf = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+      yazi = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+
+      # Fish Configuration
       fish = {
         enable = true;
         functions = {

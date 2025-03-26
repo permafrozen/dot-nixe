@@ -36,7 +36,6 @@ rec {
 
   pkgs = [
     "virt-manager"
-    "zsh"
     "xdg-user-dirs"
     "steam"
     "mpd"
