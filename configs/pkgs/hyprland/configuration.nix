@@ -166,8 +166,9 @@ in {
         ];
 
         input = {
+          touchpad = { disable_while_typing = false; };
           kb_layout = "de";
-          mouse_refocus = "false";
+          mouse_refocus = false;
           follow_mouse = "0";
         };
 
