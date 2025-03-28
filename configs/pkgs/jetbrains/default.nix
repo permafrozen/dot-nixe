@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
     jetbrains.datagrip
+    scenebuilder
   ];
 
   programs.java = {

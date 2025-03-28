@@ -202,6 +202,7 @@ in {
           "maxsize 1 1, class:^(xwaylandvideobridge)$"
           "noblur, class:^(xwaylandvideobridge)$"
           "nofocus, class:^(xwaylandvideobridge)$"
+          "stayfocused,class:^(com.oracle.javafx.scenebuilder.app.SceneBuilderApp)$"
 
           # Smart Gaps ------------------ #
           # "bordersize 0, floating:0, onworkspace:w[tv1]"
