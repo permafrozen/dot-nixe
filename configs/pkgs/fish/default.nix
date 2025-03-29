@@ -31,6 +31,7 @@
           cd = "z";
           edi = "zeditor ./";
           nos = "nh os switch .";
+          dev = " nix develop --command fish";
         };
         shellInit = ''
           fish_default_key_bindings

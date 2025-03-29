@@ -74,7 +74,7 @@ in {
   fonts.packages = with pkgs; [
     nerd-fonts.hack
     nerd-fonts.symbols-only
-    maple-mono-NF
+    maple-mono.NF
     noto-fonts-emoji
     fira-code-symbols
   ];
