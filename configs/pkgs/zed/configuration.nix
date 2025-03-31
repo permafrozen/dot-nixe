@@ -46,6 +46,7 @@ in {
 
         # Important Stuff
         vim_mode = true;
+        dock = "right";
         features.copilot = false;
 
         # Telemetry Data Collection

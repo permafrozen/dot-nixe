@@ -1,6 +1,14 @@
-{ config, settings, ... }:
+{ lib, config, settings, ... }:
 
-{
+let
+
+  decToHex = decimalString:
+    let
+      decimal = builtins.fromJSON decimalString;
+      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
+      hex = lib.trivial.toHexString integer;
+    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
+in {
 
   nix.settings = {
     substituters =
@@ -116,8 +124,8 @@
 
         style = ''
           :root {
-            --main-background: #${config.lib.stylix.colors.base00}80;
-            --background-color: #${config.lib.stylix.colors.base00}80;
+            --main-background: #${config.lib.stylix.colors.base00}${decToHex settings.opacity};
+            --background-color: #${config.lib.stylix.colors.base00}${decToHex settings.opacity};
             --main-color: #${config.lib.stylix.colors.base05};
             --main-border-color: #${config.lib.stylix.colors.base05};
             --search-background: #${config.lib.stylix.colors.base00};
