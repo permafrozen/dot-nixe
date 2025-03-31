@@ -11,7 +11,7 @@
           path =
             "/home/${settings.userName}/.dot-nixe/assets/wallpapers/${settings.wallpaper}";
           color =
-            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0.5)";
+            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${settings.opacity})";
 
           # Blur
           blur_size = "10";
@@ -54,7 +54,7 @@
             "rgb(${config.lib.stylix.colors.base08-rgb-r}, ${config.lib.stylix.colors.base08-rgb-g}, ${config.lib.stylix.colors.base08-rgb-b})";
 
           # Font
-          font_family = "Hack Nerd Font";
+          font_family = "${config.stylix.fonts.monospace.name}";
 
           # Misc
           placeholder_text = "";

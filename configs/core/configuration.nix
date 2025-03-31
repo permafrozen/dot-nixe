@@ -15,9 +15,11 @@ in {
     file
     git
     nix-melt
+    nixfmt-classic
     nix-output-monitor
     wget
     zip
+    unzip
     brightnessctl
     nodejs
     pnpm
@@ -32,7 +34,7 @@ in {
   # Laptop Settings
   services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
 
-  boot.loader = { 
+  boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };

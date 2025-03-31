@@ -199,12 +199,21 @@ in {
                   decToHex settings.opacity
                 }
             }
-            toolbox#navigator-toolbox.browser-toolbox-background {
+            toolbox#navigator-toolbox.browser-toolbox-background, hbox#zen-main-app-wrapper {
               background-color: transparent !important;
             }
 
             hbox#browser {
                 background-color: var(--main-bg) !important;
+                font-family: "Maple Mono NF";
+                font-weight: 700
+            }
+
+            tabbox#tabbrowser-tabbox * {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+
             }
           '';
         };

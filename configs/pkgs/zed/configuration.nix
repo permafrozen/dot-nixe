@@ -1,4 +1,4 @@
-{ lib, pkgs, settings, ... }:
+{ config, lib, pkgs, settings, ... }:
 let
   ui_font_size = (lib.toInt settings.font-size) * 5 / 3;
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
@@ -57,7 +57,8 @@ in {
         # Font
         inherit ui_font_size; # pt -> px
         inherit buffer_font_size; # ^
-        buffer_font_family = "Hack Nerd Font";
+        ui_font_family = "${config.stylix.fonts.monospace.name}";
+        buffer_font_family = "${config.stylix.fonts.monospace.name}";
 
         # Theme
         theme = {

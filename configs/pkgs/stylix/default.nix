@@ -34,7 +34,7 @@ let
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       monospace = {
-        name = "Maple Mono";
+        name = "Maple Mono NF";
         package = pkgs.nerd-fonts.hack;
       };
       emoji = {

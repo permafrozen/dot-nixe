@@ -18,6 +18,7 @@
         confirm-close-surface = false;
         cursor-style = "bar";
         cursor-style-blink = true;
+        font-family = "${config.stylix.fonts.monospace.name}";
         font-size = "${settings.font-size}";
         window-padding-x = 10;
       };
