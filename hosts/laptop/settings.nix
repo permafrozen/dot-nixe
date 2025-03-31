@@ -18,7 +18,7 @@ rec {
   # theme
   wallpaper = "skull.png"; # ../assets/wallpaper/
   scheme = "da-one-black"; # base16-schemes Package
-  opacity = "0.5";
+  opacity = "0.8";
   font-size = "14";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
   hyprcursor = "McMojave-Hypr";
@@ -73,6 +73,7 @@ rec {
     "zed"
     "element"
     "wireshark"
+    "nvchad"
     "${terminal}" # BROWSER
     "${browser}" # TERMINAL
     "${shell}" # SHELL
