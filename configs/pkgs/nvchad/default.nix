@@ -14,6 +14,13 @@
       # *IMPORTANT*
       # This file needs to have same structure as nvconfig.lua
       # https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+
+      extraPlugins = ''
+      return {
+        {"NvChad/base46",lazy=false},
+      }
+      '';
+
       chadrcConfig = ''
         ---@type ChadrcConfig
         local M = {
