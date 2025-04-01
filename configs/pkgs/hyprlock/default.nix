@@ -14,12 +14,12 @@
             "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${settings.opacity})";
 
           # Blur
-          blur_size = "10";
-          blur_passes = "4";
-          noise = "0.0420";
-          contrast = "1.0";
-          vibrancy = "1.0";
-          vibrancy_darkness = "0.1069";
+          # blur_size = "10";
+          # blur_passes = "4";
+          # noise = "0.0420";
+          # contrast = "1.0";
+          # vibrancy = "1.0";
+          # vibrancy_darkness = "0.1069";
         };
 
         input-field = {
@@ -72,7 +72,8 @@
             color =
               "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
             font_size = "25";
-            font_family = "Hack Nerd Font";
+            font_family = "${config.stylix.fonts.monospace.name}";
+
             rotate = "0"; # degrees, counter-clockwise
 
             position = "0, 80";
@@ -87,7 +88,7 @@
             color =
               "rgb(${config.lib.stylix.colors.base06-rgb-r}, ${config.lib.stylix.colors.base06-rgb-g}, ${config.lib.stylix.colors.base06-rgb-b})";
             font_size = "65";
-            font_family = "Hack Nerd Font";
+            font_family = "${config.stylix.fonts.monospace.name}";
             rotate = "0"; # degrees, counter-clockwise
 
             position = "0, 200";
