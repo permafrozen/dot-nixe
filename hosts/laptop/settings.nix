@@ -16,8 +16,8 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "skull.png"; # ../assets/wallpaper/
-  scheme = "da-one-black"; # base16-schemes Package
+  wallpaper = "city-rain.png"; # ../assets/wallpaper/
+  scheme = "dracula"; # base16-schemes Package
   opacity = "0.8";
   font-size = "14";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave

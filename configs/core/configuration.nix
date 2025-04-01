@@ -7,6 +7,7 @@ in {
 
   # Packages
   environment.systemPackages = with pkgs; [
+    ascii-draw
     acpi
     bat
     curl
