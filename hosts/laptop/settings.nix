@@ -16,7 +16,7 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "city-rain.png"; # ../assets/wallpaper/
+  wallpaper = "mountain.png"; # ../assets/wallpaper/
   scheme = "dracula"; # base16-schemes Package
   opacity = "0.8";
   font-size = "14";
