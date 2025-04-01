@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743400553,
-        "narHash": "sha256-+rBfSv4h0nOusk5WthngASk6KvZwwN28nVk5V7dy8jA=",
+        "lastModified": 1743496849,
+        "narHash": "sha256-0igsXZKYRjRbfdlTvJDgLtyOriJPB2nleVn4E25JCIc=",
         "owner": "Permafrozen",
         "repo": "aglet",
-        "rev": "2d473cbe828bcef6112797d7bb8f5fc55c1c7709",
+        "rev": "5de93803fa8b656775c074858cfc40753d911c76",
         "type": "github"
       },
       "original": {

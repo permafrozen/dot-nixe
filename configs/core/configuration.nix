@@ -7,13 +7,14 @@ in {
 
   # Packages
   environment.systemPackages = with pkgs; [
-    ascii-draw
+    inotify-tools
     acpi
     bat
     curl
     nurl
     eza
     file
+    fzf
     git
     nix-melt
     nixfmt-classic
@@ -26,8 +27,6 @@ in {
     pnpm
     udiskie
     figlet
-    fzf
-    cmatrix
     pipes
     vitetris
   ];
