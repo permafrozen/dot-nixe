@@ -11,8 +11,15 @@
     stylix.url = "github:danth/stylix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     walker.url = "github:abenz1267/walker";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
 
     aglet = {
       url = "github:Permafrozen/aglet";
