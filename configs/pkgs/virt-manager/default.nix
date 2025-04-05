@@ -5,6 +5,9 @@
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
+  # Enable Waydroid for Android apps
+  virtualisation.waydroid.enable = true;
+
   # Add user to libvirtd group
   users.users.${settings.userName}.extraGroups = [ "libvirtd" ];
 
