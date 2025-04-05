@@ -2,7 +2,7 @@
 
 {
   # pavucontrol
-  environment.systemPackages = with pkgs; [ pavucontrol ];
+  environment.systemPackages = with pkgs; [ pulsemixer ];
 
   # Pipewire
   services.pipewire = {
