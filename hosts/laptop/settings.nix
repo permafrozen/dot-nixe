@@ -36,6 +36,7 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
+    "krita"
     "blender"
     "virt-manager"
     "xdg-user-dirs"
