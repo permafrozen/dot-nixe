@@ -36,6 +36,7 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
+    "plymouth"
     "rpcs3"
     "krita"
     "blender"
@@ -49,8 +50,8 @@ rec {
     "hyprland"
     "starship"
     "stylix"
-    "swww"
-    "sddm" # "greetd"
+    "hyprpaper" # swww, hyprpaper
+    "ly" # greetd, sddm, ly
     "libreoffice"
     "yazi"
     "btop"

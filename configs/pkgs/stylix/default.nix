@@ -56,12 +56,7 @@ let
   };
 
 in {
-  stylix = stylixConfig // {
-    targets = {
-      console.enable = true;
-      regreet.enable = true;
-    };
-  };
+  stylix = stylixConfig // { targets = { regreet.enable = true; }; };
 
   environment.systemPackages = with pkgs; [
     base16-schemes

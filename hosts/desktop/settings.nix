@@ -1,8 +1,8 @@
 { ... }: rec {
 
   #############################################
-  # OUTDATE
-  # LOOK AT LAPTOP AND FIX TODO
+  # OUTDATED
+  # LOOK AT LAPTOP; FIX TODO WHEN I USE A DESKTOP AGAIN
   #############################################
 
   # system settings
