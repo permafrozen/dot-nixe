@@ -1,4 +1,4 @@
-{ settings, inputs, lib, ... }:
+{ settings, inputs, ... }:
 
 {
   imports = [
@@ -10,13 +10,7 @@
   home = {
     username = "${settings.userName}";
     homeDirectory = "/home/${settings.userName}";
-    stateVersion = "24.05";
-
-    # Delete Backup File that causes home-manager to implode
-    activation.cleanup = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      rm -f ~/.zen/default/search.json.mozlz4.backup
-    '';
-
+    stateVersion = "24.05"; # careful, like nixos version
   };
 
   # Let Home Manager install and manage itself.

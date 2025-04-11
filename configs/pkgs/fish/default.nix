@@ -30,7 +30,8 @@
           ls = "eza";
           cd = "z";
           edi = "zeditor ./";
-          nos = "nh os switch .";
+          nos =
+            "rm -f ~/.zen/default/search.json.mozlz4.backup && nh os switch .";
           dev = " nix develop --command fish";
         };
         shellInit = ''
