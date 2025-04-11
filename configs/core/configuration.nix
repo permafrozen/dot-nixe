@@ -38,21 +38,16 @@ in {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
-  # Bootloader.
-  # boot.loader = {
-  #  systemd-boot.enable = false;
-  #  grub = {
-  #    enable = true;
-  #    device = "nodev";
-  #    efiSupport = true;
-  #    # useOSProber = true;
-  #  };
-  #  efi = { canTouchEfiVariables = true; };
-  #};
 
   networking = {
     hostName = "${settings.hostName}";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      insertNameservers = [
+        # Control D (fixes internet speed issues)
+        "76.76.2.2"
+      ];
+    };
   };
 
   time.timeZone = "${settings.timeZone}";
