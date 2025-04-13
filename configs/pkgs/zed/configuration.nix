@@ -18,7 +18,6 @@ in {
         "nix"
         "dockerfile"
         "docker-compose"
-        "discord-presence"
         "svelte"
         "scss"
         "log"
@@ -47,8 +46,29 @@ in {
 
         # Important Stuff
         vim_mode = true;
-        dock = "right";
+        relative_line_numbers = true;
         features.copilot = false;
+        dock = "right";
+
+        # Ui
+        project_panel = {
+          button = true;
+          default_width = 240;
+          dock = "right";
+          entry_spacing = "comfortable";
+        };
+
+        assistant = {
+          enabled = false;
+          button = false;
+          dock = "right";
+        };
+
+        outline_panel = {
+          button = false;
+          default_width = 300;
+          dock = "right";
+        };
 
         # Telemetry Data Collection
         telemetry = {

@@ -52,7 +52,8 @@
               "surface.background": "#${config.lib.stylix.colors.base00}00",
               "editor.active_line.background": "#${config.lib.stylix.colors.base01}00",
               "editor.gutter.background": "#${config.lib.stylix.colors.base00}00",
-              "editor.line_number": "#${config.lib.stylix.colors.base03}00",
+              "editor.line_number": "#${config.lib.stylix.colors.base04}ff",
+              "editor.active_line_number": "#${config.lib.stylix.colors.base05}ff",
 
 
               "element.background": "#${config.lib.stylix.colors.base01}",
@@ -84,7 +85,6 @@
               "editor.invisible": null,
               "editor.wrap_guide": "#${config.lib.stylix.colors.base01}",
               "editor.active_wrap_guide": "#${config.lib.stylix.colors.base03}",
-              "editor.active_line_number": "#${config.lib.stylix.colors.base06}",
               "editor.document_highlight.read_background": "#${config.lib.stylix.colors.base01}",
               "editor.document_highlight.write_background": "#${config.lib.stylix.colors.base01}",
               "terminal.foreground": null,
