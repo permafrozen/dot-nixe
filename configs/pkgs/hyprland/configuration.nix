@@ -89,7 +89,6 @@
 
         exec-once = [
           "$statusbar"
-          "$terminal"
           "walker --gapplication-service"
           "hyprctl setcursor $cursor 32"
         ];
