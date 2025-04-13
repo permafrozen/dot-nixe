@@ -18,6 +18,7 @@ in {
         "nix"
         "dockerfile"
         "docker-compose"
+        "discord-presence"
         "svelte"
         "scss"
         "log"

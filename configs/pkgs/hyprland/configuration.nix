@@ -1,13 +1,6 @@
-{ pkgs, config, settings, lib, ... }:
+{ pkgs, config, settings, dotlib, ... }:
 
-let
-  decToHex = decimalString:
-    let
-      decimal = builtins.fromJSON decimalString;
-      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
-      hex = lib.trivial.toHexString integer;
-    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
-in {
+{
   environment.systemPackages = [ pkgs.kdePackages.xwaylandvideobridge ];
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
@@ -33,10 +26,12 @@ in {
 
         general = {
           border_size = "5";
-          "col.active_border" =
-            "0x${decToHex settings.opacity}${config.lib.stylix.colors.base05}";
-          "col.inactive_border" =
-            "0x${decToHex settings.opacity}${config.lib.stylix.colors.base02}";
+          "col.active_border" = "0x${
+              dotlib.decToHex settings.opacity
+            }${config.lib.stylix.colors.base05}";
+          "col.inactive_border" = "0x${
+              dotlib.decToHex settings.opacity
+            }${config.lib.stylix.colors.base02}";
           resize_on_border = "true";
 
           gaps_in = "10";

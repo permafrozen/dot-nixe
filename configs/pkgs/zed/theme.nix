@@ -1,13 +1,4 @@
-{ config, settings, lib, ... }:
-let
-
-  decToHex = decimalString:
-    let
-      decimal = builtins.fromJSON decimalString;
-      integer = lib.strings.toInt (toString (builtins.floor (decimal * 255)));
-      hex = lib.trivial.toHexString integer;
-    in if (lib.stringLength hex) == 1 then "0${hex}" else hex;
-in {
+{ config, settings, dotlib, ... }: {
 
   home-manager.users.${settings.userName} = {
     home.file.".config/zed/themes/stylix.json".text = ''
@@ -29,16 +20,16 @@ in {
 
               "background.appearance": "blurred",
               "background": "#${config.lib.stylix.colors.base00}${
-                decToHex settings.opacity
+                dotlib.decToHex settings.opacity
               }",
               "title_bar.background": "#${config.lib.stylix.colors.base00}${
-                decToHex settings.opacity
+                dotlib.decToHex settings.opacity
               }",
               "title_bar.inactive_background": "#${config.lib.stylix.colors.base00}${
-                decToHex settings.opacity
+                dotlib.decToHex settings.opacity
               }",
               "status_bar.background": "#${config.lib.stylix.colors.base00}${
-                decToHex settings.opacity
+                dotlib.decToHex settings.opacity
               }",
 
               "panel.background": "#${config.lib.stylix.colors.base00}00",

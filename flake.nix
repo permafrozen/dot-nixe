@@ -52,8 +52,10 @@
     let
       system = "x86_64-linux";
       settings = import ./hosts/laptop/settings.nix;
+      dotlib = import ./lib/default.nix { lib = nixpkgs.lib; };
       extensions = inputs.nix-vscode-extensions.extensions.${system};
       args = {
+        inherit dotlib;
         inherit system;
         inherit inputs;
         inherit settings;
