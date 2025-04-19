@@ -49,7 +49,6 @@ rec {
     "pipewire"
     "hyprland"
     "starship"
-    "stylix"
     "hyprpaper" # swww, hyprpaper
     "ly" # greetd, sddm, ly
     "libreoffice"
@@ -79,8 +78,8 @@ rec {
     "element"
     "wireshark"
     "nvchad"
-    "${terminal}" # BROWSER
-    "${browser}" # TERMINAL
-    "${shell}" # SHELL
+    "${terminal}"
+    "${browser}"
+    "${shell}"
   ];
 }

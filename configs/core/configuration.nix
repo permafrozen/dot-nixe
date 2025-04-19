@@ -2,8 +2,13 @@
 
 let path = pkg: ../../configs/pkgs/${pkg}/default.nix;
 in {
-  imports = [ ../../hosts/${settings.hostPreset}/hardware-configuration.nix ]
-    ++ map path settings.pkgs;
+  imports = [
+    ../../hosts/${settings.hostPreset}/hardware-configuration.nix
+    ../pkgs/stylix
+  ] ++ map path settings.pkgs;
+
+  # Laptop Settings
+  services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
 
   # Packages
   environment.systemPackages = with pkgs; [
@@ -30,9 +35,6 @@ in {
     pipes
     vitetris
   ];
-
-  # Laptop Settings
-  services.logind.lidSwitch = "ignore"; # only turns off screen on lid close
 
   boot.loader = {
     systemd-boot.enable = true;
