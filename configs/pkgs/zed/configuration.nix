@@ -1,5 +1,6 @@
 { config, lib, pkgs, settings, ... }:
 let
+  # conversion from pt
   ui_font_size = (lib.toInt settings.font-size) * 5 / 3;
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
 in {
