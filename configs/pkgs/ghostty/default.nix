@@ -8,6 +8,10 @@
       enable = true;
       clearDefaultKeybinds = true;
       settings = {
+        keybind = [
+          "ctrl+shift+c=copy_to_clipboard"
+          "ctrl+shift+v=paste_from_clipboard"
+        ];
         foreground = "${config.lib.stylix.colors.base05}";
         background = "${config.lib.stylix.colors.base00}";
         background-opacity = "${settings.opacity}";
@@ -21,6 +25,7 @@
         font-family = "${config.stylix.fonts.monospace.name}";
         font-size = "${settings.font-size}";
         window-padding-x = 10;
+        window-padding-y = 10;
       };
     };
   };
