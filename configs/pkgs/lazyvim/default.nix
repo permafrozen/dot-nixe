@@ -7,6 +7,11 @@ let
     hash = "sha256-QrpnlDD4r1X4C8PqBhQ+S3ar5C+qDrU1Jm/lPqyMIFM=";
   };
 in {
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+    MANPAGER = "nvim +Man!";
+  };
+
   # just wanted to test it real quick, don't actually use this solution
   environment.systemPackages = with pkgs; [ neovim gcc ];
   home-manager.users.${settings.userName} = {
