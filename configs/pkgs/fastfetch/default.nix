@@ -23,98 +23,57 @@
         modules = [
           {
             type = "title";
-            format = "{#1}╭───────────── {#}{user-name-colored}";
-          }
-          {
-            type = "custom";
-            format = "{#1}│ {#}System Information";
+            format = "{#1}{#}{user-name-colored}";
           }
           {
             type = "os";
-            key = "{#separator}│  {#keys}󰍹 OS";
+            key = "{#separator}{#keys} ├─ 󰍹 OS";
           }
           {
             type = "kernel";
-            key = "{#separator}│  {#keys}󰒋 Kernel";
-          }
-          {
-            type = "uptime";
-            key = "{#separator}│  {#keys}󰅐 Uptime";
+            key = "{#separator}{#keys} ├─ 󰒋 Kernel";
           }
           {
             type = "packages";
-            key = "{#separator}│  {#keys}󰏖 Packages";
+            key = "{#separator}{#keys} ├─ 󰏖 Packages";
             format = "{all}";
           }
           {
-            type = "custom";
-            format = "{#1}│";
-          }
-          {
-            type = "custom";
-            format = "{#1}│ {#}Desktop Environment";
-          }
-          {
             type = "de";
-            key = "{#separator}│  {#keys}󰧨 DE";
+            key = "{#separator}{#keys} ├─ 󰧨 DE";
           }
           {
             type = "wm";
-            key = "{#separator}│  {#keys}󱂬 WM";
-          }
-          {
-            type = "wmtheme";
-            key = "{#separator}│  {#keys}󰉼 Theme";
+            key = "{#separator}{#keys} ├─ 󱂬 WM";
           }
           {
             type = "display";
-            key = "{#separator}│  {#keys}󰹑 Resolution";
+            key = "{#separator}{#keys} ├─ 󰹑 Resolution";
           }
           {
             type = "shell";
-            key = "{#separator}│  {#keys}󰞷 Shell";
+            key = "{#separator}{#keys} ├─ 󰞷 Shell";
           }
           {
             type = "terminalfont";
-            key = "{#separator}│  {#keys}󰛖 Font";
-          }
-          {
-            type = "custom";
-            format = "{#1}│";
-          }
-          {
-            type = "custom";
-            format = "{#1}│ {#}Hardware Information";
+            key = "{#separator}{#keys} ├─ 󰛖 Font";
           }
           {
             type = "cpu";
-            key = "{#separator}│  {#keys}󰻠 CPU";
+            key = "{#separator}{#keys} ├─ 󰻠 CPU";
           }
           {
             type = "gpu";
-            key = "{#separator}│  {#keys}󰢮 GPU";
+            key = "{#separator}{#keys} ├─ 󰢮 GPU";
           }
           {
             type = "memory";
-            key = "{#separator}│  {#keys}󰍛 Memory";
+            key = "{#separator}{#keys} ├─ 󰍛 Memory";
           }
           {
             type = "disk";
-            key = "{#separator}│  {#keys}󰋊 Disk (/)";
+            key = "{#separator}{#keys} ╰─ 󰋊 Disk (/)";
             folders = "/";
-          }
-          {
-            type = "custom";
-            format = "{#1}│";
-          }
-          {
-            type = "colors";
-            key = "{#separator}│";
-            symbol = "circle";
-          }
-          {
-            type = "custom";
-            format = "{#1}╰───────────────────────────────╯";
           }
         ];
       };
