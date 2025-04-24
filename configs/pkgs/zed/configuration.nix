@@ -7,6 +7,7 @@ in {
   environment.systemPackages = with pkgs; [ nixd ];
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {
+      package = pkgs.zed-editor-fhs; # <- FHS environment for LSPs
       enable = true;
       extensions = [
         "csharp"
@@ -32,6 +33,7 @@ in {
         "git-firefly"
       ];
       extraPackages = with pkgs; [
+        dotnet-runtime_8
         rust-analyzer
         nixd
         nixfmt-classic
@@ -41,7 +43,6 @@ in {
         shfmt
       ];
 
-      package = pkgs.zed-editor;
       userKeymaps = { };
       userSettings = {
 
