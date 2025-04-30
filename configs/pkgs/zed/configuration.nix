@@ -4,7 +4,19 @@ let
   ui_font_size = (lib.toInt settings.font-size) * 5 / 3;
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
 in {
-  environment.systemPackages = with pkgs; [ nixd ];
+
+  environment.systemPackages = with pkgs; [
+    nixd
+    dotnetCorePackages.sdk_8_0
+    dotnetCorePackages.runtime_8_0
+  ];
+
+  # C# env vars
+  environment.sessionVariables = {
+    DOTNET_BIN = "${pkgs.dotnetCorePackages.sdk_8_0}/bin/dotnet";
+    DOTNET_ROOT = "${pkgs.dotnetCorePackages.runtime_8_0}/share/dotnet/";
+  };
+
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {
       package = pkgs.zed-editor-fhs; # <- FHS environment for LSPs
@@ -13,6 +25,7 @@ in {
         "csharp"
         "basher"
         "powershell"
+        "php"
         "java"
         "lua"
         "zig"
@@ -41,6 +54,7 @@ in {
         kdePackages.qtdeclarative
         shellcheck
         shfmt
+        php
       ];
 
       userKeymaps = { };
