@@ -46,8 +46,7 @@ in {
     networkmanager = {
       enable = true;
       insertNameservers = [
-        # Control D (fixes internet speed issues)
-        "76.76.2.2"
+        "1.1.1.1" # Cloudflare
       ];
     };
   };
