@@ -1,20 +1,28 @@
 { pkgs, settings, ... }:
 
 {
+  environment.systemPackages = [ pkgs.devenv ];
+
   home-manager.users.${settings.userName} = {
     programs = {
-      # Terminal Utilities
       zoxide = {
         enable = true;
         enableFishIntegration = true;
       };
+
       fzf = {
         enable = true;
         enableFishIntegration = true;
       };
+
       yazi = {
         enable = true;
         enableFishIntegration = true;
+      };
+
+      direnv = {
+        enable = true;
+        silent = true;
       };
 
       # Fish Configuration
@@ -37,6 +45,7 @@
         shellInit = ''
           fish_default_key_bindings
           set -U fish_greeting
+          direnv hook fish | source
         '';
       };
     };
