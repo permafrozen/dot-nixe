@@ -22,5 +22,14 @@ This is my NixOS configuration utilising `flakes` and `home-manager` for a repro
 
 TODO
 
+## Devenv
+
+**TODO (Secrets Management)**
+
+For more gh api create a new token with no extra permissions at https://github.com/settings/personal-access-tokens/new. Add the token to your `~/.config/nix/nix.conf`:
+```ini
+access-tokens = github.com=<GITHUB_TOKEN>
+```
+
 ## License
 MIT License
