@@ -120,7 +120,8 @@
           # TODO
 
           # Screenshot keybinds
-          "$mainMod, PRINT, exec, hyprshot -m region"
+          "$altMod, PRINT, exec, hyprshot -m region -- pinta"
+          "$mainMod, PRINT, exec, hyprshot -m region --clipboard-only"
 
           # Windowfocus Controls
           "$mainMod, H, movefocus, l"
@@ -188,7 +189,7 @@
 
         ];
 
-        windowrulev2 = [
+        windowrule = [
           # xwayland video bridge
           "opacity 0.0 override, class:^(xwaylandvideobridge)$"
           "noanim, class:^(xwaylandvideobridge)$"
@@ -196,7 +197,10 @@
           "maxsize 1 1, class:^(xwaylandvideobridge)$"
           "noblur, class:^(xwaylandvideobridge)$"
           "nofocus, class:^(xwaylandvideobridge)$"
+
+          # Other
           "stayfocused,class:^(com.oracle.javafx.scenebuilder.app.SceneBuilderApp)$"
+          "float, stayfocused, class:^(pinta)"
 
           # Smart Gaps ------------------ #
           # "bordersize 0, floating:0, onworkspace:w[tv1]"

@@ -6,7 +6,7 @@
     ./configuration.nix
   ];
 
-  environment.systemPackages = with pkgs; [ hyprshot ];
+  environment.systemPackages = with pkgs; [ hyprshot pinta ];
 
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
