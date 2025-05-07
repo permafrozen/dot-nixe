@@ -5,21 +5,9 @@ let
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
 in {
 
-  environment.systemPackages = with pkgs; [
-    nixd
-    dotnetCorePackages.sdk_8_0
-    dotnetCorePackages.runtime_8_0
-  ];
-
-  # C# env vars
-  environment.sessionVariables = {
-    DOTNET_BIN = "${pkgs.dotnetCorePackages.sdk_8_0}/bin/dotnet";
-    DOTNET_ROOT = "${pkgs.dotnetCorePackages.runtime_8_0}/share/dotnet/";
-  };
-
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {
-      package = pkgs.zed-editor-fhs; # <- FHS environment for LSPs
+      package = pkgs.zed-editor-fhs;
       enable = true;
       extensions = [
         "csharp"
@@ -45,6 +33,7 @@ in {
         "qml"
         "git-firefly"
       ];
+
       extraPackages = with pkgs; [
         dotnet-runtime_8
         rust-analyzer
@@ -109,13 +98,15 @@ in {
         languages = {
           Nix = {
             formatter.command = "nixfmt";
-            language_servers = [ "nixd" "nil" "..." ];
+            language_servers = [ "nixd" "!nil" "!..." ];
           };
         };
 
         # LSP - Config
         lsp = {
-          nixd.settings.diagnostic.suppress = [ "sema-extra-with" ];
+          nixd = {
+            settings = { diagnostic = { suppress = [ "sema-extra-with" ]; }; };
+          };
           nil.settings.formatting.command = [ "nixfmt" ];
         };
       };
