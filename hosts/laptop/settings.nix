@@ -25,8 +25,9 @@ rec {
 
   # Setup Specific Hyprland Config
   hyprConfig = ''
-    monitor= eDP-1, 1920x1080@60, 0x0, 1
-    monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
+    monitor=eDP-1, 1920x1080@60, 0x0, 1
+    # monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
+    monitor=HDMI-A-1, 1920x1080@60, 0x-1080, 1
   '';
 
   # variable apps
