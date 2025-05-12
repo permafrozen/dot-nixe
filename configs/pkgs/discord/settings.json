@@ -3,7 +3,7 @@
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [],
-    "enabledThemes": ["stylix.theme.css"],
+    "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": false,
     "transparent": false,
