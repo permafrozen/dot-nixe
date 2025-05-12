@@ -15,7 +15,6 @@
         "$browser" = "${settings.browser}";
         "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
-        "$todolist" = "io.github.alainm23.planify";
         "$screenlock" = "hyprlock";
         "$runner" =
           "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
@@ -99,7 +98,8 @@
           "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
           "$mainMod, E, exec, $explorer"
-          "$mainMod, W, exec, $todolist"
+          "$mainMod, W, exec, io.github.alainm23.planify.quick-add"
+          "$altMod, W, exec, io.github.alainm23.planify"
           "$mainMod, C, exec, $screenlock"
 
           # Window/Session killing
@@ -180,15 +180,6 @@
           background_color = "0x000000";
         };
 
-        workspace = [
-
-          # Smart Gaps ------------------ #
-          # "w[tv1], gapsout:0, gapsin:0"
-          # "f[1], gapsout:0, gapsin:0"
-          # ----------------------------- #
-
-        ];
-
         windowrule = [
           # xwayland video bridge
           "opacity 0.0 override, class:^(xwaylandvideobridge)$"
@@ -201,14 +192,6 @@
           # Other
           "stayfocused,class:^(com.oracle.javafx.scenebuilder.app.SceneBuilderApp)$"
           "float, stayfocused, class:^(pinta)"
-
-          # Smart Gaps ------------------ #
-          # "bordersize 0, floating:0, onworkspace:w[tv1]"
-          # "rounding 0, floating:0, onworkspace:w[tv1]"
-          # "bordersize 0, floating:0, onworkspace:f[1]"
-          # "rounding 0, floating:0, onworkspace:f[1]"
-          # ----------------------------- #
-
           "maximize, class:^(mpv)$"
           "maximize, class:^(VSCodium)$"
           "opacity 1 1 1, class:^(foot)"
