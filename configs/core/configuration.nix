@@ -21,6 +21,7 @@ in {
     file
     fzf
     git
+    git-ignore
     nix-melt
     nixfmt-classic
     nix-output-monitor
