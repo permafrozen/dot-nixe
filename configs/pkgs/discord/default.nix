@@ -52,7 +52,7 @@ in {
               letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
               /* sizes */
-              --gap: 12px; /* spacing between panels */
+              --gap: 15px; /* spacing between panels */
               --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
               --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
               --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
@@ -100,7 +100,7 @@ in {
               /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
               --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
               --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-              --panel-blur: off; /* off: no changes, on: blur the background of panels */
+              --panel-blur: on; /* off: no changes, on: blur the background of panels */
               --blur-amount: 12px; /* amount of blur */
               --bg-floating: var(
                   --bg-3
@@ -138,7 +138,7 @@ in {
               /* background and dark colors */
               --bg-1: transparent; /* dark buttons when clicked */
               --bg-2: transparent; /* dark buttons */
-              --bg-3: transparent; /* spacing, secondary elements */
+              --bg-3: #${config.lib.stylix.colors.base00}; /* spacing, secondary elements */
               --bg-4: #${config.lib.stylix.colors.base00}${
                 dotlib.decToHex settings.opacity
               }; /* main background color */
