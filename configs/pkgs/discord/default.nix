@@ -139,18 +139,10 @@ in {
               --bg-1: transparent; /* dark buttons when clicked */
               --bg-2: transparent; /* dark buttons */
               --bg-3: #${config.lib.stylix.colors.base00}; /* spacing, secondary elements */
-              --bg-4: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }; /* main background color */
-              --hover: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }; /* channels and buttons when hovered */
-              --active: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }; /* channels and buttons when clicked or selected */
-              --active-2: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }; /* extra state for transparent buttons */
+              --bg-4: #${config.lib.stylix.colors.base00}; /* main background color */
+              --hover: #${config.lib.stylix.colors.base00}; /* channels and buttons when hovered */
+              --active: #${config.lib.stylix.colors.base00}; /* channels and buttons when clicked or selected */
+              --active-2: #${config.lib.stylix.colors.base00}; /* extra state for transparent buttons */
               --message-hover: var(--hover); /* messages when hovered */
 
               /* accent colors */
@@ -193,7 +185,7 @@ in {
               /* border colors */
               --border-light: transparent; /* general light border color */
               --border: transparent; /* general normal border color */
-              --border-hover: var(--accent-2); /* border color of panels when hovered */
+              --border-hover: transparent /* border color of panels when hovered */
               --button-border: transparent; /* neutral border color of buttons */
 
               /* base colors */
