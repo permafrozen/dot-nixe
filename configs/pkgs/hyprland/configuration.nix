@@ -24,7 +24,7 @@
         env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,32" ];
 
         general = {
-          border_size = "5";
+          border_size = "2";
           "col.active_border" = "0x${
               dotlib.decToHex settings.opacity
             }${config.lib.stylix.colors.base05}";
@@ -34,7 +34,7 @@
           resize_on_border = "true";
 
           gaps_in = "10";
-          gaps_out = "10";
+          gaps_out = "40";
           gaps_workspaces = "0";
 
           layout = "dwindle";
@@ -73,16 +73,16 @@
 
           animation = [
             # windows in & out
-            "windowsIn, 1, 4, easeOutExpo, popin"
-            "windowsOut, 1, 4, easeOutExpo, popin"
-            "windowsMove, 1, 4, easeOutExpo, popin"
+            "windowsIn, 1, 10, easeOutExpo, gnomed"
+            "windowsOut, 1, 10, easeOutExpo, gnomed"
+            "windowsMove, 1, 10, easeOutExpo, gnomed"
 
             # Workspaces in & out
-            "workspacesIn, 1, 4, easeOutExpo, slide"
-            "workspacesOut, 1, 4, easeOutExpo, slide"
+            "workspacesIn, 1, 4, easeOutExpo, slidevert"
+            "workspacesOut, 1, 4, easeOutExpo, slidevert"
 
             # Layer Shell
-            "layers, 1, 3, easeOutExpo, popin"
+            "layers, 1, 10, easeOutExpo, gnomed"
           ];
         };
 
