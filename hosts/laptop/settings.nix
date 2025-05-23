@@ -37,6 +37,7 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
+    "osu"
     "plymouth"
     "rpcs3"
     "krita"

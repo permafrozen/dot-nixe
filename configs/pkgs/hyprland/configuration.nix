@@ -167,7 +167,7 @@
           follow_mouse = "0";
         };
 
-        cursor.inactive_timeout = "0.1";
+        cursor.inactive_timeout = "0";
 
         gestures = {
           workspace_swipe = "true";
