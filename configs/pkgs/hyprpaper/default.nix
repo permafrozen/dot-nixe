@@ -14,9 +14,5 @@ in {
         wallpaper = ",${wallpaper}";
       };
     };
-
-    wayland.windowManager.hyprland.extraConfig = ''
-      exec-once = hyprpaper
-    '';
   };
 }

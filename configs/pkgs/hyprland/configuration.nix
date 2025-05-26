@@ -16,6 +16,7 @@
         "$explorer" = "nautilus";
         "$terminal" = "${settings.terminal}";
         "$screenlock" = "hyprlock";
+        "$wallpaper" = "hyprpaper";
         "$runner" =
           "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
         "$statusbar" = "aglet";
@@ -88,7 +89,8 @@
 
         exec-once = [
           "$statusbar"
-          "walker --gapplication-service"
+          "$wallpaper"
+          "wlalker --modules applications"
           "hyprctl setcursor $cursor 32"
         ];
 
