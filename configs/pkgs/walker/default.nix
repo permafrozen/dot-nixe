@@ -1,4 +1,4 @@
-{ dotlib, config, settings, ... }:
+{ inputs, dotlib, config, settings, ... }:
 
 {
 
@@ -12,6 +12,7 @@
   };
 
   home-manager.users.${settings.userName} = {
+    imports = [ inputs.walker.homeManagerModules.default ];
     programs.walker = {
       enable = true;
       runAsService = true;

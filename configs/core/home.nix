@@ -1,11 +1,6 @@
-{ settings, inputs, ... }:
+{ settings, ... }:
 
 {
-  imports = [
-    inputs.ags.homeManagerModules.default
-    inputs.walker.homeManagerModules.default
-  ];
-
   # Information what to manage
   home = {
     username = "${settings.userName}";
@@ -15,5 +10,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 }

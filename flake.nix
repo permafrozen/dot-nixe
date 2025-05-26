@@ -12,6 +12,15 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     walker.url = "github:abenz1267/walker";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    nvf-config = {
+      url = "github:permafrozen/nvf-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    lazyvim = {
+      url = "github:matadaniel/LazyVim-module";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -22,7 +31,7 @@
     };
 
     aglet = {
-      url = "github:Permafrozen/aglet";
+      url = "github:permafrozen/aglet";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
