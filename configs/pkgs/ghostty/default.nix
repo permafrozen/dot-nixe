@@ -24,8 +24,8 @@
         cursor-style-blink = true;
         font-family = "${config.stylix.fonts.monospace.name}";
         font-size = "${settings.font-size}";
-        window-padding-x = 10;
-        window-padding-y = 10;
+        # window-padding-x = 10;
+        # window-padding-y = 10;
       };
     };
   };
