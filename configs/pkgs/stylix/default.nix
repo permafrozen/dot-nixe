@@ -56,7 +56,15 @@ let
   };
 
 in {
-  stylix = stylixConfig // { targets = { regreet.enable = true; }; };
+  stylix = stylixConfig // {
+    targets = {
+      regreet.enable = true;
+      nvf = {
+        enable = true;
+        transparentBackground = true;
+      };
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     base16-schemes
@@ -105,6 +113,10 @@ in {
         zathura.enable = true;
         zellij.enable = true;
         firefox.enable = true;
+        nvf = {
+          enable = true;
+          transparentBackground = true;
+        };
         lazygit.enable = true;
       };
     };
