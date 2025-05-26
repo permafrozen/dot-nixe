@@ -60,6 +60,7 @@
           "devtools.chrome.enabled" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.tabs.allow_transparent_browser" = true;
+          "zen.widget.linux.transparency" = true;
           "gfx.webrender.all" = true;
           "zen.view.grey-out-inactive-windows" = false;
           "signon.rememberSignons" = false;
