@@ -1,20 +1,43 @@
-{ settings, pkgs, ... }:
-let
-  lazyvim = pkgs.fetchFromGitHub {
-    owner = "LazyVim";
-    repo = "starter";
-    rev = "803bc181d7c0d6d5eeba9274d9be49b287294d99";
-    hash = "sha256-QrpnlDD4r1X4C8PqBhQ+S3ar5C+qDrU1Jm/lPqyMIFM=";
+{ inputs, settings, ... }: {
+
+  home-manager.users.${settings.userName} = {
+    imports = [ inputs.lazyvim.homeManagerModules.default ];
+    programs.lazyvim = {
+      enable = true;
+      extras = {
+        coding = { yanky.enable = true; };
+
+        editor = {
+          dial.enable = true;
+          inc-rename.enable = true;
+        };
+
+        lang = {
+          nix.enable = true;
+          astro.enable = true;
+          go.enable = true;
+          json.enable = true;
+          markdown.enable = true;
+          python.enable = true;
+          svelte.enable = true;
+          tailwind.enable = true;
+          typescript.enable = true;
+          zig.enable = true;
+        };
+
+        test = { core.enable = true; };
+
+        util = {
+          dot.enable = true;
+          mini-hipatterns.enable = true;
+        };
+      };
+    };
   };
-in {
+
   environment.sessionVariables = {
     EDITOR = "nvim";
     MANPAGER = "nvim +Man!";
   };
 
-  # just wanted to test it real quick, don't actually use this solution
-  environment.systemPackages = with pkgs; [ neovim gcc ];
-  home-manager.users.${settings.userName} = {
-    home.file.".config/nvim".source = lazyvim;
-  };
 }
