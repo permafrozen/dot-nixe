@@ -37,6 +37,8 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
+    # "nvf"
+    "lazyvim"
     "osu"
     "plymouth"
     "rpcs3"
@@ -51,7 +53,7 @@ rec {
     "pipewire"
     "hyprland"
     "starship"
-    "hyprpaper" # swww, hyprpaper
+    "hyprpaper" # swww, hyprpaper, mpvpaper
     "ly" # greetd, sddm, ly
     "libreoffice"
     "yazi"
@@ -69,7 +71,7 @@ rec {
     "kanata"
     "cliphist"
     "distrobox"
-    "planify"
+    # "planify"
     "bluetooth"
     "ags"
     "zathura"
@@ -79,7 +81,7 @@ rec {
     "zed"
     "element"
     "wireshark"
-    "nvchad"
+    # "nvchad"
     "${terminal}"
     "${browser}"
     "${shell}"
