@@ -11,7 +11,7 @@ rec {
   searchRegion = "AT";
 
   # git settings
-  gitUser = "Permafrozen";
+  gitUser = "permafrozen";
   gitMail = "permafrozen@disroot.org";
   defaultBranch = "main";
 
