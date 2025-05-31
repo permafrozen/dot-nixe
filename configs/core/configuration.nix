@@ -37,6 +37,7 @@ in
     figlet
     pipes
     vitetris
+    yt-dlp
   ];
 
   boot.loader = {

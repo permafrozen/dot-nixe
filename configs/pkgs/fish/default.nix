@@ -40,6 +40,7 @@
           edi = "zeditor ./";
           nos = "rm -f ~/.zen/default/search.json.mozlz4.backup && nh os switch .";
           dev = " nix develop --command fish";
+          fym = "yt-dlp -f bestaudio --extract-audio --audio-format mp3";
         };
         shellInit = ''
           fish_default_key_bindings
