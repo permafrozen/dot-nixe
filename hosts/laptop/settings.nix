@@ -37,6 +37,7 @@ rec {
 
   pkgs = [
     # "nvf"
+    "kew"
     "lazyvim"
     "osu"
     "plymouth"
