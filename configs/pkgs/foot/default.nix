@@ -1,22 +1,30 @@
 { settings, lib, ... }:
 
 {
-  programs.foot = { enableFishIntegration = true; };
+  programs.foot = {
+    enableFishIntegration = true;
+  };
 
   home-manager.users.${settings.userName} = {
     programs.foot = {
       enable = true;
       server.enable = false;
       settings = {
-        main = { resize-delay-ms = "80"; };
+        main = {
+          resize-delay-ms = "80";
+        };
 
         cursor = {
           style = "beam";
           blink = true;
         };
 
-        mouse = { hide-when-typing = true; };
-        colors = { alpha = lib.mkForce "${settings.opacity}"; };
+        mouse = {
+          hide-when-typing = true;
+        };
+        colors = {
+          alpha = lib.mkForce "${settings.opacity}";
+        };
       };
     };
   };

@@ -1,6 +1,9 @@
-{ pkgs, settings, ... }: {
+{ pkgs, settings, ... }:
+{
   home-file.users.${settings.userName} = {
-    programs.bash = { enable = true; };
+    programs.bash = {
+      enable = true;
+    };
     programs.starship.enableBashIntegration = true;
   };
 }

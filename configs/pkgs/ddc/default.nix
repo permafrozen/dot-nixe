@@ -1,4 +1,9 @@
-{ config, pkgs, settings, ... }:
+{
+  config,
+  pkgs,
+  settings,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [ ddcutil ];

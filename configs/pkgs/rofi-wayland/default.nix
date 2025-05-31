@@ -1,9 +1,16 @@
-{ config, pkgs, settings, ... }:
+{
+  config,
+  pkgs,
+  settings,
+  ...
+}:
 
 {
   environment = {
     systemPackages = [ pkgs.rofi-wayland ];
-    sessionVariables = { TERMINAL = "${settings.terminal}"; };
+    sessionVariables = {
+      TERMINAL = "${settings.terminal}";
+    };
   };
 
   home-manager.users.${settings.userName} = {

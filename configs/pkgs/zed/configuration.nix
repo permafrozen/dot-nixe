@@ -1,9 +1,16 @@
-{ config, lib, pkgs, settings, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  settings,
+  ...
+}:
 let
   # conversion from pt
   ui_font_size = (lib.toInt settings.font-size) * 5 / 3;
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
-in {
+in
+{
 
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {
@@ -35,10 +42,11 @@ in {
       ];
 
       extraPackages = with pkgs; [
+        openssl
         dotnet-runtime_8
         rust-analyzer
         nixd
-        nixfmt-classic
+        nixfmt-rfc-style
         nil
         kdePackages.qtdeclarative
         shellcheck
@@ -98,14 +106,22 @@ in {
         languages = {
           Nix = {
             formatter.command = "nixfmt";
-            language_servers = [ "nixd" "!nil" "!..." ];
+            language_servers = [
+              "nixd"
+              "!nil"
+              "!..."
+            ];
           };
         };
 
         # LSP - Config
         lsp = {
           nixd = {
-            settings = { diagnostic = { suppress = [ "sema-extra-with" ]; }; };
+            settings = {
+              diagnostic = {
+                suppress = [ "sema-extra-with" ];
+              };
+            };
           };
           nil.settings.formatting.command = [ "nixfmt" ];
         };

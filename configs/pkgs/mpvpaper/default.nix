@@ -1,1 +1,4 @@
-{ pkgs, ... }: { environment.systemPackages = with pkgs; [ mpvpaper ]; }
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [ mpvpaper ];
+}

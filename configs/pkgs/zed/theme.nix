@@ -1,4 +1,10 @@
-{ config, settings, dotlib, ... }: {
+{
+  config,
+  settings,
+  dotlib,
+  ...
+}:
+{
 
   home-manager.users.${settings.userName} = {
     home.file.".config/zed/themes/stylix.json".text = ''
@@ -19,18 +25,10 @@
               "border.disabled": "#00000000",
 
               "background.appearance": "blurred",
-              "background": "#${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }",
-              "title_bar.background": "#${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }",
-              "title_bar.inactive_background": "#${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }",
-              "status_bar.background": "#${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }",
+              "background": "#${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}",
+              "title_bar.background": "#${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}",
+              "title_bar.inactive_background": "#${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}",
+              "status_bar.background": "#${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}",
 
               "panel.background": "#${config.lib.stylix.colors.base00}00",
               "editor.background": "#${config.lib.stylix.colors.base00}00",

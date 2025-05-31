@@ -1,1 +1,4 @@
-{ pkgs, ... }: { environment.systemPackages = [ pkgs.blender ]; }
+{ pkgs, ... }:
+{
+  environment.systemPackages = [ pkgs.blender ];
+}

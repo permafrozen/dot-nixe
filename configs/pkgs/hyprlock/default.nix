@@ -5,13 +5,13 @@
     programs.hyprlock = {
       enable = true;
       settings = {
-        general = { hide_cursor = true; };
+        general = {
+          hide_cursor = true;
+        };
 
         background = {
-          path =
-            "/home/${settings.userName}/.dot-nixe/assets/wallpapers/${settings.wallpaper}";
-          color =
-            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${settings.opacity})";
+          path = "/home/${settings.userName}/.dot-nixe/assets/wallpapers/${settings.wallpaper}";
+          color = "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${settings.opacity})";
 
           # Blur
           # blur_size = "10";
@@ -36,22 +36,14 @@
           dots_text_format = "";
 
           # Color Setting
-          outer_color =
-            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
-          inner_color =
-            "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
-          font_color =
-            "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
-          check_color =
-            "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
-          fail_color =
-            "rgb(${config.lib.stylix.colors.base08-rgb-r}, ${config.lib.stylix.colors.base08-rgb-g}, ${config.lib.stylix.colors.base08-rgb-b})";
-          capslock_color =
-            "rgb(${config.lib.stylix.colors.base0A-rgb-r}, ${config.lib.stylix.colors.base0A-rgb-g}, ${config.lib.stylix.colors.base0A-rgb-b})";
-          numlock_color =
-            "rgb(${config.lib.stylix.colors.base0A-rgb-r}, ${config.lib.stylix.colors.base0A-rgb-g}, ${config.lib.stylix.colors.base0A-rgb-b})";
-          bothlock_color =
-            "rgb(${config.lib.stylix.colors.base08-rgb-r}, ${config.lib.stylix.colors.base08-rgb-g}, ${config.lib.stylix.colors.base08-rgb-b})";
+          outer_color = "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
+          inner_color = "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, 0)";
+          font_color = "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
+          check_color = "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
+          fail_color = "rgb(${config.lib.stylix.colors.base08-rgb-r}, ${config.lib.stylix.colors.base08-rgb-g}, ${config.lib.stylix.colors.base08-rgb-b})";
+          capslock_color = "rgb(${config.lib.stylix.colors.base0A-rgb-r}, ${config.lib.stylix.colors.base0A-rgb-g}, ${config.lib.stylix.colors.base0A-rgb-b})";
+          numlock_color = "rgb(${config.lib.stylix.colors.base0A-rgb-r}, ${config.lib.stylix.colors.base0A-rgb-g}, ${config.lib.stylix.colors.base0A-rgb-b})";
+          bothlock_color = "rgb(${config.lib.stylix.colors.base08-rgb-r}, ${config.lib.stylix.colors.base08-rgb-g}, ${config.lib.stylix.colors.base08-rgb-b})";
 
           # Font
           font_family = "${config.stylix.fonts.monospace.name}";
@@ -69,8 +61,7 @@
             monitor = "";
             text = "Hi there, $USER";
             text_align = "center";
-            color =
-              "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
+            color = "rgb(${config.lib.stylix.colors.base05-rgb-r}, ${config.lib.stylix.colors.base05-rgb-g}, ${config.lib.stylix.colors.base05-rgb-b})";
             font_size = "25";
             font_family = "${config.stylix.fonts.monospace.name}";
 
@@ -85,8 +76,7 @@
             monitor = "";
             text = "$TIME";
             text_align = "center";
-            color =
-              "rgb(${config.lib.stylix.colors.base06-rgb-r}, ${config.lib.stylix.colors.base06-rgb-g}, ${config.lib.stylix.colors.base06-rgb-b})";
+            color = "rgb(${config.lib.stylix.colors.base06-rgb-r}, ${config.lib.stylix.colors.base06-rgb-g}, ${config.lib.stylix.colors.base06-rgb-b})";
             font_size = "65";
             font_family = "${config.stylix.fonts.monospace.name}";
             rotate = "0"; # degrees, counter-clockwise

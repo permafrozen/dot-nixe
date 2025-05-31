@@ -1,7 +1,10 @@
 { pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ quickemu spice-gtk ];
+  environment.systemPackages = with pkgs; [
+    quickemu
+    spice-gtk
+  ];
   services.samba.enable = true;
 
   # Enable virt-manager and dconf
@@ -9,12 +12,20 @@
   programs.dconf.enable = true;
 
   # Enable libvirtd
-  virtualisation.libvirtd = { enable = true; };
+  virtualisation.libvirtd = {
+    enable = true;
+  };
 
   # Ensure user is added to the libvirtd group
   users.users.${settings.userName}.extraGroups = [ "libvirtd" ];
 
   # Kernel module and virtualization settings specific to AMD
-  boot.kernelModules = [ "kvm" "kvm-amd" ]; # Use "kvm-amd" for AMD CPUs
-  boot.kernelParams = [ "amd_iommu=on" "iommu=pt" ]; # Enable IOMMU for AMD
+  boot.kernelModules = [
+    "kvm"
+    "kvm-amd"
+  ]; # Use "kvm-amd" for AMD CPUs
+  boot.kernelParams = [
+    "amd_iommu=on"
+    "iommu=pt"
+  ]; # Enable IOMMU for AMD
 }

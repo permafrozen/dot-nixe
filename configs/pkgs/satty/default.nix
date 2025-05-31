@@ -1,7 +1,11 @@
 { pkgs, settings, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ satty grim slurp ];
+  environment.systemPackages = with pkgs; [
+    satty
+    grim
+    slurp
+  ];
 
   home-manager.users.${settings.userName} = {
     home.file.".config/satty/config.toml".text = ''

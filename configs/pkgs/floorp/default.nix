@@ -1,4 +1,10 @@
-{ config, settings, pkgs, ... }: {
+{
+  config,
+  settings,
+  pkgs,
+  ...
+}:
+{
   home-manager.users.${settings.userName} = {
     programs.floorp = {
       enable = true;
@@ -30,77 +36,74 @@
           terms-of-service-didnt-read
         ];
 
-        bookmarks = [{
-          name = "HTL-Wels Seiten";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "moodle";
-              url = "http://elearn.htl-wels.at/";
-            }
-            {
-              name = "webdav";
-              url = "https://webdav.htl-wels.at:4343/Lehrer/Lehrer/";
-            }
-            {
-              name = "digi4school";
-              url = "https://digi4school.at/";
-            }
-            {
-              name = "webuntis";
-              url = "https://hypate.webuntis.com/today";
-            }
-          ];
-        }];
+        bookmarks = [
+          {
+            name = "HTL-Wels Seiten";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "moodle";
+                url = "http://elearn.htl-wels.at/";
+              }
+              {
+                name = "webdav";
+                url = "https://webdav.htl-wels.at:4343/Lehrer/Lehrer/";
+              }
+              {
+                name = "digi4school";
+                url = "https://digi4school.at/";
+              }
+              {
+                name = "webuntis";
+                url = "https://hypate.webuntis.com/today";
+              }
+            ];
+          }
+        ];
 
         search = {
           default = "DuckDuckGo";
           engines = {
             "Nix Packages" = {
-              urls = [{
-                template = "https://search.nixos.org/packages";
-                params = [
-                  {
-                    name = "type";
-                    value = "packages";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }];
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
 
-              icon =
-                "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = [ "@np" ];
             };
 
             "NixOS Wiki" = {
-              urls = [{
-                template =
-                  "https://wiki.nixos.org/index.php?search={searchTerms}";
-              }];
+              urls = [ { template = "https://wiki.nixos.org/index.php?search={searchTerms}"; } ];
               iconUpdateURL = "https://wiki.nixos.org/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@nw" ];
             };
 
             "Perplexity ai" = {
-              urls =
-                [{ template = "https://www.perplexity.ai/?q={searchTerms}"; }];
+              urls = [ { template = "https://www.perplexity.ai/?q={searchTerms}"; } ];
               definedAliases = [ "@pe" ];
             };
 
             "My NixOS" = {
-              urls =
-                [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+              urls = [ { template = "https://mynixos.com/search?q={searchTerms}"; } ];
               definedAliases = [ "@my" ];
             };
 
             "Bing".metaData.hidden = true;
-            "Google".metaData.alias =
-              "@g"; # builtin engines only support specifying one additional alias
+            "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
           };
         };
       };

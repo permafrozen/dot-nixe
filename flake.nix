@@ -57,7 +57,8 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs:
+  outputs =
+    { nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
       settings = import ./hosts/laptop/settings.nix;
@@ -70,7 +71,8 @@
         inherit settings;
         inherit extensions;
       };
-    in {
+    in
+    {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = args;

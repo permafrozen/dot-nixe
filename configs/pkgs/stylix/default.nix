@@ -1,4 +1,10 @@
-{ config, pkgs, lib, settings, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  settings,
+  ...
+}:
 
 let
 
@@ -28,8 +34,7 @@ let
     enable = true;
     autoEnable = false;
     image = ../../../assets/wallpapers/${settings.wallpaper};
-    base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/${settings.scheme}.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${settings.scheme}.yaml";
     fonts = {
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
@@ -55,7 +60,8 @@ let
     };
   };
 
-in {
+in
+{
   stylix = stylixConfig // {
     targets = {
       regreet.enable = true;
@@ -192,30 +198,18 @@ in {
         "workbench.list.smoothScrolling" = "true";
         "workbench.colorCustomizations" = {
           "[Stylix]" = {
-            "sideBar.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "activityBar.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "tab.inactiveBackground" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "editorGroupHeader.tabsBackground" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "tree.indentGuidesStroke" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "statusBar.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "editorTitle.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "statusBarItem.remoteBackground" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "dropdown.listBackground" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "titleBar.inactiveBackground" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "breadcrumb.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
-            "sideBarSectionHeader.background" =
-              lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "sideBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "activityBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "tab.inactiveBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "editorGroupHeader.tabsBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "tree.indentGuidesStroke" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "statusBar.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "editorTitle.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "statusBarItem.remoteBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "dropdown.listBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "titleBar.inactiveBackground" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "breadcrumb.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
+            "sideBarSectionHeader.background" = lib.mkForce "#${config.lib.stylix.colors.base00}";
           };
         };
       };

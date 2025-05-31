@@ -1,4 +1,5 @@
-{ settings, ... }: {
+{ settings, ... }:
+{
   home-manager.users.${settings.userName} = {
     programs.starship = {
       enable = true;
@@ -32,7 +33,9 @@
           ssh_only = false;
           style = "bold username";
         };
-        line_break = { disabled = true; };
+        line_break = {
+          disabled = true;
+        };
         palette = "custom";
         palettes = {
           custom = {

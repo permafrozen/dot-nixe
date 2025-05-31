@@ -1,16 +1,15 @@
 { pkgs, ... }:
 
-let theme = "dna";
-in {
+let
+  theme = "dna";
+in
+{
   # https://wiki.nixos.org/wiki/Plymouth
   boot = {
     plymouth = {
       enable = true;
       inherit theme;
-      themePackages = with pkgs;
-        [
-          (adi1090x-plymouth-themes.override { selected_themes = [ theme ]; })
-        ];
+      themePackages = with pkgs; [ (adi1090x-plymouth-themes.override { selected_themes = [ theme ]; }) ];
     };
 
     # Enable "Silent boot"

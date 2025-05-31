@@ -2,7 +2,9 @@
 
 {
   services = {
-    openssh = { enable = true; };
+    openssh = {
+      enable = true;
+    };
 
     # Autologin
     displayManager.autoLogin.enable = true;

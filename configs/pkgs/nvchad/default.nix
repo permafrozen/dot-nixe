@@ -1,10 +1,12 @@
-{ pkgs, inputs, settings, ... }: {
+{
+  pkgs,
+  inputs,
+  settings,
+  ...
+}:
+{
   nixpkgs = {
-    overlays = [
-      (final: prev: {
-        nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
-      })
-    ];
+    overlays = [ (final: prev: { nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad; }) ];
   };
 
   home-manager.users.${settings.userName} = {
@@ -16,9 +18,9 @@
       # https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
 
       extraPlugins = ''
-      return {
-        {"NvChad/base46",lazy=false},
-      }
+        return {
+          {"NvChad/base46",lazy=false},
+        }
       '';
 
       chadrcConfig = ''

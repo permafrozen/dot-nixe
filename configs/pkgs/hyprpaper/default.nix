@@ -1,8 +1,10 @@
 { pkgs, settings, ... }:
 
-let wallpaper = "${../../../.}/assets/wallpapers/${settings.wallpaper}";
+let
+  wallpaper = "${../../../.}/assets/wallpapers/${settings.wallpaper}";
 
-in {
+in
+{
   environment.systemPackages = [ pkgs.hyprpaper ];
   home-manager.users.${settings.userName} = {
     services.hyprpaper = {

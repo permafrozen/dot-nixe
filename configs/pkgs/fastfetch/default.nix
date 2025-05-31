@@ -18,7 +18,9 @@
           };
         };
 
-        display = { separator = "  "; };
+        display = {
+          separator = "  ";
+        };
 
         modules = [
           {

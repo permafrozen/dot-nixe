@@ -1,11 +1,33 @@
-{ inputs, settings, ... }: {
-
+{
+  pkgs,
+  inputs,
+  settings,
+  ...
+}:
+{
+  environment.systemPackages = with pkgs; [
+    ripgrep
+    fd
+    git
+    curl
+    wget
+    unzip
+    nixfmt-rfc-style
+    gnutar
+    gzip
+    nodejs
+    python3
+    clang
+    gcc
+  ];
   home-manager.users.${settings.userName} = {
     imports = [ inputs.lazyvim.homeManagerModules.default ];
     programs.lazyvim = {
       enable = true;
       extras = {
-        coding = { yanky.enable = true; };
+        coding = {
+          yanky.enable = true;
+        };
 
         editor = {
           dial.enable = true;
@@ -25,7 +47,9 @@
           zig.enable = true;
         };
 
-        test = { core.enable = true; };
+        test = {
+          core.enable = true;
+        };
 
         util = {
           dot.enable = true;
@@ -39,5 +63,4 @@
     EDITOR = "nvim";
     MANPAGER = "nvim +Man!";
   };
-
 }

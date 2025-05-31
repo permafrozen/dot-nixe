@@ -1,4 +1,10 @@
-{ inputs, pkgs, settings, ... }: {
+{
+  inputs,
+  pkgs,
+  settings,
+  ...
+}:
+{
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
       plugins = [

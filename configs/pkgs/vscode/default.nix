@@ -1,7 +1,17 @@
-{ pkgs, lib, settings, extensions, ... }:
+{
+  pkgs,
+  lib,
+  settings,
+  extensions,
+  ...
+}:
 
 {
-  environment.systemPackages = with pkgs; [ vscodium nixd nixfmt-classic ];
+  environment.systemPackages = with pkgs; [
+    vscodium
+    nixd
+    nixfmt-rfc-style
+  ];
 
   programs.direnv.enable = true;
   home-manager.users.${settings.userName} = {
@@ -23,11 +33,9 @@
         "editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
         "chat.editor.fontSize" = lib.mkForce (lib.toInt settings.font-size);
         "debug.console.fontSize" = lib.mkForce (lib.toInt settings.font-size);
-        "markdown.preview.fontSize" =
-          lib.mkForce (lib.toInt settings.font-size);
+        "markdown.preview.fontSize" = lib.mkForce (lib.toInt settings.font-size);
         "scm.inputFontSize" = lib.mkForce (lib.toInt settings.font-size);
-        "terminal.integrated.fontSize" =
-          lib.mkForce (lib.toInt settings.font-size);
+        "terminal.integrated.fontSize" = lib.mkForce (lib.toInt settings.font-size);
 
         # Editor Settigns
         "editor.cursorBlinking" = "phase";
@@ -53,18 +61,26 @@
 
         # Default Formater
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        "[nix]" = { "editor.defaultFormatter" = "jnoortheen.nix-ide"; };
+        "[nix]" = {
+          "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        };
 
         # Svelte ts support
         "svelte.enable-ts-plugin" = true;
-        "[svelte]" = { "editor.defaultFormatter" = "svelte.svelte-vscode"; };
+        "[svelte]" = {
+          "editor.defaultFormatter" = "svelte.svelte-vscode";
+        };
 
         # nix-plugin
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
 
         "nix.serverSettings" = {
-          "nixd" = { "formatting" = { "command" = [ "nixfmt" ]; }; };
+          "nixd" = {
+            "formatting" = {
+              "command" = [ "nixfmt" ];
+            };
+          };
         };
 
         # Scrollbar Settings

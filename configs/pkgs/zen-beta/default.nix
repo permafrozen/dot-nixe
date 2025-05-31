@@ -1,4 +1,12 @@
-{ settings, dotlib, config, inputs, pkgs, ... }: {
+{
+  settings,
+  dotlib,
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
+{
 
   home-manager.users.${settings.userName} = {
     imports = [ inputs.zen-browser.homeModules.beta ];
@@ -72,82 +80,68 @@
 
         search.engines = {
           "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages";
-              params = [
-                {
-                  name = "type";
-                  value = "packages";
-                }
-                {
-                  name = "query";
-                  value = "{searchTerms}";
-                }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
 
-            icon =
-              "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
 
           "NixOS Wiki" = {
-            urls = [{
-              template =
-                "https://wiki.nixos.org/index.php?search={searchTerms}";
-            }];
+            urls = [ { template = "https://wiki.nixos.org/index.php?search={searchTerms}"; } ];
             icon = "https://wiki.nixos.org/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@nw" ];
           };
 
           "Perplexity" = {
-            urls = [{
-              template = "https://www.perplexity.ai/search/?q={searchTerms}";
-            }];
+            urls = [ { template = "https://www.perplexity.ai/search/?q={searchTerms}"; } ];
             icon = "https://www.perplexity.ai/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@pp" ];
           };
 
           "MyNixOS" = {
-            urls =
-              [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+            urls = [ { template = "https://mynixos.com/search?q={searchTerms}"; } ];
             icon = "https://mynixos.com/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@my" ];
           };
 
           "GitHub" = {
-            urls = [{
-              template =
-                "https://github.com/search?q={searchTerms}&type=repositories";
-            }];
+            urls = [ { template = "https://github.com/search?q={searchTerms}&type=repositories"; } ];
             icon = "https://github.com/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@gh" ];
           };
 
           "youtube" = {
-            urls = [{
-              template =
-                "https://www.youtube.com/results?search_query={searchTerms}";
-            }];
+            urls = [ { template = "https://www.youtube.com/results?search_query={searchTerms}"; } ];
             icon = "https://www.youtube.com/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@yt" ];
           };
 
           "bing".metaData.hidden = true;
-          "google".metaData.alias =
-            "@go"; # builtin engines only support specifying one additional alias
+          "google".metaData.alias = "@go"; # builtin engines only support specifying one additional alias
           "ddg".metaData.alias = "@ddg"; # ^
         };
         userChrome = ''
           :root {
-              --main-bg: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              }
+              --main-bg: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}
           }
           toolbox#navigator-toolbox.browser-toolbox-background, hbox#zen-main-app-wrapper {
             background-color: transparent !important;

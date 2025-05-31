@@ -7,7 +7,9 @@
         enable = true;
         userName = settings.gitUser;
         userEmail = settings.gitMail;
-        extraConfig = { init.defaultBranch = settings.defaultBranch; };
+        extraConfig = {
+          init.defaultBranch = settings.defaultBranch;
+        };
       };
       gh = {
         enable = true;

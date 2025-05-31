@@ -1,4 +1,11 @@
-{ dotlib, config, settings, pkgs, ... }: {
+{
+  dotlib,
+  config,
+  settings,
+  pkgs,
+  ...
+}:
+{
   home-manager.users.${settings.userName} = {
     # *Theme*
     # https://github.com/datguypiko/Firefox-Mod-Blur
@@ -15,7 +22,10 @@
     programs.librewolf = {
       enable = true;
       package = pkgs.librewolf;
-      languagePacks = [ "en-GB" "de" ];
+      languagePacks = [
+        "en-GB"
+        "de"
+      ];
 
       # Librewolf Overrides (about:config; ...)
       settings = {
@@ -68,38 +78,32 @@
           "*".installation_mode = "blocked";
 
           "uBlock0@raymondhill.net" = {
-            install_url =
-              "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
             installation_mode = "force_installed";
           };
 
           "jid1-MnnxcxisBPnSXQ@jetpack" = {
-            install_url =
-              "https://addons.mozilla.org/en-US/firefox/downloads/latest/privacy-badger17/latest.xpi";
+            install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
           };
 
           "sponsorBlocker@ajay.app" = {
-            install_url =
-              "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
             installation_mode = "force_installed";
           };
 
           "jid1-D7momAzRw417Ag@jetpack" = {
-            install_url =
-              "https://addons.mozilla.org/firefox/downloads/latest/wikiwand-wikipedia-modernized/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/wikiwand-wikipedia-modernized/latest.xpi";
             installation_mode = "force_installed";
           };
 
           "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-            install_url =
-              "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
             installation_mode = "force_installed";
           };
 
           "queryamoid@kaply.com" = {
-            install_url =
-              "https://github.com/mkaply/queryamoid/releases/download/v0.1/query_amo_addon_id-0.1-fx.xpi";
+            install_url = "https://github.com/mkaply/queryamoid/releases/download/v0.1/query_amo_addon_id-0.1-fx.xpi";
             installation_mode = "force_installed";
           };
         };
@@ -116,55 +120,47 @@
 
         search.engines = {
           "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages";
-              params = [
-                {
-                  name = "type";
-                  value = "packages";
-                }
-                {
-                  name = "query";
-                  value = "{searchTerms}";
-                }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
 
-            icon =
-              "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@nixp" ];
           };
 
           "NixOS Wiki" = {
-            urls = [{
-              template =
-                "https://wiki.nixos.org/index.php?search={searchTerms}";
-            }];
+            urls = [ { template = "https://wiki.nixos.org/index.php?search={searchTerms}"; } ];
             iconUpdateURL = "https://wiki.nixos.org/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@nixw" ];
           };
 
           "Perplexity" = {
-            urls = [{
-              template = "https://www.perplexity.ai/search/?q=%s{searchTerms}";
-            }];
+            urls = [ { template = "https://www.perplexity.ai/search/?q=%s{searchTerms}"; } ];
             iconUpdateURL = "https://www.perplexity.ai/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@per" ];
           };
 
           "Bing".metaData.hidden = true;
-          "Google".metaData.alias =
-            "@goo"; # builtin engines only support specifying one additional alias
-          "DuckDuckGo".metaData.alias =
-            "@duck"; # builtin engines only support specifying one additional alias
+          "Google".metaData.alias = "@goo"; # builtin engines only support specifying one additional alias
+          "DuckDuckGo".metaData.alias = "@duck"; # builtin engines only support specifying one additional alias
         };
         userChrome = ''
           :root {
-              --main-bg: #${config.lib.stylix.colors.base00}${
-                dotlib.decToHex settings.opacity
-              };
+              --main-bg: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity};
           }
 
           toolbox#navigator-toolbox.browser-toolbox-background {

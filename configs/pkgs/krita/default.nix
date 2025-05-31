@@ -1,3 +1,7 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ krita opentabletdriver ];
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    krita
+    opentabletdriver
+  ];
 }

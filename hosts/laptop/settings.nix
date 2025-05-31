@@ -31,8 +31,7 @@ rec {
   '';
 
   # variable apps
-  browser =
-    "zen-beta"; # firefox, floorp, ungoogle-chromium, librewolf, zen-beta
+  browser = "zen-beta"; # firefox, floorp, ungoogle-chromium, librewolf, zen-beta
   terminal = "ghostty"; # kitty, foot, ghostty
   shell = "fish"; # zsh, fish, bash
 

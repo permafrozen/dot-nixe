@@ -1,10 +1,18 @@
-{ inputs, dotlib, config, settings, ... }:
+{
+  inputs,
+  dotlib,
+  config,
+  settings,
+  ...
+}:
 
 {
 
   nix.settings = {
-    substituters =
-      [ "https://walker-git.cachix.org" "https://walker.cachix.org" ];
+    substituters = [
+      "https://walker-git.cachix.org"
+      "https://walker.cachix.org"
+    ];
     trusted-public-keys = [
       "walker-git.cachix.org-1:vmC0ocfPWh0S/vRAQGtChuiZBTAe4wiKDeyyXM0/7pM="
       "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
@@ -20,7 +28,9 @@
       # All options from the config.json can be used here.
       config = {
         search.placeholder = "Search";
-        list = { height = 200; };
+        list = {
+          height = 200;
+        };
         websearch.prefix = "?";
         switcher.prefix = "/";
         theme = "nixos";
@@ -54,7 +64,9 @@
                     "spacing" = 10;
                     "width" = 400;
                   };
-                  "margins" = { "top" = 8; };
+                  "margins" = {
+                    "top" = 8;
+                  };
                   "max_height" = 300;
                   "min_width" = 400;
                   "name" = "aiScroll";
@@ -76,7 +88,9 @@
                   "position" = "end";
                 };
                 "h_align" = "center";
-                "margins" = { "top" = 200; };
+                "margins" = {
+                  "top" = 200;
+                };
                 "scroll" = {
                   "list" = {
                     "item" = {
@@ -92,7 +106,9 @@
                         "theme" = "Papirus";
                       };
                     };
-                    "margins" = { "top" = 8; };
+                    "margins" = {
+                      "top" = 8;
+                    };
                     "max_height" = 300;
                     "max_width" = 400;
                     "min_width" = 400;
@@ -105,7 +121,9 @@
                     "h_expand" = true;
                     "icons" = true;
                   };
-                  "spinner" = { "hide" = true; };
+                  "spinner" = {
+                    "hide" = true;
+                  };
                 };
                 "width" = 450;
               };
@@ -117,12 +135,8 @@
 
         style = ''
           :root {
-            --main-background: #${config.lib.stylix.colors.base00}${
-              dotlib.decToHex settings.opacity
-            };
-            --background-color: #${config.lib.stylix.colors.base00}${
-              dotlib.decToHex settings.opacity
-            };
+            --main-background: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity};
+            --background-color: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity};
             --main-color: #${config.lib.stylix.colors.base05};
             --main-border-color: #${config.lib.stylix.colors.base05};
             --search-background: #${config.lib.stylix.colors.base00};

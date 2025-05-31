@@ -1,4 +1,9 @@
-{ inputs, pkgs, settings, ... }:
+{
+  inputs,
+  pkgs,
+  settings,
+  ...
+}:
 
 {
   imports = [
@@ -6,13 +11,15 @@
     ./configuration.nix
   ];
 
-  environment.systemPackages = with pkgs; [ hyprshot pinta ];
+  environment.systemPackages = with pkgs; [
+    hyprshot
+    pinta
+  ];
 
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys =
-      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # Hyprland NixOS Module
@@ -21,8 +28,7 @@
     xwayland.enable = true;
 
     # Flake Inputs -> Hyprland Package
-    package =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage =
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
@@ -42,8 +48,7 @@
       enable = true;
 
       # Flake Input -> Hyprland package
-      package =
-        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       extraConfig = settings.hyprConfig;
     };

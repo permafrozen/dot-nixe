@@ -1,4 +1,9 @@
-{ pkgs, config, settings, ... }:
+{
+  pkgs,
+  config,
+  settings,
+  ...
+}:
 
 {
   home-manager.users.${settings.userName} = {
@@ -16,32 +21,43 @@
           wikiwand-wikipedia-modernized
           terms-of-service-didnt-read
         ];
-        bookmarks = [{
-          name = "Nix sites";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "homepage";
-              url = "https://nixos.org/";
-              tags = [ "nixos" ];
-            }
-            {
-              name = "wiki";
-              tags = [ "nixios" "wiki" ];
-              url = "https://wiki.nixos.org/";
-            }
-            {
-              name = "mynixos";
-              tags = [ "nixos" "search" ];
-              url = "https://wiki.nixos.org/";
-            }
-            {
-              name = "discourse";
-              tags = [ "nixos" "forum" ];
-              url = "https://discourse.nixos.org/";
-            }
-          ];
-        }];
+        bookmarks = [
+          {
+            name = "Nix sites";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "homepage";
+                url = "https://nixos.org/";
+                tags = [ "nixos" ];
+              }
+              {
+                name = "wiki";
+                tags = [
+                  "nixios"
+                  "wiki"
+                ];
+                url = "https://wiki.nixos.org/";
+              }
+              {
+                name = "mynixos";
+                tags = [
+                  "nixos"
+                  "search"
+                ];
+                url = "https://wiki.nixos.org/";
+              }
+              {
+                name = "discourse";
+                tags = [
+                  "nixos"
+                  "forum"
+                ];
+                url = "https://discourse.nixos.org/";
+              }
+            ];
+          }
+        ];
         settings = {
           # Enable all Extensions
           "extensions.autoDisableScopes" = 0;

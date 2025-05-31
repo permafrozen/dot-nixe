@@ -1,7 +1,9 @@
 { settings, pkgs, ... }:
 
-let path = pkg: ../../configs/pkgs/${pkg}/default.nix;
-in {
+let
+  path = pkg: ../../configs/pkgs/${pkg}/default.nix;
+in
+{
   imports = [
     ../../hosts/${settings.hostPreset}/hardware-configuration.nix
     ../pkgs/stylix
@@ -23,8 +25,8 @@ in {
     git
     git-ignore
     nix-melt
-    nixfmt-classic
     nix-output-monitor
+    nixfmt-rfc-style
     wget
     zip
     unzip
@@ -84,13 +86,19 @@ in {
     users.${settings.userName} = {
       isNormalUser = true;
       description = "${settings.userName}";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
     };
   };
 
   # System Settings
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05"; # be careful with this one
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
 }

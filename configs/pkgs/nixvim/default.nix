@@ -1,7 +1,9 @@
 { config, ... }:
 
 {
-  environment.sessionVariables = { MANPAGER = "nvim +Man!"; };
+  environment.sessionVariables = {
+    MANPAGER = "nvim +Man!";
+  };
   programs.nixvim = {
     enable = true;
 
@@ -15,7 +17,9 @@
 
       transparent = {
         enable = true;
-        settings = { enable = true; };
+        settings = {
+          enable = true;
+        };
       };
 
       lsp = {
@@ -23,21 +27,32 @@
         servers = {
           nixd = {
             enable = true;
-            settings = { formatting.command = [ "nix-fmt" ]; };
+            settings = {
+              formatting.command = [ "nix-fmt" ];
+            };
           };
         };
       };
 
-      lualine = { enable = true; };
+      lualine = {
+        enable = true;
+      };
 
-      nvim-tree = { enable = true; };
-      web-devicons = { enable = true; };
+      nvim-tree = {
+        enable = true;
+      };
+      web-devicons = {
+        enable = true;
+      };
 
       cmp = {
         enable = true;
         autoEnableSources = true;
-        settings.sources =
-          [ { name = "nvim_lsp"; } { name = "path"; } { name = "buffer"; } ];
+        settings.sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
       };
     };
 
@@ -54,7 +69,9 @@
       augroup END
     '';
 
-    globals = { transparent_enabled = "v:true"; };
+    globals = {
+      transparent_enabled = "v:true";
+    };
 
     # Base16 color scheme
     colorschemes.base16 = {

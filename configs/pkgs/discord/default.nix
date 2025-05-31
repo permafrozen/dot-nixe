@@ -1,23 +1,33 @@
-{ pkgs, config, settings, dotlib, ... }:
+{
+  pkgs,
+  config,
+  settings,
+  dotlib,
+  ...
+}:
 
 let
-  vesktop-settings = (builtins.fromJSON (builtins.readFile ./settings.json))
-    // {
-      enabledThemes = [ "generated.css" ];
-      transparent = true;
-      plugins = { ClearURLs.enabled = true; };
+  vesktop-settings = (builtins.fromJSON (builtins.readFile ./settings.json)) // {
+    enabledThemes = [ "generated.css" ];
+    transparent = true;
+    plugins = {
+      ClearURLs.enabled = true;
     };
+  };
   sys-settings = {
     minimizeToTray = "on";
     discordBranch = "stable";
     arRPC = "on";
-    splashColor =
-      "rgb(${config.lib.stylix.colors.base05-rgb-r},${config.lib.stylix.colors.base05-rgb-g},${config.lib.stylix.colors.base05-rgb-b})";
-    splashBackground =
-      "rgba(${config.lib.stylix.colors.base00-rgb-r},${config.lib.stylix.colors.base00-rgb-g},${config.lib.stylix.colors.base00-rgb-b},${settings.opacity})";
-    spellCheckLanguages = [ "en-US" "en" "de" ];
+    splashColor = "rgb(${config.lib.stylix.colors.base05-rgb-r},${config.lib.stylix.colors.base05-rgb-g},${config.lib.stylix.colors.base05-rgb-b})";
+    splashBackground = "rgba(${config.lib.stylix.colors.base00-rgb-r},${config.lib.stylix.colors.base00-rgb-g},${config.lib.stylix.colors.base00-rgb-b},${settings.opacity})";
+    spellCheckLanguages = [
+      "en-US"
+      "en"
+      "de"
+    ];
   };
-in {
+in
+{
   environment.systemPackages = with pkgs; [ vesktop ];
   home-manager.users.${settings.userName} = {
     home.file = {

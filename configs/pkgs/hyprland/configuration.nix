@@ -1,4 +1,10 @@
-{ pkgs, config, settings, dotlib, ... }:
+{
+  pkgs,
+  config,
+  settings,
+  dotlib,
+  ...
+}:
 
 {
   environment.systemPackages = [ pkgs.kdePackages.xwaylandvideobridge ];
@@ -17,21 +23,19 @@
         "$terminal" = "${settings.terminal}";
         "$screenlock" = "hyprlock";
         "$wallpaper" = "hyprpaper";
-        "$runner" =
-          "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
+        "$runner" = "walker"; # "wlalker --modules applications"; "rofi -show drun -theme default";
         "$statusbar" = "aglet";
 
         # Set Cursor
-        env = [ "HYPRCURSOR_THEME,$cursor" "HYPRCURSOR_SIZE,32" ];
+        env = [
+          "HYPRCURSOR_THEME,$cursor"
+          "HYPRCURSOR_SIZE,32"
+        ];
 
         general = {
           border_size = "2";
-          "col.active_border" = "0x${
-              dotlib.decToHex settings.opacity
-            }${config.lib.stylix.colors.base05}";
-          "col.inactive_border" = "0x${
-              dotlib.decToHex settings.opacity
-            }${config.lib.stylix.colors.base02}";
+          "col.active_border" = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base05}";
+          "col.inactive_border" = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base02}";
           resize_on_border = "true";
 
           gaps_in = "10";
@@ -163,7 +167,9 @@
         ];
 
         input = {
-          touchpad = { disable_while_typing = false; };
+          touchpad = {
+            disable_while_typing = false;
+          };
           kb_layout = "de";
           mouse_refocus = false;
           follow_mouse = "0";

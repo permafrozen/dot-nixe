@@ -1,1 +1,4 @@
-{ pkgs, ... }: { environment.systemPackages = [ pkgs.osu-lazer-bin ]; }
+{ pkgs, ... }:
+{
+  environment.systemPackages = [ pkgs.osu-lazer-bin ];
+}

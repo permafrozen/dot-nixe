@@ -1,4 +1,10 @@
-{ config, settings, pkgs, ... }: {
+{
+  config,
+  settings,
+  pkgs,
+  ...
+}:
+{
 
   # system
   environment.pathsToLink = [ "/share/zsh" ];
@@ -15,12 +21,20 @@
       oh-my-zsh = {
         enable = true;
         theme = "";
-        plugins = [ "gh" "fzf" "starship" "zoxide" ];
+        plugins = [
+          "gh"
+          "fzf"
+          "starship"
+          "zoxide"
+        ];
       };
       autosuggestion = {
         enable = true;
         highlight = "fg=#${config.lib.stylix.colors.base04}";
-        strategy = [ "history" "completion" ];
+        strategy = [
+          "history"
+          "completion"
+        ];
       };
       shellAliases = {
         ls = "eza";
