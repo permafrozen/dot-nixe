@@ -16,8 +16,8 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "creature.png"; # ../assets/wallpaper/
-  scheme = "gruvbox-dark-hard"; # base16-schemes Package, any of https://tinted-theming.github.io/tinted-gallery/
+  wallpaper = "untitled.png"; # ../assets/wallpaper/
+  scheme = "onedark-dark"; # base16-schemes Package, most of https://tinted-theming.github.io/tinted-gallery/
   opacity = "0.8";
   font-size = "14";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
