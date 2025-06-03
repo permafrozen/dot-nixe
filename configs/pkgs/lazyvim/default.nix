@@ -16,7 +16,6 @@
     gnutar
     gzip
     nodejs
-    python3
     clang
     gcc
   ];

@@ -51,10 +51,15 @@
           active_opacity = "1";
           inactive_opacity = "1";
           fullscreen_opacity = "1";
-          shadow.enabled = "false";
-
           dim_inactive = "false";
           dim_strength = "0.2";
+
+          shadow = {
+            enabled = "true";
+            color = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base05}";
+            color_inactive = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base02}";
+            range = 7;
+          };
 
           blur = {
             enabled = true;

@@ -139,27 +139,73 @@
           "google".metaData.alias = "@go"; # builtin engines only support specifying one additional alias
           "ddg".metaData.alias = "@ddg"; # ^
         };
+
         userChrome = ''
           :root {
-              --main-bg: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity}
-          }
-          toolbox#navigator-toolbox.browser-toolbox-background, hbox#zen-main-app-wrapper {
-            background-color: transparent !important;
-          }
-
-          hbox#browser {
-              background-color: var(--main-bg) !important;
-              font-family: "Maple Mono NF";
-              font-weight: 700
+            --zen-themed-toolbar-bg-transparent: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity} !important;
+            --zen-blur-radius: 10px;
+            --zen-blur-transition-duration: 0.4s;
+            --zen-blur-transition-timing: cubic-bezier(0.22, 1, 0.36, 1);
           }
 
-          tabbox#tabbrowser-tabbox * {
+          #browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels,
+          #browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels > hbox {
+              pointer-events: none;
+              filter: blur(var(--zen-blur-radius)) brightness(100%) !important;
+              transition:
+                  filter var(--zen-blur-transition-duration) var(--zen-blur-transition-timing),
+                  opacity var(--zen-blur-transition-duration) ease !important;
+          }
+
+          #browser:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #tabbrowser-tabpanels,
+          #browser:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #tabbrowser-tabpanels > hbox {
+              filter: blur(0) brightness(100%) !important;
+              transition:
+                  filter var(--zen-blur-transition-duration) var(--zen-blur-transition-timing),
+                  opacity var(--zen-blur-transition-duration) ease !important;
+          }
+
+          #urlbar[open][zen-floating-urlbar="true"] #urlbar-background {
+              border-radius: 1em !important;
               background-color: transparent !important;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+              transition: all 0.3s ease !important;
+          }
+
+          toolbaritem#urlbar-container * {
+              border: none !important;
+          }
+
+          #tabbrowser-tabpanels
+              > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
+              transition:
+                  all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35),
+                  filter var(--zen-blur-transition-duration) ease-in-out,
+                  opacity 0.35s ease-in-out !important;
+              scale: 0.9 !important;
+              opacity: 0;
+          }
+
+          #tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {
+              scale: 1 !important;
+              opacity: 1 !important;
+          }
+
+          #urlbar:not([open]) {
+              transition: all 0.3s ease !important;
+          }
+
+          #urlbar[open][zen-floating-urlbar="true"] .urlbar-input {
+              color: white !important;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+          }
+
+          #urlbar[open] > #urlbar-background,
+          #urlbar[open] > .urlbarView {
               border: none !important;
               box-shadow: none !important;
-
-          }
-        '';
+              outline: none !important;
+          }        '';
       };
     };
   };
