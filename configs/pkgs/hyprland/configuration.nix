@@ -33,7 +33,7 @@
         ];
 
         general = {
-          border_size = "2";
+          border_size = "3";
           "col.active_border" = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base05}";
           "col.inactive_border" = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base02}";
           resize_on_border = "true";
@@ -47,7 +47,7 @@
         };
 
         decoration = {
-          rounding = "15";
+          rounding = "5";
           active_opacity = "1";
           inactive_opacity = "1";
           fullscreen_opacity = "1";
@@ -55,7 +55,7 @@
           dim_strength = "0.2";
 
           shadow = {
-            enabled = "true";
+            enabled = "false";
             color = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base05}";
             color_inactive = "0x${dotlib.decToHex settings.opacity}${config.lib.stylix.colors.base02}";
             range = 7;

@@ -11,6 +11,7 @@ let
   buffer_font_size = (lib.toInt settings.font-size) * 4 / 3;
 in
 {
+  qt.enable = true; # for qmils; proper QML2_IMPORT_PATH use
 
   home-manager.users.${settings.userName} = {
     programs.zed-editor = {

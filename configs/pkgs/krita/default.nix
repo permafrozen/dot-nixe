@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     krita
-    opentabletdriver
   ];
+
+  hardware.opentabletdriver.enable = true;
 }

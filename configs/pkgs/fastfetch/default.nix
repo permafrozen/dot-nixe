@@ -9,12 +9,12 @@
       package = pkgs.fastfetch;
       settings = {
         logo = {
-          source = "~/.dot-nixe/assets/ascii/dot-nixe.txt";
-          position = "top";
+          source = ../../../. + "/assets/ascii/frieren.txt";
+          position = "left";
           padding = {
-            top = 1;
-            left = 1;
-            right = 1;
+            top = 0;
+            left = 2;
+            right = 4;
           };
         };
 

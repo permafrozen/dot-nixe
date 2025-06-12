@@ -14,7 +14,16 @@
   # Enable libvirtd
   virtualisation.libvirtd = {
     enable = true;
+    allowedBridges = [ "br0" ];
   };
+
+  # networking = {
+  #   bridges.br0.interfaces = [ "eth0" ];
+  #   interfaces.br0.useDHCP = true;
+  #   interfaces.eth0.useDHCP = false;
+  # };
+
+  virtualisation.virtualbox.host.enable = true;
 
   # Ensure user is added to the libvirtd group
   users.users.${settings.userName}.extraGroups = [ "libvirtd" ];

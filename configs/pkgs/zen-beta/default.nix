@@ -1,5 +1,6 @@
 {
   settings,
+  lib,
   dotlib,
   config,
   inputs,
@@ -142,70 +143,39 @@
 
         userChrome = ''
           :root {
-            --zen-themed-toolbar-bg-transparent: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity} !important;
-            --zen-blur-radius: 10px;
-            --zen-blur-transition-duration: 0.4s;
-            --zen-blur-transition-timing: cubic-bezier(0.22, 1, 0.36, 1);
+            --zen-themed-toolbar-bg-transparent: #${config.lib.stylix.colors.base00}${
+              dotlib.decToHex (lib.strings.floatToString (builtins.fromJSON settings.opacity / 2))
+            } !important;
+            --solid: #${config.lib.stylix.colors.base00} !important;
           }
 
-          #browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels,
-          #browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels > hbox {
+          @keyframes in {
+              0% {
+                  transform: translateY(-50%) translateX(-50%);
+                  opacity: 0;
+              }
+              100% {
+                  transform: translateY(0%) translateX(-50%);
+                  opacity: 1;
+              }
+          }
+
+          #urlbar[open][zen-floating-urlbar="true"] {
               pointer-events: none;
-              filter: blur(var(--zen-blur-radius)) brightness(100%) !important;
-              transition:
-                  filter var(--zen-blur-transition-duration) var(--zen-blur-transition-timing),
-                  opacity var(--zen-blur-transition-duration) ease !important;
+              animation: in 0.3s ease forwards;
           }
 
-          #browser:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #tabbrowser-tabpanels,
-          #browser:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #tabbrowser-tabpanels > hbox {
-              filter: blur(0) brightness(100%) !important;
-              transition:
-                  filter var(--zen-blur-transition-duration) var(--zen-blur-transition-timing),
-                  opacity var(--zen-blur-transition-duration) ease !important;
-          }
 
           #urlbar[open][zen-floating-urlbar="true"] #urlbar-background {
-              border-radius: 1em !important;
-              background-color: transparent !important;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-              transition: all 0.3s ease !important;
+              background-color: var(--solid) !important;
+              box-shadow: none;
           }
 
-          toolbaritem#urlbar-container * {
-              border: none !important;
+          tabbox#tabbrowser-tabbox {
+              background-color: #fff;
+              border-radius: calc(var(--zen-native-inner-radius) + 1px);
           }
-
-          #tabbrowser-tabpanels
-              > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
-              transition:
-                  all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35),
-                  filter var(--zen-blur-transition-duration) ease-in-out,
-                  opacity 0.35s ease-in-out !important;
-              scale: 0.9 !important;
-              opacity: 0;
-          }
-
-          #tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {
-              scale: 1 !important;
-              opacity: 1 !important;
-          }
-
-          #urlbar:not([open]) {
-              transition: all 0.3s ease !important;
-          }
-
-          #urlbar[open][zen-floating-urlbar="true"] .urlbar-input {
-              color: white !important;
-              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
-          }
-
-          #urlbar[open] > #urlbar-background,
-          #urlbar[open] > .urlbarView {
-              border: none !important;
-              box-shadow: none !important;
-              outline: none !important;
-          }        '';
+        '';
       };
     };
   };

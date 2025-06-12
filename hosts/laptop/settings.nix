@@ -16,8 +16,8 @@ rec {
   defaultBranch = "main";
 
   # theme
-  wallpaper = "untitled.png"; # ../assets/wallpaper/
-  scheme = "onedark-dark"; # base16-schemes Package, most of https://tinted-theming.github.io/tinted-gallery/
+  wallpaper = "clouds.png"; # ../assets/wallpaper/
+  scheme = "moonlight"; # base16-schemes Package, most of https://tinted-theming.github.io/tinted-gallery/
   opacity = "0.8";
   font-size = "14";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
@@ -26,8 +26,8 @@ rec {
   # Setup Specific Hyprland Config
   hyprConfig = ''
     monitor=eDP-1, 1920x1080@60, 0x0, 1
-    # monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
-    monitor=HDMI-A-1, 1920x1080@60, 0x-1080, 1
+    monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
+    # monitor=HDMI-A-1, 1920x1080@60, 0x-1080, 1
   '';
 
   # variable apps
@@ -36,9 +36,8 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
-    # "nvf"
+    "helix"
     "kew"
-    "lazyvim"
     "osu"
     "plymouth"
     "rpcs3"
@@ -71,7 +70,6 @@ rec {
     "kanata"
     "cliphist"
     "distrobox"
-    # "planify"
     "bluetooth"
     "ags"
     "zathura"
@@ -81,7 +79,6 @@ rec {
     "zed"
     "element"
     "wireshark"
-    # "nvchad"
     "${terminal}"
     "${browser}"
     "${shell}"
