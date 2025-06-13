@@ -19,7 +19,7 @@ rec {
   wallpaper = "clouds.png"; # ../assets/wallpaper/
   scheme = "moonlight"; # base16-schemes Package, most of https://tinted-theming.github.io/tinted-gallery/
   opacity = "0.8";
-  font-size = "14";
+  font-size = "15";
   cursor = "McMojave"; # Bibata-Modern-Classic, McMojave
   hyprcursor = "McMojave-Hypr";
 
@@ -36,18 +36,19 @@ rec {
   shell = "fish"; # zsh, fish, bash
 
   pkgs = [
+    "nheko"
     "helix"
     "kew"
     "osu"
     "plymouth"
-    "rpcs3"
+    # "rpcs3"
     "krita"
     "blender"
-    "virt-manager"
+    # "virt-manager"
     "xdg-user-dirs"
     "steam"
-    "mpd"
-    "ncmpcpp"
+    # "mpd"
+    # "ncmpcpp"
     "kernel"
     "pipewire"
     "hyprland"
@@ -69,15 +70,15 @@ rec {
     "hyprlock"
     "kanata"
     "cliphist"
-    "distrobox"
+    # "distrobox"
     "bluetooth"
-    "ags"
+    "aglet"
     "zathura"
     "tealdeer"
     "walker"
     "docker"
-    "zed"
-    "element"
+    # "zed"
+    # "element"
     "wireshark"
     "${terminal}"
     "${browser}"

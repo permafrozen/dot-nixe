@@ -11,7 +11,7 @@
   home-manager.users.${settings.userName} = {
     programs.ghostty = {
       enable = true;
-      clearDefaultKeybinds = true;
+      clearDefaultKeybinds = false;
       settings = {
         keybind = [
           "ctrl+shift+c=copy_to_clipboard"
