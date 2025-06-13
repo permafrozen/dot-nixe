@@ -37,9 +37,7 @@
         shellAliases = {
           ls = "eza";
           cd = "z";
-          edi = "zeditor ./";
           nos = "rm -f ~/.zen/default/search.json.mozlz4.backup && nh os switch .";
-          dev = " nix develop --command fish";
           ytd = "yt-dlp -f bestaudio --extract-audio --audio-format mp3";
           ff = "clear && fastfetch && sleep 1d";
         };
