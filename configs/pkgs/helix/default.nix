@@ -5,8 +5,10 @@
   ...
 }:
 {
+  qt.enable = true;
+
   environment.systemPackages = with pkgs; [
-    helix
+    # nixlang
     nixd
     nixfmt-rfc-style
   ];
@@ -33,6 +35,11 @@
               command = lib.getExe pkgs.nixfmt-rfc-style;
             };
           }
+          {
+            name = "qml";
+            auto-format = true;
+            language-servers = [ "qmlls" ];
+          }
         ];
         language-server = {
           nixd = {
@@ -40,8 +47,11 @@
             formatting = {
               command = [ "nixfmt" ];
             };
-            nixpkgs.expr = "import (builtins.getFlake /home/matteo/.dot-nixe/).inputs.nixpkgs { }";
-            home-manager.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.matteo.options.home-manager.users.type.getSubOptions []";
+            nixpkgs.expr = "import (builtins.getFlake /home/matteo/.dot-nixe).inputs.nixpkgs { }";
+          };
+          qmlls = {
+            args = [ "-E" ];
+            command = "qmlls";
           };
         };
       };
