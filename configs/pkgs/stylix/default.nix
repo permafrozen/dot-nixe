@@ -64,6 +64,7 @@ in
 {
   stylix = stylixConfig // {
     targets = {
+      qt.enable = true;
       regreet.enable = true;
       nvf = {
         enable = true;
@@ -113,7 +114,7 @@ in
         bat.enable = true;
         foot.enable = true;
         gnome.enable = true;
-        kde.enable = true;
+        qt.enable = true;
         vscode.enable = true;
         yazi.enable = true;
         zathura.enable = true;

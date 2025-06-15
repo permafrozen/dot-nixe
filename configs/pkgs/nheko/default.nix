@@ -4,5 +4,7 @@
     "olm-3.2.16"
   ];
 
-  environment.systemPackages = with pkgs; [ nheko ];
+  environment.systemPackages = with pkgs; [
+    nheko
+  ];
 }

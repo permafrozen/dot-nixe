@@ -7,7 +7,6 @@
 }:
 
 {
-  services.desktopManager.plasma6.enable = true;
   environment.systemPackages = [ pkgs.kdePackages.xwaylandvideobridge ];
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {

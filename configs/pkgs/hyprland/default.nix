@@ -16,6 +16,9 @@
     pinta
   ];
 
+  # Keyring
+  services.gnome.gnome-keyring.enable = true;
+
   # Hyprland Cache, so I don't have to compile it
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
