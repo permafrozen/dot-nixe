@@ -141,39 +141,59 @@
           "ddg".metaData.alias = "@ddg"; # ^
         };
 
+        userContent = ''
+          /* TODO */
+        '';
+
+        # Inspiration from: https://github.com/sameerasw/zen-themes/blob/main/TransparentZen/chrome.css
         userChrome = ''
-          :root {
-            --zen-themed-toolbar-bg-transparent: #${config.lib.stylix.colors.base00}${
-              dotlib.decToHex (lib.strings.floatToString (builtins.fromJSON settings.opacity / 2))
-            } !important;
-            --solid: #${config.lib.stylix.colors.base00} !important;
+                    :root {            
+                      --zen-themed-toolbar-bg-transparent: #${config.lib.stylix.colors.base00}${
+                        dotlib.decToHex (lib.strings.floatToString (builtins.fromJSON settings.opacity / 2))
+                      } !important;
+                      --zen-border-radius: 5px;
+                    }
+
+                    tabbox#tabbrowser-tabbox *{
+                        background-color: transparent !important;
+                    }
+
+                    @-moz-document url-prefix("chrome:") {
+                      #urlbar[breakout-extend="true"] #urlbar-background {
+                        background-color: #${config.lib.stylix.colors.base00}${dotlib.decToHex settings.opacity} !important;
+                        border-radius: var(--zen-border-radius) !important;
+                        border: solid 3px #${config.lib.stylix.colors.base05}${dotlib.decToHex settings.opacity}!important;
+                        backdrop-filter: blur(10px) !important;
+                      }
+                      
+                      .urlbarView-row {
+                        &[selected] {
+                          background-color: transparent !important;
+                        }
+                        border-radius: var(--zen-border-radius) !important;
+                      }
+
+                      .urlbarView-body-inner {
+                        border: none !important;
+                      }
+                      
+                       .browserStack browser {
+                        transform: translateX(0) !important;
+                      }
+                    }
+                    hbox.browserSidebarContainer {
+             box-shadow: none !important;
           }
 
-          @keyframes in {
-              0% {
-                  transform: translateY(-50%) translateX(-50%);
-                  opacity: 0;
+          #browser:has([zen-empty-tab="true"][selected="true"]) box#zen-browser-background::after {
+              background-image: url("https://raw.githubusercontent.com/zen-browser/branding/refs/heads/main/Official/Word%20Marks/SVG/zen_logo_icon_white.svg") !important;
+              background-position: center !important;
+              background-repeat: no-repeat !important;
+              background-size: 150px !important;
+              @media (prefers-color-scheme: light) {
+                filter: saturate(0) invert(1) !important;
               }
-              100% {
-                  transform: translateY(0%) translateX(-50%);
-                  opacity: 1;
-              }
-          }
-
-          #urlbar[open][zen-floating-urlbar="true"] {
-              pointer-events: none;
-              animation: in 0.3s ease forwards;
-          }
-
-
-          #urlbar[open][zen-floating-urlbar="true"] #urlbar-background {
-              background-color: var(--solid) !important;
-              box-shadow: none;
-          }
-
-          tabbox#tabbrowser-tabbox {
-              background-color: #fff;
-              border-radius: calc(var(--zen-native-inner-radius) + 1px);
+            }
           }
         '';
       };
