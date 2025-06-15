@@ -26,8 +26,8 @@ rec {
   # Setup Specific Hyprland Config
   hyprConfig = ''
     monitor=eDP-1, 1920x1080@60, 0x0, 1
-    monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
-    # monitor=HDMI-A-1, 1920x1080@60, 0x-1080, 1
+    # monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
+    monitor=HDMI-A-1, 1920x1080@60, 0x-1080, 1
   '';
 
   # variable apps
@@ -39,14 +39,14 @@ rec {
     "nheko"
     "helix"
     "kew"
-    "osu"
+    # "osu"
     "plymouth"
     # "rpcs3"
     "krita"
-    "blender"
+    # "blender"
     # "virt-manager"
     "xdg-user-dirs"
-    "steam"
+    # "steam"
     # "mpd"
     # "ncmpcpp"
     "kernel"
@@ -63,7 +63,7 @@ rec {
     "discord"
     "git"
     "syncthing"
-    "ani-cli"
+    # "ani-cli"
     "jetbrains"
     "fastfetch"
     "nh"
