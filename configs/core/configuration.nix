@@ -47,12 +47,11 @@ in
 
   networking = {
     hostName = "${settings.hostName}";
-    networkmanager = {
-      enable = true;
-      insertNameservers = [
-        "1.1.1.1" # Cloudflare
-      ];
-    };
+    networkmanager.enable = true;
+    nameservers = [
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
   };
 
   time.timeZone = "${settings.timeZone}";
