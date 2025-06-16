@@ -142,7 +142,11 @@
         };
 
         userContent = ''
-          /* TODO */
+          @-moz-document url-prefix("http://"), url-prefix("https://") {
+            html {
+              background-color: #fff; 
+            }
+          }
         '';
 
         # Inspiration from: https://github.com/sameerasw/zen-themes/blob/main/TransparentZen/chrome.css
