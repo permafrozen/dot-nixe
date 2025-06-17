@@ -143,7 +143,7 @@
 
         userContent = ''
           @-moz-document url-prefix("http://"), url-prefix("https://") {
-            html {
+            body {
               background-color: #fff; 
             }
           }
