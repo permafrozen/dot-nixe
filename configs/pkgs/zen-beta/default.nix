@@ -146,6 +146,10 @@
             body {
               background-color: #fff; 
             }
+
+            @-moz-document domain(reddit.com), domain(nixos.org) {
+              html, body { background-color: initial ; }
+            }
           }
         '';
 

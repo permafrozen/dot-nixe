@@ -29,6 +29,7 @@ in
     nixfmt-rfc-style
     wget
     zip
+    ripgrep
     unzip
     brightnessctl
     nodejs

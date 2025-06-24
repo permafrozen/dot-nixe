@@ -135,7 +135,7 @@
           "ui.window" = { bg = "base01" }
 
           [palette]
-          base00 = ""
+          base00 = "#${config.lib.stylix.colors.base00}"
           base01 = "#${config.lib.stylix.colors.base01}"
           base02 = "#${config.lib.stylix.colors.base02}"
           base03 = "#${config.lib.stylix.colors.base03}"
