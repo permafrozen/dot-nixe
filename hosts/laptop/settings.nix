@@ -46,7 +46,7 @@ rec {
     # "blender"
     # "virt-manager"
     "xdg-user-dirs"
-    # "steam"
+    "steam"
     # "mpd"
     # "ncmpcpp"
     "kernel"
